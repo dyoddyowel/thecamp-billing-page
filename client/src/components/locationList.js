@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 class LocationList extends Component {
     constructor() {
         super();
-        this.state = {};
+        this.state = {
+            selected: "Locations"
+        };
+
+        this.onChange = this.onChange.bind(this);
     }
 
     renderLocations(options) {
@@ -17,11 +21,17 @@ class LocationList extends Component {
         return arr;
     }
 
+    onChange(e) {
+        const key = Object.keys(locations).find(key => locations[key] === e.target.value);
+        this.setState({ selected: key });
+        e.target.style.display = 'none';
+    }
+
     render() {
         return(
             <div>
-                <h2>Locations</h2>
-                <select>
+                <h2>{this.state.selected}</h2>
+                <select onChange={this.onChange} value={this.state.selected}>
                     {
                         this.renderLocations(locations)
                     }

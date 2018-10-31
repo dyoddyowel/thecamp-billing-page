@@ -18,6 +18,10 @@
   color: white;
 }
 
+.rccs {
+  display: inline-block;
+}
+
 .rccs input {
   width: 100%;
 }

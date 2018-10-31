@@ -21,7 +21,7 @@ const args = {
     }
 };
 
-const getRequiredFields = () => {
+const getRequiredFields = (params) => {
     soap.createClient(url + wsdl, (err, client) => {
         if (err) {
             throw err;
@@ -39,6 +39,7 @@ const getRequiredFields = () => {
 const getExistingClient = (email) => {
     const params = {...args};
     params['SearchText'] = email;
+    console.log(params);
     soap.createClient(url + wsdl, (err, client) => {
         if (err) {
             throw err;
