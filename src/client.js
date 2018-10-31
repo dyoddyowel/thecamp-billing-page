@@ -36,6 +36,23 @@ const getRequiredFields = () => {
     });
 }
 
+const getExistingClient = (email) => {
+    const params = {...args};
+    params['SearchText'] = email;
+    soap.createClient(url + wsdl, (err, client) => {
+        if (err) {
+            throw err;
+        }
+        client.setEndpoint(url);
+        client.GetClients(params, (err, result) => {
+            if(err) {
+                console.log(err);
+            }
+            console.log(result);
+        })
+    });
+}
+
 const convertToObject = (fields) => {
     console.log(fields);
     let rFields = {};
@@ -65,3 +82,4 @@ const addClient = async (requiredFields, params) => {
 
 module.exports.getRequiredFields = getRequiredFields;
 module.exports.addClient = addClient;  
+module.exports.getExistingClient = getExistingClient;  
