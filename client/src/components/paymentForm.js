@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cards from 'react-credit-cards';
 import Payment from 'payment';
+import valid from 'card-validator';
 import 'react-credit-cards/es/styles-compiled.css';
 
 export default class PaymentForm extends Component {
@@ -29,7 +30,12 @@ export default class PaymentForm extends Component {
     };
   
     handleInputChange = ({ target }) => {
-      if (target.name === 'number') {
+        if (target.name === 'number') {
+            let numberValidation = valid.number(target.value);
+            if(!numberValidation.isPotentiallyValid) {
+                console.log("invalid");
+            }
+        
         this.setState({
           [target.name]: target.value.replace(/ /g, ''),
         });
@@ -64,7 +70,7 @@ export default class PaymentForm extends Component {
               focused={focused}
               callback={this.handleCallback}
             />
-            <form>
+            <form className="rccs">
               <div>
                 <input
                   type="tel"
@@ -73,7 +79,6 @@ export default class PaymentForm extends Component {
                   onKeyUp={this.handleInputChange}
                   onFocus={this.handleInputFocus}
                 />
-                <div>E.g.: 49..., 51..., 36..., 37...</div>
               </div>
               <div>
                 <input
@@ -87,6 +92,7 @@ export default class PaymentForm extends Component {
               <div>
                 <input
                   type="tel"
+                  className="half-width"
                   name="expiry"
                   placeholder="Valid Thru"
                   onKeyUp={this.handleInputChange}
@@ -94,6 +100,7 @@ export default class PaymentForm extends Component {
                 />
                 <input
                   type="tel"
+                  className="half-width"
                   name="cvc"
                   placeholder="CVC"
                   onKeyUp={this.handleInputChange}

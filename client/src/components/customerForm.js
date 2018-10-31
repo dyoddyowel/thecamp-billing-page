@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SelectUSState from 'react-select-us-states';
 
 class CustomerForm extends Component {
     constructor() {
@@ -8,24 +9,24 @@ class CustomerForm extends Component {
 
     render() {
         return(
-            <div class="form">
+            <div id="customer-form" className="form">
                 <h2>Customer Information</h2>
-                <label for="BillingName">Name</label>
-                <input type="text" id="BillingName" name="BillingName" />
-                <label for="BillingName">Address 1</label>
-                <input type="text" id="AddressLine1" />
-                <label for="BillingName">Address 2</label>
-                <input type="text" id="AddressLine1" />
-                <label for="BillingName">State</label>
-                <input type="text" id="State" />
-                <label for="BillingName">City</label>
-                <input type="text" id="City" />
-                <label for="BillingName">Postal Code</label>
-                <input type="text" id="PostalCode" />
-                <label for="BillingName">Referred By</label>
-                <input type="text" id="ReferredBy" />
-                <label for="BillingName">Mobile Phone</label>
-                <input type="text" id="MobilePhone" />
+                
+                <input type="text" placeholder="Name" id="BillingName" name="BillingName" />
+                
+                <input type="text" placeholder="Address 1" id="AddressLine1" />
+                
+                <input type="text" placeholder="Address 2" id="AddressLine1" />
+                
+                <SelectUSState id="BillingState" name="BillingState" className="myClassName" onChange={this.setNewValue}/>
+                
+                <input type="text" placeholder="City" id="City" />
+                
+                <input type="text" placeholder="Zip Code" id="PostalCode" />
+    
+                <input type="text" placeholder="Phone" id="MobilePhone" />
+                <input type="text" placeholder="Referred By" id="ReferredBy" />
+                
             </div>
         );
     }

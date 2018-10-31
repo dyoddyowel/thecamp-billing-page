@@ -11,7 +11,7 @@ class LocationList extends Component {
         let values = Object.values(options);
         let arr = [];
         for(let i of keys.keys()) {
-            let x = <option value={values[i]}>{keys[i]}</option>
+            let x = <option value={values[i]} key={i}>{keys[i]}</option>
             arr.push(x);
         }
         return arr;

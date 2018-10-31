@@ -18,6 +18,15 @@
   color: white;
 }
 
+.rccs input {
+  width: 100%;
+}
+
+.half-width {
+  width: 48% !important;
+  display: inline-block;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -31,12 +40,12 @@
   position: relative;
 }
 
-#billing-form input {
+.form input {
   display: inline-block;
   width: 69%;
 }
 
-#billing-form label {
+.form label {
   display: inline-block;
   width: 30%;
 }
