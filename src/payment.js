@@ -1,6 +1,6 @@
 const soap = require('soap');
 const base_url = "https://api.mindbodyonline.com/0_5_1/";
-const apiUrl = "ClassService";
+const apiUrl = "ClientService";
 const url = base_url + '/' + apiUrl + '.asmx';
 const wsdl = '?wsdl';
 const args = {
@@ -21,35 +21,31 @@ const args = {
     }
 };
 
-const getClasses = () => {
+const paymentData = {
+    "Amount": 89,
+    "CreditCardNumber": 777777777777,
+    "ExpMonth": 1,
+    "ExpYear": 2018,
+    "BillingName": "",
+    "BillingAddress": "",
+    "BillingCity": "",
+    "BillingState": "",
+    "BillingPostalCode": "",
+};
+
+const purchase = (purchaseData) => {
     soap.createClient(url + wsdl, (err, client) => {
         if (err) {
             throw err;
         }
         client.setEndpoint(url);
-        client.GetClasses(args, (err, result) => {
+        client.GetRequiredClientFields(args, (err, result) => {
             if(err) {
                 console.log(err);
             }
-            console.log(result.GetClassesResult.Classes);
+            addClient(result.GetRequiredClientFieldsResult.RequiredClientFields.string, args);
         })
     });
 }
 
-const addClientToClass = () => {
-    soap.createClient(url + wsdl, (err, client) => {
-        if (err) {
-            throw err;
-        }
-        client.setEndpoint(url);
-        client.AddClientsToClass(args, (err, result) => {
-            if(err) {
-                console.log(err);
-            }
-            console.log(result.AddClientsToClassResult);
-        })
-    });
-}
-
-module.exports.getClasses = getClasses;
-module.exports.addClientToClass = addClientToClass;
+module.exports.purchase = purchase;

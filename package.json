@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "node-rest-client": "^3.1.0",
-    "npm": "^6.4.1"
-  }
+    "npm": "^6.4.1",
+    "soap": "^0.25.0"
+  },
+  "proxy": "http://localhost:5000/"
 }
