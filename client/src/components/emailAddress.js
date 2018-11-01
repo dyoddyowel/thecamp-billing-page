@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import validator from 'email-validator';
+// import validator from 'email-validator';
 
 class EmailForm extends Component {
   constructor() {
@@ -7,7 +7,7 @@ class EmailForm extends Component {
     this.state = {};
   }
 
-  onInputChange(e) {
+  onInputChange = (e) => {
     // validator.validate
   }
 

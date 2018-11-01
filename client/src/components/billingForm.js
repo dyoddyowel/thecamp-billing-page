@@ -17,7 +17,8 @@ class BillingForm extends Component {
         return(
             <div id="billing-form" className="form">
                 <h2>Billing Address</h2>
-                <input type="text" placeholder="Name" id="BillingName" name="BillingName" />
+                <input type="text" placeholder="First Name" id="BillingFirstName" name="BillingFirstName" />
+                <input type="text" placeholder="Last Name" id="BillingLastName" name="BillingLastName" />
                 <input type="text" placeholder="Address" id="BillingAddress" name="BillingAddress" />
                 <div id="city-postal">
                     <input type="text" placeholder="City" id="BillingCity" name="BillingCity" />

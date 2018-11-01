@@ -7,6 +7,14 @@
   height: 40vmin;
 }
 
+.proper {
+  text-transform: capitalize;
+}
+
+.hide {
+  display: none;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,6 +24,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.block {
+  background: gray;
+  opacity: 0.5;
+}
+
+.focused {
+  opacity: 1;
+  transition: opacity 2s;
 }
 
 .rccs {
