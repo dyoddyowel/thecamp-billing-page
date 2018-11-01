@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-// import validator from 'email-validator';
 
 class EmailForm extends Component {
-  constructor() {
+  constructor(props) {
     super();
-    this.state = {};
+    this.state = {
+      input: ""
+    }
   }
 
-  onInputChange = (e) => {
-    // validator.validate
+  handleChange = (e) => {
+    this.setState({ input: e.target.value });
+  }
+  
+  clickHandler = (e) => {
+      e.preventDefault();
+      let x = {
+        "Email": this.state.input
+      }
+      this.props.saveData(x);
   }
 
   render() {
     return(
       <div>
-        <input type="text" placeholder="Email Address" onKeyUp={this.onInputChange} />
+        <input type="text" placeholder="Email Address" onChange={this.handleChange} />
+        <button onClick={this.clickHandler}>Test</button>
       </div>
     );
   }

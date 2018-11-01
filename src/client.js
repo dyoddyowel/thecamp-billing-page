@@ -12,7 +12,7 @@ const args = {
             "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw=",
             "SiteIDs": {
                 "int": -99
-            }
+            },
         }
     },
     "UserCredentials": {
@@ -21,7 +21,7 @@ const args = {
     }
 };
 
-const getRequiredFields = (params) => {
+const getRequiredFields = async (params) => {
     soap.createClient(url + wsdl, (err, client) => {
         if (err) {
             throw err;
@@ -31,13 +31,15 @@ const getRequiredFields = (params) => {
             if(err) {
                 console.log(err);
             }
-            addClient(result.GetRequiredClientFieldsResult.RequiredClientFields.string, args);
+            let requiredFields = convertToObject(result.GetRequiredClientFieldsResult.RequiredClientFields.string);
+            addClient(requiredFields);
         })
     });
 }
 
-const getExistingClient = (email) => {
+const getExistingClient = async (email) => {
     const params = {...args};
+    params.UserCredentials.Username = '_' + params.UserCredentials.Username;
     params['SearchText'] = email;
     console.log(params);
     soap.createClient(url + wsdl, (err, client) => {
@@ -52,7 +54,7 @@ const getExistingClient = (email) => {
             console.log(result);
         })
     });
-}
+}	
 
 const convertToObject = (fields) => {
     console.log(fields);
@@ -63,9 +65,7 @@ const convertToObject = (fields) => {
     return rFields;
 }
 
-const addClient = async (requiredFields, params) => {
-    let fields = convertToObject(requiredFields);
-    console.log(fields);
+const addClient = async (fields) => {
     soap.createClient(url + wsdl, (err, client) => {
         if (err) {
             throw err;
@@ -76,7 +76,6 @@ const addClient = async (requiredFields, params) => {
                 console.log(err);
             }
             console.log(JSON.stringify(result));
-            newClient = result;
         })
     });
 }

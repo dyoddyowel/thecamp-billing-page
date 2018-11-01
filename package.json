@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
     "node-rest-client": "^3.1.0",
     "npm": "^6.4.1",
     "soap": "^0.25.0"

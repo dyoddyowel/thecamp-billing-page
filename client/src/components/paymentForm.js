@@ -14,6 +14,10 @@ export default class PaymentForm extends Component {
         expiry: '',
         cvc: '',
         focused: '',
+        "Amount": 89,
+        "CreditCardNumber": 777777777777,
+        "ExpMonth": 1,
+        "ExpYear": 2018,
       };
     }
   
