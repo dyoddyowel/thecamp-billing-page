@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PaymentForm from './components/paymentForm';
 import BillingForm from './components/billingForm';
 import LocationList from './components/locationList';
 import EmailAddress from './components/emailAddress';
@@ -8,22 +7,20 @@ import './App.css';
 import './bootstrap.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const NextButton = ({ nextSection }) => {
-  const clickHandler = (e) => {
-    nextSection();
-  }
-  return (
-    <div onClick={clickHandler} className="btn">Next</div>
-  );
-}
+// const NextButton = ({ nextSection }) => {
+//   const clickHandler = (e) => {
+//     nextSection();
+//   }
+//   return (
+//     <div onClick={clickHandler} className="btn">Next</div>
+//   );
+// }
 
 const StepComponent = ({ step, components, nextSection }) => {
   return(
     <div>
       { step } of 2
       { components[step] }
-        <NextButton 
-          nextSection={nextSection} />
     </div>
   );
 }
@@ -34,18 +31,18 @@ class App extends Component {
     this.state = {
       step: 1,
       components: {
-        1: [<EmailAddress saveData={this.saveData} />],
-        2: [<PaymentForm saveData={this.saveData} />, <BillingForm saveData={this.saveData} />],
+        1: <EmailAddress saveData={this.saveData} />,
+        2: <BillingForm saveData={this.saveData} handleSubmit={this.handleSubmitA}/>,
       },
-      data: {
-        
-      }
+      data: {}
     };
   }
   
   saveData = (data) => {
-    this.setState({ data: data });
+    const newData = Object.assign({}, this.state.data, data);
+    this.setState({ data: newData });
     this.nextSection();
+    console.log("submitted")
   }
 
   componentDidMount() {
@@ -54,9 +51,13 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  print = () => {
+    console.log(this.state)
+  }
+
   nextSection = () => {
     let nextStep = this.state.step + 1;
-    this.setState({ step: nextStep });
+    this.setState({ step: nextStep }, this.print);
   };
 
   callApi = async () => {
@@ -65,6 +66,10 @@ class App extends Component {
     if (response.status !== 200) throw Error(body.message);
     return body;
   };
+
+  handleSubmitA = () => {
+    console.log("Full State", this.state);
+  }
 
   handleSubmit = async e => {
     e.preventDefault();
@@ -93,8 +98,6 @@ class App extends Component {
                   components={this.state.components}
                   nextSection={this.nextSection} />
               </div>
-              
-            <input type="button" value="Join Class" onClick={this.handleSubmit} />
         </div>
       </Router>
     );

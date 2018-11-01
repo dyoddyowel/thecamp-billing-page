@@ -24,7 +24,7 @@ class EmailForm extends Component {
     return(
       <div>
         <input type="text" placeholder="Email Address" onChange={this.handleChange} />
-        <button onClick={this.clickHandler}>Test</button>
+        <button onClick={this.clickHandler}>Continue to Payment</button>
       </div>
     );
   }
