@@ -25,7 +25,7 @@ app.post('/api', async (req, res) => {
     State: body.Address.BillingState,
     PostalCode: body.Address.BillingPostalCode
   }
-  
+  let saleParams = sale.buildArguments(body.SiteID);
   let params = client.buildArguments(body.SiteID)
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
@@ -48,10 +48,10 @@ app.post('/api', async (req, res) => {
   }
   let exp = body.Payment.expiry.split('/');
   checkout_data.Payments.PaymentInfo['ExpMonth'] = exp[0];
+  
   checkout_data.Payments.PaymentInfo['ExpYear'] = exp[1];
   checkout_data['ClientID'] = clientResponse[0]['ID'];
   console.log('checkout_data', checkout_data)
-  let saleParams = sale.buildArguments(body.SiteID);
   let purchase = await sale.purchase(saleParams, checkout_data)
   console.log("purchase data", purchase);
   // Get Existing Client
