@@ -53,7 +53,7 @@ const getCourses = (params) => {
                 throw err;
             }
             client.setEndpoint(url);
-            await client.GetCourses(params, (err, result) => {
+            client.GetCourses(params, (err, result) => {
                 if(err) {
                     console.log(err);
                 }

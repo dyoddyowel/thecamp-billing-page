@@ -41,7 +41,7 @@ export default class PaymentForm extends Component {
       }
       else if (target.name === 'expiry') {
         this.props.handlePaymentChange({
-          [target.name]: target.value.replace(/ |\//g, ''),
+          [target.name]: target.value.replace(' ', ''),
         });
         this.setState({
           [target.name]: target.value.replace(/ |\//g, ''),

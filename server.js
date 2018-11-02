@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/api', async (req, res) => {
   let body = req.body;
+  console.log("body", body);
   let name = body.Payment.name.split(' ');
   let client_data = {
     Email: body.Email,
@@ -23,13 +24,43 @@ app.post('/api', async (req, res) => {
     City: body.Address.BillingCity,
     State: body.Address.BillingState,
     PostalCode: body.Address.BillingPostalCode
-
   }
+  
   let params = client.buildArguments(body.SiteID)
-  let clients = await client.getExistingClient(params, client_data.Email);
-  console.log("clients working?", clients);
+  // Add Client
+  let clientResponse = await client.addClient(params, client_data);
+  console.log("Client", clientResponse);
+
+  let checkout_data = {
+      Test: "false",
+      CartItems: {
+          CartItem: {
+              Quantity: 1,
+              Item: {
+                  ID: 11020
+                }
+              }
+            },
+            Payments: {
+                PaymentInfo: body.Payment,
+                ...body.Address
+              }
+  }
+  let exp = body.Payment.expiry.split('/');
+  checkout_data.Payments.PaymentInfo['ExpMonth'] = exp[0];
+  checkout_data.Payments.PaymentInfo['ExpYear'] = exp[1];
+  checkout_data['ClientID'] = clientResponse[0]['ID'];
+  console.log('checkout_data', checkout_data)
+  let saleParams = sale.buildArguments(body.SiteID);
+  let purchase = await sale.purchase(saleParams, checkout_data)
+  console.log("purchase data", purchase);
+  // Get Existing Client
+  // let clients = await client.getExistingClient(params, client_data.Email);
+  // Get Required Fields
   // let requiredFields = await client.getRequiredFields(params);
-  // let clientResponse = await client.addClient(params, client_data);
+  // let services = await sale.getService(serviceParams)
+
+  // console.log("services working?", services);
   // let params = classes.buildArguments(body.SiteID);
   // let getClasses = await classes.getClasses(params);
   // console.log("class response", clients);

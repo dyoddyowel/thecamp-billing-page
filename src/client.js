@@ -59,7 +59,7 @@ const getExistingClient = (params, email) => {
                 if(err) {
                     console.log(err);
                 }
-                 return resolve(result);
+                 return resolve(result.GetClientsResult.Clients);
             })
         });
     })
@@ -95,7 +95,7 @@ const addClient = (args, fields) => {
                 if(err) {
                     console.log(err);
                 }
-                return resolve(JSON.stringify(result));
+                return resolve(JSON.stringify(result.AddOrUpdateClientsResult.Clients.Client));
             })
         });
     });

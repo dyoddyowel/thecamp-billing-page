@@ -53,7 +53,7 @@ const purchase = (params, item) => {
                   throw err;
               }
               client.setEndpoint(url);
-              client.CheckoutShoppingCart(args, (err, result) => {
+              client.CheckoutShoppingCart(params, (err, result) => {
                   if(err) {
                       console.log(err);
                   }
@@ -64,5 +64,5 @@ const purchase = (params, item) => {
 }
 
 module.exports.purchase = purchase;
-module.exports.services = getService;
+module.exports.getService = getService;
 module.exports.buildArguments = buildArguments;
