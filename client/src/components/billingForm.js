@@ -7,21 +7,37 @@ class BillingForm extends Component {
         super(props);
         this.state = {
             address: {
-                "BillingFirstName": "",
-                "BillingLastName": "",
                 "BillingAddress": "",
                 "BillingCity": "",
                 "BillingState": "",
                 "BillingPostalCode": "",
+            },
+            payment: {
+                "amount": 89,
+                "number": "",
+                "expiry": "",
+                "cvc": "",
+                "name": ""
             }
         }
     }
 
     handleChange = (e) => {
         let x = this.state.address;
-        console.log(x);
         x[e.target.id] = e.target.value;
-        this.setState({ address: x });
+        this.setState({ address: x }, () => {
+            console.log(this.state)
+        });
+    }
+    
+    handlePaymentChange = (data) => {
+        let x = {
+            ...this.state.payment,
+            ...data
+        };
+        this.setState({ payment: x }, () => {
+            console.log("payment data", this.state);
+        });
     }
 
     setNewValue = (newValue) => {
@@ -35,19 +51,24 @@ class BillingForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         let x = {
-            "Address": this.state.address
+            "Address": this.state.address,
+            "Payment": this.state.payment
         }
-        this.props.saveData(x);
-        this.props.handleSubmit();
+        // this.props.saveData(x);
+        this.props.handleSubmit(x);
     }
 
     render() {
         return(
             <div id="billing-form" className="form">
-                <PaymentForm />
+                <PaymentForm 
+                    amount={this.state.payment['amount']}
+                    cc={this.state.payment['number']}
+                    cvc={this.state.payment['cvc']}
+                    expiry={this.state.payment['expiry']}
+                    ccName={this.state.payment['name']} 
+                    handlePaymentChange={this.handlePaymentChange}/>
                 <h2>Billing Address</h2>
-                <input onChange={this.handleChange} type="text" placeholder="First Name" id="BillingFirstName" name="BillingFirstName" />
-                <input onChange={this.handleChange} type="text" placeholder="Last Name" id="BillingLastName" name="BillingLastName" />
                 <input onChange={this.handleChange} type="text" placeholder="Address" id="BillingAddress" name="BillingAddress" />
                 <div id="city-postal">
                     <input onChange={this.handleChange} type="text" placeholder="City" id="BillingCity" name="BillingCity" />

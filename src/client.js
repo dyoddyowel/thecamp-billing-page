@@ -3,23 +3,31 @@ const base_url = "https://api.mindbodyonline.com/0_5_1/";
 const apiUrl = "ClientService";
 const url = base_url + '/' + apiUrl + '.asmx';
 const wsdl = '?wsdl';
-const args = {
-    "Request": {
-        "Content-Type": "application/json",
-        "API-key": process.env.MINDBODY_API_KEY,
-        "SourceCredentials": {
-            "SourceName": "OnePercentNutrition",
-            "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw=",
-            "SiteIDs": {
-                "int": -99
+const args = {};
+
+const buildArguments = (siteID) => {
+    let params = {
+        "Request": {
+            "Content-Type": "application/json",
+            "API-key": process.env.MINDBODY_API_KEY,
+            "SourceCredentials": {
+                "SourceName": process.env.MINDBODY_SOURCE_NAME,
+                "Password": process.env.MINDBODY_PASSWORD,
+                "SiteIDs": {
+                    "int": siteID
+                }
             },
+            "UserCredentials": {
+                "SiteIDs": {
+                    "int": siteID
+                },
+                "Username": process.env.MINDBODY_STAFF_USERNAME,
+                "Password": process.env.MINDBODY_STAFF_PASSWORD
+            }
         }
-    },
-    "UserCredentials": {
-        "Username": "Siteowner",
-        "Password": "apitest1234"
     }
-};
+    return params;
+}
 
 const getRequiredFields = async (params) => {
     soap.createClient(url + wsdl, (err, client) => {
@@ -32,26 +40,27 @@ const getRequiredFields = async (params) => {
                 console.log(err);
             }
             let requiredFields = convertToObject(result.GetRequiredClientFieldsResult.RequiredClientFields.string);
-            addClient(requiredFields);
+            console.log(requiredFields);
+            // addClient(requiredFields);
         })
     });
 }
 
 const getExistingClient = async (email) => {
     const params = {...args};
-    params.UserCredentials.Username = '_' + params.UserCredentials.Username;
-    params['SearchText'] = email;
+    // params.UserCredentials.Username = '_' + params.UserCredentials.Username;
+    params.Request['SearchText'] = email;
     console.log(params);
-    soap.createClient(url + wsdl, (err, client) => {
+    soap.createClient(url + wsdl, async (err, client) => {
         if (err) {
             throw err;
         }
         client.setEndpoint(url);
-        client.GetClients(params, (err, result) => {
+        await client.GetClients(params, async (err, result) => {
             if(err) {
                 console.log(err);
             }
-            console.log(result);
+            console.log("test",result);
         })
     });
 }	
@@ -66,16 +75,17 @@ const convertToObject = (fields) => {
 }
 
 const addClient = async (fields) => {
-    soap.createClient(url + wsdl, (err, client) => {
+    soap.createClient(url + wsdl, async (err, client) => {
         if (err) {
             throw err;
         }
         client.setEndpoint(url);
-        client.AddOrUpdateClients(args, (err, result) => {
+        client.AddOrUpdateClients(args, async (err, result) => {
             if(err) {
                 console.log(err);
             }
             console.log(JSON.stringify(result));
+            await JSON.stringify(result);
         })
     });
 }
@@ -83,3 +93,4 @@ const addClient = async (fields) => {
 module.exports.getRequiredFields = getRequiredFields;
 module.exports.addClient = addClient;  
 module.exports.getExistingClient = getExistingClient;  
+module.exports.buildArguments = buildArguments;

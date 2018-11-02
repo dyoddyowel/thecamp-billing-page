@@ -32,32 +32,32 @@ class App extends Component {
       step: 1,
       components: {
         1: <EmailAddress saveData={this.saveData} />,
-        2: <BillingForm saveData={this.saveData} handleSubmit={this.handleSubmitA}/>,
+        2: <BillingForm saveData={this.saveData} handleSubmit={this.handleSubmit}/>,
       },
       data: {}
     };
   }
   
-  saveData = (data) => {
+  saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
-    this.setState({ data: newData });
-    this.nextSection();
-    console.log("submitted")
+    await this.setState({ data: newData }, () => {
+      console.log("submitted", this.state);
+      this.nextSection();
+    });
+    return this.state;
   }
 
   componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
-
-  print = () => {
-    console.log(this.state)
+    // this.callApi()
+    //   .then(res => this.setState({ response: res.express }))
+    //   .catch(err => console.log(err));
   }
 
   nextSection = () => {
     let nextStep = this.state.step + 1;
-    this.setState({ step: nextStep }, this.print);
+    this.setState({ step: nextStep }, () => {
+      console.log(this.state);
+    });
   };
 
   callApi = async () => {
@@ -67,21 +67,17 @@ class App extends Component {
     return body;
   };
 
-  handleSubmitA = () => {
-    console.log("Full State", this.state);
-  }
-
-  handleSubmit = async e => {
-    e.preventDefault();
-    const response = await fetch('/api/world', {
+  handleSubmit = async (x) => {
+    let d = await this.saveData(x);
+    const response = await fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ post: this.state.post }),
+      body: JSON.stringify(this.state.data),
     });
     const body = await response.text();
-    this.setState({ responseToPost: body });
+    console.log(body);
   };
 
   render() {

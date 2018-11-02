@@ -14,23 +14,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
-app.post('/api/sale', (req, res) => {
-  
-  res.send('sale endpoint');
-});
-app.post('/api/client', (req, res) => {
-  
-  res.send('client endpoint');
-});
-app.post('/api/payment', (req, res) => {
-  
+app.post('/api', async (req, res) => {
+  let body = req.body;
+  let a = client.buildArguments();
+  console.log(body);
+  let client_data = {
+    Email: req.body.Email,
+    FirstName: req.body.Payment.name,
+    LastName: req.body.Payment.name,
+    AddressLine1: req.body.Address.BillingAddress,
+    MobilePhone: '(909) 393-9075',
+    BirthDate: 'October 31',
+    IsMale: 'N/A'
+  }
+  console.log("Client Data", client_data);
+  let clientResponse = await client.addClient(client_data);
+  console.log("clientresponse", clientResponse);
+  // sale.services();
+  // payment.purchase();
   res.send('payment endpoint');
-});
-app.post('/api/world', (req, res) => {
-  console.log(req.body);
-  res.send(
-    `I received your POST request. This is what you sent me: ${req.body.post}`,
-  );
 });
 
 // Serve any static files built by React

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Cards from 'react-credit-cards';
 import Payment from 'payment';
-import valid from 'card-validator';
 import 'react-credit-cards/es/styles-compiled.css';
 
 export default class PaymentForm extends Component {
@@ -9,15 +8,11 @@ export default class PaymentForm extends Component {
       super(props);
   
       this.state = {
-        number: '',
-        name: '',
-        expiry: '',
-        cvc: '',
-        focused: '',
-        "Amount": 89,
-        "CreditCardNumber": 777777777777,
-        "ExpMonth": 1,
-        "ExpYear": 2018,
+        number: props.cc,
+        name: props.ccName,
+        expiry: props.expiry,
+        cvc: props.cvc,
+        focused: "",
       };
     }
   
@@ -27,6 +22,8 @@ export default class PaymentForm extends Component {
       Payment.formatCardCVC(document.querySelector('[name="cvc"]'));
     }
   
+    
+
     handleInputFocus = ({ target }) => {
       this.setState({
         focused: target.name,
@@ -34,25 +31,29 @@ export default class PaymentForm extends Component {
     };
   
     handleInputChange = ({ target }) => {
-        if (target.name === 'number') {
-            let numberValidation = valid.number(target.value);
-            if(!numberValidation.isPotentiallyValid) {
-                console.log("invalid");
-            }
-        
-        this.setState({
+      if (target.name === 'number') {
+        this.props.handlePaymentChange({
           [target.name]: target.value.replace(/ /g, ''),
-        });
+        })
+        // this.setState({
+        //   [target.name]: target.value.replace(/ /g, ''),
+        // });
       }
       else if (target.name === 'expiry') {
-        this.setState({
+        this.props.handlePaymentChange({
           [target.name]: target.value.replace(/ |\//g, ''),
         });
+        // this.setState({
+        //   [target.name]: target.value.replace(/ |\//g, ''),
+        // });
       }
       else {
-        this.setState({
+        this.props.handlePaymentChange({
           [target.name]: target.value,
         });
+        // this.setState({
+        //   [target.name]: target.value,
+        // });
       }
     };
   
