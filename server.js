@@ -5,31 +5,34 @@ const path = require("path");
 const client = require('./src/client');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
+const classes = require('./src/class');
 
 const port = process.env.PORT || 5000; 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express' });
-});
 app.post('/api', async (req, res) => {
   let body = req.body;
-  let a = client.buildArguments();
-  console.log(body);
+  let name = body.Payment.name.split(' ');
   let client_data = {
-    Email: req.body.Email,
-    FirstName: req.body.Payment.name,
-    LastName: req.body.Payment.name,
-    AddressLine1: req.body.Address.BillingAddress,
-    MobilePhone: '(909) 393-9075',
-    BirthDate: 'October 31',
-    IsMale: 'N/A'
+    Email: body.Email,
+    FirstName: name[0],
+    LastName: name[1],
+    AddressLine1: body.Address.BillingAddress,
+    City: body.Address.BillingCity,
+    State: body.Address.BillingState,
+    PostalCode: body.Address.BillingPostalCode
+
   }
-  console.log("Client Data", client_data);
-  let clientResponse = await client.addClient(client_data);
-  console.log("clientresponse", clientResponse);
+  let params = client.buildArguments(body.SiteID)
+  let clients = await client.getExistingClient(params, client_data.Email);
+  console.log("clients working?", clients);
+  // let requiredFields = await client.getRequiredFields(params);
+  // let clientResponse = await client.addClient(params, client_data);
+  // let params = classes.buildArguments(body.SiteID);
+  // let getClasses = await classes.getClasses(params);
+  // console.log("class response", clients);
   // sale.services();
   // payment.purchase();
   res.send('payment endpoint');

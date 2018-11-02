@@ -35,25 +35,25 @@ export default class PaymentForm extends Component {
         this.props.handlePaymentChange({
           [target.name]: target.value.replace(/ /g, ''),
         })
-        // this.setState({
-        //   [target.name]: target.value.replace(/ /g, ''),
-        // });
+        this.setState({
+          [target.name]: target.value.replace(/ /g, ''),
+        });
       }
       else if (target.name === 'expiry') {
         this.props.handlePaymentChange({
           [target.name]: target.value.replace(/ |\//g, ''),
         });
-        // this.setState({
-        //   [target.name]: target.value.replace(/ |\//g, ''),
-        // });
+        this.setState({
+          [target.name]: target.value.replace(/ |\//g, ''),
+        });
       }
       else {
         this.props.handlePaymentChange({
           [target.name]: target.value,
         });
-        // this.setState({
-        //   [target.name]: target.value,
-        // });
+        this.setState({
+          [target.name]: target.value,
+        });
       }
     };
   

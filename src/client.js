@@ -21,7 +21,7 @@ const buildArguments = (siteID) => {
                 "SiteIDs": {
                     "int": siteID
                 },
-                "Username": process.env.MINDBODY_STAFF_USERNAME,
+                "Username": process.env.MINDBODY_STAFF_USER,
                 "Password": process.env.MINDBODY_STAFF_PASSWORD
             }
         }
@@ -29,40 +29,40 @@ const buildArguments = (siteID) => {
     return params;
 }
 
-const getRequiredFields = async (params) => {
-    soap.createClient(url + wsdl, (err, client) => {
-        if (err) {
-            throw err;
-        }
-        client.setEndpoint(url);
-        client.GetRequiredClientFields(args, (err, result) => {
-            if(err) {
-                console.log(err);
+const getRequiredFields = (params) => {
+    return new Promise ((resolve, reject) => {
+        soap.createClient(url + wsdl, (err, client) => {
+            if (err) {
+                throw err;
             }
-            let requiredFields = convertToObject(result.GetRequiredClientFieldsResult.RequiredClientFields.string);
-            console.log(requiredFields);
-            // addClient(requiredFields);
-        })
-    });
+            client.setEndpoint(url);
+            client.GetRequiredClientFields(params, (err, result) => {
+                if(err) {
+                    console.log(err);
+                }
+                let requiredFields = convertToObject(result.GetRequiredClientFieldsResult.RequiredClientFields.string);
+                return resolve(requiredFields);
+            })
+        });
+    })
 }
 
-const getExistingClient = async (email) => {
-    const params = {...args};
-    // params.UserCredentials.Username = '_' + params.UserCredentials.Username;
+const getExistingClient = (params, email) => {
     params.Request['SearchText'] = email;
-    console.log(params);
-    soap.createClient(url + wsdl, async (err, client) => {
-        if (err) {
-            throw err;
-        }
-        client.setEndpoint(url);
-        await client.GetClients(params, async (err, result) => {
-            if(err) {
-                console.log(err);
+    return new Promise ((resolve, reject) => {
+        soap.createClient(url + wsdl, async (err, client) => {
+            if (err) {
+                throw err;
             }
-            console.log("test",result);
-        })
-    });
+            client.setEndpoint(url);
+            client.GetClients(params, async (err, result) => {
+                if(err) {
+                    console.log(err);
+                }
+                 return resolve(result);
+            })
+        });
+    })
 }	
 
 const convertToObject = (fields) => {
@@ -74,19 +74,30 @@ const convertToObject = (fields) => {
     return rFields;
 }
 
-const addClient = async (fields) => {
-    soap.createClient(url + wsdl, async (err, client) => {
-        if (err) {
-            throw err;
-        }
-        client.setEndpoint(url);
-        client.AddOrUpdateClients(args, async (err, result) => {
-            if(err) {
-                console.log(err);
+const addClient = (args, fields) => {
+    let params = {
+        Request: {
+            'Content-Type': 'application/json',
+            'API-key': '90f5bb6381f34839b14e5e590a9e079f',
+            SourceCredentials: args.Request.SourceCredentials,
+            Clients: {
+                Client: fields
             }
-            console.log(JSON.stringify(result));
-            await JSON.stringify(result);
-        })
+        }
+    }
+    return new Promise((resolve, reject) => {
+        soap.createClient(url + wsdl, (err, client) => {
+            if (err) {
+                throw err;
+            }
+            client.setEndpoint(url);
+            client.AddOrUpdateClients(params, (err, result) => {
+                if(err) {
+                    console.log(err);
+                }
+                return resolve(JSON.stringify(result));
+            })
+        });
     });
 }
 

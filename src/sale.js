@@ -3,92 +3,66 @@ const base_url = "https://api.mindbodyonline.com/0_5_1/";
 const apiUrl = "SaleService";
 const url = base_url + '/' + apiUrl + '.asmx';
 const wsdl = '?wsdl';
-const args = {
-    "Request": {
-        "Content-Type": "application/json",
-        "API-key": process.env.MINDBODY_API_KEY,
-        "SourceCredentials": {
-            "SourceName": "OnePercentNutrition",
-            "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw=",
-            "SiteIDs": {
-                "int": -99
-            }
-        }
-    },
-    "UserCredentials": {
-        "Username": "Siteowner",
-        "Password": "apitest1234"
-    }
-};
+const args = {};
 
-const getService = async () => {
-    soap.createClient(url + wsdl, (err, client) => {
-        if (err) {
-            throw err;
-        }
-        client.setEndpoint(url);
-        client.GetServices(args, (err, result) => {
-            if(err) {
-                console.log(err);
+const buildArguments = (siteID) => {
+    let params = {
+        "Request": {
+            "Content-Type": "application/json",
+            "API-key": process.env.MINDBODY_API_KEY,
+            "SourceCredentials": {
+                "SourceName": process.env.MINDBODY_SOURCE_NAME,
+                "Password": process.env.MINDBODY_PASSWORD,
+                "SiteIDs": {
+                    "int": siteID
+                }
+            },
+            "UserCredentials": {
+                "SiteIDs": {
+                    "int": siteID
+                },
+                "Username": process.env.MINDBODY_STAFF_USER,
+                "Password": process.env.MINDBODY_STAFF_PASSWORD
             }
-            result.GetServicesResult.Services;
-            console.log(result.GetServicesResult.Services);
-        })
+        }
+    }
+    return params;
+}
+
+const getService = (params) => {
+    return new Promise ((resolve, reject) => {
+        soap.createClient(url + wsdl, (err, client) => {
+            if (err) {
+                throw err;
+            }
+            client.setEndpoint(url);
+            client.GetServices(params, (err, result) => {
+                if(err) {
+                    console.log(err);
+                }
+                return resolve(result.GetServicesResult.Services);
+            })
+        });
     });
 }	
 
-const print = async () => {
-    let x = await getService();
+const purchase = (params, item) => {
+        return new Promise ((resolve, reject) => {
+            soap.createClient(url + wsdl, (err, client) => {
+              if (err) {
+                  throw err;
+              }
+              client.setEndpoint(url);
+              client.CheckoutShoppingCart(args, (err, result) => {
+                  if(err) {
+                      console.log(err);
+                  }
+                  return resolve(result.CheckoutShoppingCartResult);
+              })
+          });
+        });
 }
-
-const purchase = async (item, payments, clientID) => {
-    let params =  {
-          CartItems: item,
-          Payments: {
-              PaymentInfo: payments,
-          },
-          ClientID: clientID,
-          Test: "true",
-          ...args
-      };
-
-      soap.createClient(url + wsdl, (err, client) => {
-        if (err) {
-            throw err;
-        }
-        client.setEndpoint(url);
-        client.CheckoutShoppingCart(args, (err, result) => {
-            if(err) {
-                console.log(err);
-            }
-            console.log(result.CheckoutShoppingCartResult);
-        })
-    });
-}
-
-let item = {
-    CartItem: {
-        Quantity: 1,
-        Item: {
-            ID: "1186"
-        }
-    }
-}
-
-let payments = {
-    Amount: 65,
-    CreditCardNumber: 777777777777,
-    ExpMonth: 1,
-    ExpYear: 2030,
-    BillingName: "Michael Burnley",
-    BillingAddress: "120 E Monterey Ave",
-    BillingCity: "San Luis Obispo",
-    BillingState: "CA",
-    BillingPostalCode: 93401
-}
-
-
 
 module.exports.purchase = purchase;
 module.exports.services = getService;
-module.exports.print = print;
+module.exports.buildArguments = buildArguments;
