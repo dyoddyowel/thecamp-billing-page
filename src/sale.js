@@ -17,13 +17,6 @@ const buildArguments = (siteID) => {
                     "int": siteID
                 }
             },
-            "UserCredentials": {
-                "SiteIDs": {
-                    "int": siteID
-                },
-                "Username": process.env.MINDBODY_STAFF_USER,
-                "Password": process.env.MINDBODY_STAFF_PASSWORD
-            }
         }
     }
     return params;

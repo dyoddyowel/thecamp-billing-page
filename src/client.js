@@ -95,7 +95,7 @@ const addClient = (args, fields) => {
                 if(err) {
                     console.log(err);
                 }
-                return resolve(JSON.stringify(result.AddOrUpdateClientsResult.Clients.Client));
+                return resolve(result.AddOrUpdateClientsResult.Clients.Client);
             })
         });
     });

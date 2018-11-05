@@ -16,6 +16,12 @@ app.post('/api', async (req, res) => {
   let body = req.body;
   console.log("body", body);
   let name = body.Payment.name.split(' ');
+  
+  let params = client.buildArguments(body.SiteID)
+
+  let exp = body.Payment.expiry.split('/');
+  // checkout_data.Payments.PaymentInfo['ExpMonth'] = exp[0];
+  // checkout_data.Payments.PaymentInfo['ExpYear'] = exp[1];
   let client_data = {
     Email: body.Email,
     FirstName: name[0],
@@ -25,34 +31,38 @@ app.post('/api', async (req, res) => {
     State: body.Address.BillingState,
     PostalCode: body.Address.BillingPostalCode
   }
-  let saleParams = sale.buildArguments(body.SiteID);
-  let params = client.buildArguments(body.SiteID)
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
-  console.log("Client", clientResponse);
-
   let checkout_data = {
-      Test: "false",
-      CartItems: {
-          CartItem: {
-              Quantity: 1,
-              Item: {
-                  ID: 11020
-                }
-              }
-            },
-            Payments: {
-                PaymentInfo: body.Payment,
-                ...body.Address
-              }
+    Test: "false",
+    CartItems: {
+        CartItem: {
+            Quantity: 1,
+            Item: {
+                ID: 11020
+            }
+        }
+    },
+    Payments: {
+      PaymentInfo: {
+        Amount: body.Payment.amount,
+        CreditCardNumber: body.Payment.number,
+        ExpMonth: exp[0],
+        ExpYear: exp[1],
+        BillingName: body.Payment.name,
+        BillingAddress: body.Address.BillingAddress,
+        BillingCity: body.Address.BillingCity,
+        BillingState: body.Address.BillingState,
+        BillingPostalCode: body.Address.BillingPostalCode,
+      }
+    },
+    ClientID: clientResponse[0]['ID']
   }
-  let exp = body.Payment.expiry.split('/');
-  checkout_data.Payments.PaymentInfo['ExpMonth'] = exp[0];
-  
-  checkout_data.Payments.PaymentInfo['ExpYear'] = exp[1];
-  checkout_data['ClientID'] = clientResponse[0]['ID'];
-  console.log('checkout_data', checkout_data)
+  let saleParams = sale.buildArguments(body.SiteID);
   let purchase = await sale.purchase(saleParams, checkout_data)
+  console.log("client response", clientResponse);
+  console.log("sale params", saleParams);
+  console.log('checkout_data', checkout_data);
   console.log("purchase data", purchase);
   // Get Existing Client
   // let clients = await client.getExistingClient(params, client_data.Email);
