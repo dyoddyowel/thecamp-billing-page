@@ -40,6 +40,8 @@ class EmailForm extends Component {
         <div id="email-box">
           <h3>Join Our Program</h3>
           <div>
+            <input type="text" placeholder="Name" onChange={this.handleChange} />
+            <input type="text" placeholder="Phone Number" onChange={this.handleChange} />
             <input type="text" placeholder="Email Address" onChange={this.handleChange} />
           </div>
           <div>

@@ -14,9 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^4.0.1",
+    "email-templates": "^5.0.2",
     "express": "^4.16.4",
     "node-rest-client": "^3.1.0",
     "npm": "^6.4.1",
+    "pug": "^2.0.3",
     "soap": "^0.25.0"
   },
   "proxy": "http://localhost:5000/"

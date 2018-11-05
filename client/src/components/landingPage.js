@@ -19,10 +19,11 @@ class LandingPage extends Component {
         <br />
         <ul>
           <li>Unlimited sessions @ The Camp 7 days/week for 4 weeks</li>
-          <li>Best Alcoholic Beverages to Minimize Holiday Weight Gain</li>
-          <li>Healthy Holiday Recipes</li>
-          <li>Custom step-by-step nutrition program</li>
-          <li>40 page manual</li>
+          <li>How to Choose the Right Alcoholic Beverages during the Holidays</li>
+          <li>Healthy Holiday Recipes that don't <span>taste</span> healthy.</li>
+          <li>Healthy alternatives to holiday season eating</li>
+          <li>Custom step-by-step nutrition and supplementation program</li>
+          <li>40 page step-by-step manual</li>
         </ul>
       </div>
     );

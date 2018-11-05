@@ -5,7 +5,39 @@ const path = require("path");
 const client = require('./src/client');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
+// const sendEmail = require('./src/sendEmail');
 const classes = require('./src/class');
+
+const Email = require('email-templates');
+
+const sendEmail = (name, emailAddress) => {
+  let email = new Email({
+    message: {
+      from: 'info@thecamptc.com'
+    },
+    // uncomment below to send emails in development/test env:
+    send: true,
+    transport: {
+      jsonTransport: true
+    }
+  });
+  
+  email
+    .send({
+      template: 'mindbody',
+      message: {
+        to: emailAddress
+      },
+      attachments: [{
+        path: '/emails/files/HolidaySurvivalGuideCompact.pdf'
+      }],
+      locals: {
+        name: name
+      }
+    })
+    .then(console.log)
+    .catch(console.error);
+} 
 
 const port = process.env.PORT || 5000; 
 
@@ -68,6 +100,7 @@ app.post('/api', async (req, res) => {
   saleParams.Request['ClientID'] = checkout_data.ClientID;
   let purchase = await sale.purchase(saleParams);
   console.log("purchase data", purchase);
+  sendEmail(body.Payment.name, body.Email);
   res.send('payment endpoint');
 });
 
