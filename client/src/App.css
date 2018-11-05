@@ -1,3 +1,51 @@
+@media (max-width: 700px) {
+
+  .App {
+    width: 100% !important;
+  }
+
+  #card-container form {
+    position: relative !important;
+  }
+
+  .form input {
+    display: inline-block !important;
+    width: 90% !important;
+  }
+
+  #city-state input {
+    width: 90% !important;
+  }
+
+  select {
+    width: 90% !important;
+  }
+
+  .half-width {
+    width: 46% !important;
+  }
+
+  #card-container #card-module {
+    position: relative !important; 
+    left: 0 !important;
+  }
+
+  #card-container {
+    position: relative !important;
+    width: 75% !important;
+    margin: 10% auto auto !important;
+    height: auto !important;
+}
+
+#card-data-box {
+  width: 97.9% !important;
+  position: relative !important;
+  text-align: center !important;
+  margin: auto !important;
+  display: inline-block !important;
+}
+}
+
 .App {
   text-align: center;
   width: 45%;
