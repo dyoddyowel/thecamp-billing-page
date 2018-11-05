@@ -40,7 +40,7 @@ const getRequiredFields = (params) => {
                 if(err) {
                     console.log(err);
                 }
-                let requiredFields = convertToObject(result.GetRequiredClientFieldsResult.RequiredClientFields.string);
+                let requiredFields = result.GetRequiredClientFieldsResult.RequiredClientFields;
                 return resolve(requiredFields);
             })
         });
@@ -85,6 +85,7 @@ const addClient = (args, fields) => {
             }
         }
     }
+    console.log(params);
     return new Promise((resolve, reject) => {
         soap.createClient(url + wsdl, (err, client) => {
             if (err) {

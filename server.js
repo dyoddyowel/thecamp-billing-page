@@ -48,6 +48,8 @@ app.post('/api', async (req, res) => {
   let body = req.body;
   let name = body.Payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
+  let testRequirements = await client.getRequiredFields(params);
+  console.log(testRequirements);
   let exp = body.Payment.expiry.split('/');
   let client_data = {
     Email: body.Email,
@@ -56,12 +58,19 @@ app.post('/api', async (req, res) => {
     AddressLine1: body.Address.BillingAddress,
     City: body.Address.BillingCity,
     State: body.Address.BillingState,
-    PostalCode: body.Address.BillingPostalCode
+    PostalCode: body.Address.BillingPostalCode,
+    Gender: "MF",
+    Birthday: "today"
   }
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
   let month = exp[0];
-  let year = '20' + exp[1].replace(' ','');
+  let year = exp[1].replace(' ','');
+  if(year.length < 4) {
+    year = '20' + year;
+  } else {
+    year = year;
+  }
   let checkout_data = {
     CartItems: {
         CartItem: {
