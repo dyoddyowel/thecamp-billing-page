@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  width: 60%;
+  margin: auto;
+  background: lightgray;
+  height: 100%;
+  -webkit-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
 }
 
 .App-logo {
@@ -19,6 +26,162 @@
   display: block;
 }
 
+#img-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+#img-wrapper img {
+  width: 100%;
+}
+
+#root {
+  height: 1024px;
+}
+
+#email-box {
+  width: 75%;
+  margin: auto;
+}
+
+#email-box h3 {
+  /* color: white; */
+}
+
+.form input {
+  font-size: inherit;
+    font-family: inherit;
+    padding: 5px 4px;
+    letter-spacing: normal;
+}
+
+#card-data-box {
+  width: 72%;
+  position: relative !important;
+  text-align: center;
+  margin: auto;
+}
+
+select {
+  height: 38px;
+}
+
+#city-state input{
+  width: 38.6%;
+}
+
+#header-text {
+  font-size: 25px;
+}
+
+#billing-address {
+  margin-top: 5%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#card-container {
+  position: relative;
+  width: 69%;
+  margin: auto;
+  margin-top: 10%;
+  height: 190px;
+}
+
+#card-container #card-module {
+  position: absolute;
+  left: 0;
+}
+
+#card-container form {
+  position: absolute;
+  top: 20%;
+}
+
+#billing-form button {
+  text-transform: uppercase;
+  height: 50px;
+  width: 69%;
+  margin-top: 5%;
+  background-color: #ca0010;
+  color: #fff;
+  font-family: "Alegreya Sans",sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  padding: 10px 12px;
+}
+
+#billing-form button:disabled {
+  color: black !important;
+  background: lightgray !important;
+  border: 1px solid black !important;
+}
+
+#billing-form button:hover {
+  color: #ca0010;
+  background: white;
+  cursor: pointer;
+}
+
+#email-box button {
+  text-transform: uppercase;
+  height: 50px;
+  background-color: #ca0010;
+  color: #fff;
+  font-family: "Alegreya Sans",sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  padding: 10px 12px;
+}
+
+button:disabled {
+  color: black !important;
+  background: lightgray !important;
+  border: 1px solid black !important;
+}
+
+#email-box button:hover {
+  color: #ca0010;
+  background: white;
+  cursor: pointer;
+}
+
+#component_box {
+  position: relative;
+}
+
+ul {
+  text-align: left;
+}
+
+#email-box div {
+  display: inline-block;
+  width: 100%;
+}
+
+#email-box input {
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#email-box button {
+  width: 100%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -31,7 +194,7 @@
 }
 
 .block {
-  background: gray;
+  /* background: gray; */
   opacity: 0.5;
 }
 

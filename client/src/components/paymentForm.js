@@ -65,16 +65,17 @@ export default class PaymentForm extends Component {
       const { name, number, expiry, cvc, focused } = this.state;
       return (
         <div>
-          <h2>Credit Card</h2>
-          <div>
-            <Cards
-              number={number}
-              name={name}
-              expiry={expiry}
-              cvc={cvc}
-              focused={focused}
-              callback={this.handleCallback}
-            />
+          <div id="card-container">
+            <div id="card-module">
+              <Cards
+                number={number}
+                name={name}
+                expiry={expiry}
+                cvc={cvc}
+                focused={focused}
+                callback={this.handleCallback}
+              />
+            </div>
             <form className="rccs">
               <div>
                 <input
@@ -94,7 +95,7 @@ export default class PaymentForm extends Component {
                   onFocus={this.handleInputFocus}
                 />
               </div>
-              <div>
+              <div id="card-data-box">
                 <input
                   type="tel"
                   className="half-width"

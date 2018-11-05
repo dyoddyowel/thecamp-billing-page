@@ -6,6 +6,8 @@ import logo from './logo.png';
 import './App.css';
 import './bootstrap.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import LandingPage from './components/landingPage';
+import ThankYou from './components/thankYou';
 
 // const NextButton = ({ nextSection }) => {
 //   const clickHandler = (e) => {
@@ -18,8 +20,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const StepComponent = ({ step, components, nextSection }) => {
   return(
-    <div>
-      { step } of 2
+    <div id="component_box">
       { components[step] }
     </div>
   );
@@ -33,6 +34,7 @@ class App extends Component {
       components: {
         1: <EmailAddress saveData={this.saveData} />,
         2: <BillingForm saveData={this.saveData} handleSubmit={this.handleSubmit}/>,
+        3: <ThankYou />
       },
       data: {}
     };
