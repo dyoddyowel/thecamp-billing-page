@@ -48,8 +48,6 @@ app.post('/api', async (req, res) => {
   let body = req.body;
   let name = body.Payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
-  let testRequirements = await client.getRequiredFields(params);
-  console.log(testRequirements);
   let exp = body.Payment.expiry.split('/');
   let client_data = {
     Email: body.Email,
@@ -59,8 +57,9 @@ app.post('/api', async (req, res) => {
     City: body.Address.BillingCity,
     State: body.Address.BillingState,
     PostalCode: body.Address.BillingPostalCode,
-    Gender: "MF",
-    Birthday: "today"
+    Gender: "N/A",
+    BirthDate: "2015-01-01",
+    MobilePhone: body.Phone
   }
   // Add Client
   let clientResponse = await client.addClient(params, client_data);

@@ -7,13 +7,17 @@ class EmailForm extends Component {
   constructor(props) {
     super();
     this.state = {
-      input: "",
+      email: "",
+      phone: "",
+      name: "",
       isDisabled: true
     }
   }
 
   handleChange = (e) => {
-    this.setState({ input: e.target.value });
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      console.log(this.state)
+    });
     if(validator.validate(e.target.value) && e.target.value > '') {
       this.setState({ isDisabled: false });
     } else {
@@ -24,7 +28,9 @@ class EmailForm extends Component {
   clickHandler = (e) => {
       e.preventDefault();
       let x = {
-        "Email": this.state.input
+        "Email": this.state.email,
+        "Phone": this.state.phone,
+        "Name": this.state.name,
       }
       this.props.saveData(x);
   }
@@ -40,9 +46,9 @@ class EmailForm extends Component {
         <div id="email-box">
           <h3>Join Our Program</h3>
           <div>
-            <input type="text" placeholder="Name" onChange={this.handleChange} />
-            <input type="text" placeholder="Phone Number" onChange={this.handleChange} />
-            <input type="text" placeholder="Email Address" onChange={this.handleChange} />
+            <input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
+            <input type="text" name="phone" placeholder="Phone Number" onChange={this.handleChange} />
+            <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} />
           </div>
           <div>
             <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button>

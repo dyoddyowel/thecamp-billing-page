@@ -6,17 +6,7 @@ import logo from './logo.png';
 import './App.css';
 import './bootstrap.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import LandingPage from './components/landingPage';
 import ThankYou from './components/thankYou';
-
-// const NextButton = ({ nextSection }) => {
-//   const clickHandler = (e) => {
-//     nextSection();
-//   }
-//   return (
-//     <div onClick={clickHandler} className="btn">Next</div>
-//   );
-// }
 
 const StepComponent = ({ step, components, nextSection }) => {
   return(
@@ -50,6 +40,7 @@ class App extends Component {
 
   saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
+    console.log(newData)
     await this.setState({ data: newData }, () => {
       console.log("submitted", this.state);
       this.nextSection();
