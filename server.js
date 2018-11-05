@@ -20,8 +20,6 @@ app.post('/api', async (req, res) => {
   let params = client.buildArguments(body.SiteID)
 
   let exp = body.Payment.expiry.split('/');
-  // checkout_data.Payments.PaymentInfo['ExpMonth'] = exp[0];
-  // checkout_data.Payments.PaymentInfo['ExpYear'] = exp[1];
   let client_data = {
     Email: body.Email,
     FirstName: name[0],
@@ -33,49 +31,48 @@ app.post('/api', async (req, res) => {
   }
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
+  let month = exp[0].replace(/\s+/g, '');
+  let year = exp[1].replace(/\s+/g, '');
   let checkout_data = {
-    Test: "false",
     CartItems: {
         CartItem: {
             Quantity: 1,
             Item: {
-                ID: 11020
+              attributes: {
+                'xsi:type': "Service"
+              },  
+              ID: 11019
             }
         }
     },
     Payments: {
       PaymentInfo: {
-        Amount: body.Payment.amount,
+        attributes: {
+          'xsi:type': "CreditCardInfo"
+        },  
+        Amount: 97.0,
         CreditCardNumber: body.Payment.number,
-        ExpMonth: exp[0],
-        ExpYear: exp[1],
+        CVV: body.Payment.cvc,
+        ExpMonth: month,
+        ExpYear: year,
         BillingName: body.Payment.name,
         BillingAddress: body.Address.BillingAddress,
         BillingCity: body.Address.BillingCity,
         BillingState: body.Address.BillingState,
         BillingPostalCode: body.Address.BillingPostalCode,
+        SaveInfo: true
       }
     },
     ClientID: clientResponse[0]['ID']
+    // ClientID: '300014750'
   }
   let saleParams = sale.buildArguments(body.SiteID);
-  let purchase = await sale.purchase(saleParams, checkout_data)
-  console.log("client response", clientResponse);
-  console.log("sale params", saleParams);
-  console.log('checkout_data', checkout_data);
+  saleParams.Request['CartItems'] = checkout_data.CartItems;
+  saleParams.Request['Payments'] = checkout_data.Payments;
+  saleParams.Request['ClientID'] = checkout_data.ClientID;
+  console.log("saleParams data", saleParams);
+  let purchase = await sale.purchase(saleParams);
   console.log("purchase data", purchase);
-  // Get Existing Client
-  // let clients = await client.getExistingClient(params, client_data.Email);
-  // Get Required Fields
-  // let requiredFields = await client.getRequiredFields(params);
-  // let services = await sale.getService(serviceParams)
-
-  // console.log("services working?", services);
-  // let params = classes.buildArguments(body.SiteID);
-  // let getClasses = await classes.getClasses(params);
-  // console.log("class response", clients);
-  // sale.services();
-  // payment.purchase();
   res.send('payment endpoint');
 });
 

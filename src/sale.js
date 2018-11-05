@@ -39,7 +39,8 @@ const getService = (params) => {
     });
 }	
 
-const purchase = (params, item) => {
+const purchase = (params) => {
+    console.log("new args", params);
         return new Promise ((resolve, reject) => {
             soap.createClient(url + wsdl, (err, client) => {
               if (err) {
@@ -48,7 +49,7 @@ const purchase = (params, item) => {
               client.setEndpoint(url);
               client.CheckoutShoppingCart(params, (err, result) => {
                   if(err) {
-                      console.log(err);
+                      console.log("error", err);
                   }
                   return resolve(result.CheckoutShoppingCartResult);
               })
