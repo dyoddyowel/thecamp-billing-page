@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  width: 60%;
+  width: 45%;
   margin: auto;
   background: lightgray;
   height: 100%;
@@ -67,7 +67,7 @@ select {
 }
 
 #city-state input{
-  width: 38.6%;
+  width: 40.5%;
 }
 
 #header-text {
