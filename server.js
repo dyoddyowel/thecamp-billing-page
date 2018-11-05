@@ -14,11 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/api', async (req, res) => {
   let body = req.body;
-  console.log("body", body);
-  let name = body.Payment.name.split(' ');
-  
+  let name = body.Payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
-
   let exp = body.Payment.expiry.split('/');
   let client_data = {
     Email: body.Email,
@@ -31,8 +28,8 @@ app.post('/api', async (req, res) => {
   }
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
-  let month = exp[0].replace(/\s+/g, '');
-  let year = exp[1].replace(/\s+/g, '');
+  let month = exp[0];
+  let year = '20' + exp[1].replace(' ','');
   let checkout_data = {
     CartItems: {
         CartItem: {
@@ -64,13 +61,11 @@ app.post('/api', async (req, res) => {
       }
     },
     ClientID: clientResponse[0]['ID']
-    // ClientID: '300014750'
   }
   let saleParams = sale.buildArguments(body.SiteID);
   saleParams.Request['CartItems'] = checkout_data.CartItems;
   saleParams.Request['Payments'] = checkout_data.Payments;
   saleParams.Request['ClientID'] = checkout_data.ClientID;
-  console.log("saleParams data", saleParams);
   let purchase = await sale.purchase(saleParams);
   console.log("purchase data", purchase);
   res.send('payment endpoint');
