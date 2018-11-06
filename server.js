@@ -5,10 +5,20 @@ const path = require("path");
 const client = require('./src/client');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
-// const sendEmail = require('./src/sendEmail');
 const classes = require('./src/class');
 
 const Email = require('email-templates');
+
+// const smtpConfig = {
+//   host: 'smtp.gmail.com',
+//   port: 587,
+//   secure: false, // upgrade later with STARTTLS
+//   auth: {
+//       user: 'michael@onepercentnutrition.com',
+//       pass: 'Zidane12!'
+//   }
+// };
+// const transporter = nodemailer.createTransport(smtpConfig);
 
 const sendEmail = (name, emailAddress) => {
   let email = new Email({
@@ -18,8 +28,14 @@ const sendEmail = (name, emailAddress) => {
     // uncomment below to send emails in development/test env:
     send: true,
     transport: {
-      jsonTransport: true
-    }
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // upgrade later with STARTTLS
+      auth: {
+          user: 'thatburnleykid@gmail.com',
+          pass: 'Zidane12!t0rnelbow'
+      }
+  }
   });
   
   email
@@ -29,7 +45,7 @@ const sendEmail = (name, emailAddress) => {
         to: emailAddress
       },
       attachments: [{
-        path: '/emails/files/HolidaySurvivalGuideCompact.pdf'
+        path: 'emails/files/HolidaySurvivalGuideCompact.pdf'
       }],
       locals: {
         name: name
@@ -101,7 +117,8 @@ app.post('/api', async (req, res) => {
         SaveInfo: true
       }
     },
-    ClientID: clientResponse[0]['ID']
+    ClientID: clientResponse[0]['ID'],
+    Test: false
   }
   console.log("Client Response", clientResponse);
   console.log("Client Response", clientResponse[0]);
@@ -123,3 +140,4 @@ app.get("*", function(req, res) {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+module.exports.sendmail = sendEmail;
