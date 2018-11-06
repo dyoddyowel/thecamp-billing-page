@@ -44,6 +44,15 @@ class EmailForm extends Component {
         "Name": this.state.name,
       }
       this.props.saveData(x);
+      const response = await fetch('/api/infusionsoft', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(x),
+      });
+      const body = await response.text();
+      console.log(body);
   }
 
   emailChange = (e) => {

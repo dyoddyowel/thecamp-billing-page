@@ -6,8 +6,8 @@ const client = require('./src/client');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
-
 const Email = require('email-templates');
+const Infusionsoft = require('./src/infusionsoft');
 
 // const smtpConfig = {
 //   host: 'smtp.gmail.com',
@@ -59,6 +59,28 @@ const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/api/infusionsoft', async (req, res) => {
+  let body = req.body;
+  let name = body.name.split(' ');
+  let data = {
+    "email_addresses": [{
+        "email": body.Email,
+        "field": "EMAIL1"
+    }],
+    "phone_numbers": [{
+      "field": "PHONE1",
+      "number": body.Phone
+    }],
+    "opt_in_reason": "Black Tie / Black Dress",
+    "given_name": name[0],
+    "family_name": name[1]
+  }
+
+  let updateResponse = await Infusionsoft.postRequest(data, '/contacts');
+  console.log("update response", updateResponse);
+  res.send('contact endpoint');
+})
 
 app.post('/api', async (req, res) => {
   let body = req.body;

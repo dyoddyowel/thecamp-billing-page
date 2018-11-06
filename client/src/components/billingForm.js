@@ -23,6 +23,9 @@ class BillingForm extends Component {
                 "cvc": "",
                 "name": "",
                 "isValid": false
+            },
+            formErrors: {
+                
             }
         }
     }
