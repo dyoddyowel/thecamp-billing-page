@@ -46,5 +46,23 @@ const getLocations = (params) => {
     });
 }
 
+const getActivationCode = (params) => {
+    return new Promise ((resolve, reject) => {
+        soap.createClient(url + wsdl, (err, client) => {
+            if (err) {
+                throw err;
+            }
+            client.setEndpoint(url);
+            client.GetActivationCode(params, (err, result) => {
+                if(err) {
+                    console.log(err);
+                }
+                return resolve(result.GetActivationCodeResult.ActivationCode);
+            })
+        });
+    });
+}
+
 module.exports.getLocations = getLocations;
 module.exports.buildArguments = buildArguments;
+module.exports.getActivationCode = getActivationCode;
