@@ -114,8 +114,19 @@ select {
   height: 38px;
 }
 
+
+.card-form-input-container {
+  width: 69%;
+  margin: auto;
+}
+
+#BillingState {
+  width: 49%;
+}
+
+
 #city-state input{
-  width: 40.5%;
+  width: 51%;
 }
 
 #header-text {
@@ -123,7 +134,9 @@ select {
 }
 
 #billing-address {
-  margin-top: 5%;
+  width: 75%;
+  text-align: center;
+  margin: 5% auto;
 }
 
 .bold {
@@ -132,20 +145,17 @@ select {
 
 #card-container {
   position: relative;
-  width: 69%;
-  margin: auto;
-  margin-top: 10%;
-  height: 190px;
+  width: 100%;
+  margin: 10% auto auto;
 }
 
 #card-container #card-module {
-  position: absolute;
-  left: 0;
+  display: inline-block;
 }
 
 #card-container form {
-  position: absolute;
-  top: 20%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 #billing-form button {
@@ -280,7 +290,7 @@ ul {
 
 .form input {
   display: inline-block;
-  width: 69%;
+  width: 100%;
 }
 
 .form label {

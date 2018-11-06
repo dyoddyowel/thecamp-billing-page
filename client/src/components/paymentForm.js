@@ -77,7 +77,7 @@ export default class PaymentForm extends Component {
               />
             </div>
             <form className="rccs">
-              <div>
+              <div class="card-form-input-container">
                 <input
                   type="tel"
                   name="number"
@@ -86,7 +86,7 @@ export default class PaymentForm extends Component {
                   onFocus={this.handleInputFocus}
                 />
               </div>
-              <div>
+              <div class="card-form-input-container">
                 <input
                   type="text"
                   name="name"
