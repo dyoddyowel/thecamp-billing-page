@@ -28,6 +28,15 @@ class LocationList extends Component {
     }
 
     capitalizeFirstLetter = (text) => {
+        if (text.indexOf('-') > -1)
+        {
+            let a = text.split('-');
+            let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
+            let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
+            let newString = firstword + '-' + secondword;
+            return newString;
+
+        }
         return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
