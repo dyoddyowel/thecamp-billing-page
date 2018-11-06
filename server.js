@@ -57,10 +57,11 @@ app.post('/api', async (req, res) => {
     City: body.Address.BillingCity,
     State: body.Address.BillingState,
     PostalCode: body.Address.BillingPostalCode,
-    Gender: "N/A",
-    BirthDate: "2015-01-01",
+    Gender: "Female",
+    BirthDate: "2018-01-01",
     MobilePhone: body.Phone
   }
+  console.log(client_data)
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
   let month = exp[0];
@@ -78,7 +79,7 @@ app.post('/api', async (req, res) => {
               attributes: {
                 'xsi:type': "Service"
               },  
-              ID: 10579
+              ID: body.ProgramID
             }
         }
     },
@@ -102,6 +103,8 @@ app.post('/api', async (req, res) => {
     },
     ClientID: clientResponse[0]['ID']
   }
+  console.log("Client Response", clientResponse);
+  console.log("Client Response", clientResponse[0]);
   let saleParams = sale.buildArguments(body.SiteID);
   saleParams.Request['CartItems'] = checkout_data.CartItems;
   saleParams.Request['Payments'] = checkout_data.Payments;

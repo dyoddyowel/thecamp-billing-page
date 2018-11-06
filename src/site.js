@@ -46,6 +46,17 @@ const getLocations = (params) => {
     });
 }
 
+const looper = async () => {
+    let new_obj = {};
+    for(let sobj in locations) {
+        // let key = Object.keys(sobj);
+        let t = buildArguments(locations[sobj]['siteID']);
+        let x = await getActivationCode(t);
+        new_obj[sobj] = x;
+    }
+    return new_obj;
+}
+
 const getActivationCode = (params) => {
     return new Promise ((resolve, reject) => {
         soap.createClient(url + wsdl, (err, client) => {
@@ -57,7 +68,7 @@ const getActivationCode = (params) => {
                 if(err) {
                     console.log(err);
                 }
-                return resolve(result.GetActivationCodeResult.ActivationCode);
+                return resolve(result.GetActivationCodeResult.ActivationLink);
             })
         });
     });

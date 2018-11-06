@@ -78,7 +78,7 @@ const addClient = (args, fields) => {
     let params = {
         Request: {
             'Content-Type': 'application/json',
-            'API-key': '90f5bb6381f34839b14e5e590a9e079f',
+            'API-key': process.env.MINDBODY_API_KEY,
             SourceCredentials: args.Request.SourceCredentials,
             Clients: {
                 Client: fields

@@ -32,10 +32,12 @@ class LocationList extends Component {
     }
 
     submitHandler = (e) => {
+        console.log("props locations", this.props.locations);
         let a = this.props.locations;
         let t = this.capitalizeFirstLetter(this.props.match.params.id);
         let x = {
-            SiteID: a[t]
+            SiteID: a[t]['siteID'],
+            ProgramID: a[t]['programID']
         }
         this.props.saveData(x);
     }
