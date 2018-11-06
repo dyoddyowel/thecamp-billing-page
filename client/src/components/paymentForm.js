@@ -13,6 +13,7 @@ export default class PaymentForm extends Component {
         expiry: props.expiry,
         cvc: props.cvc,
         focused: "",
+        isValid: props.isValid
       };
     }
   
@@ -55,10 +56,15 @@ export default class PaymentForm extends Component {
           [target.name]: target.value,
         });
       }
+
+      this.props.handlePaymentChange({ isValid: this.state.isValid});
     };
   
-    handleCallback(type, isValid) {
-      console.log(type, isValid); //eslint-disable-line no-console
+    handleCallback = (type, isValid) => {
+      console.log(isValid)
+      if(isValid) {
+        this.setState({ isValid: true });
+      }
     }
   
     render() {

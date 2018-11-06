@@ -6,6 +6,8 @@
     "card-validator": "^6.0.0",
     "email-validator": "^2.0.4",
     "payment": "^2.3.0",
+    "phone": "^2.2.0",
+    "postcode-validator": "^1.2.0",
     "react": "^16.6.0",
     "react-credit-cards": "^0.7.0",
     "react-dom": "^16.6.0",

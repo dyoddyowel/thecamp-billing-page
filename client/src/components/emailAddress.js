@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LandingPage from './landingPage';
 import validator from "email-validator";
- 
+import phone from 'phone'; 
 
 class EmailForm extends Component {
   constructor(props) {
@@ -14,15 +14,26 @@ class EmailForm extends Component {
     }
   }
 
+  validatePhone = () => {
+    let x = phone(this.state.phone);
+    console.log(x)
+    return x.length > 0 ? true : false;
+  }
+
+  validateEverything = () => {
+      if(validator.validate(this.state.email) && this.state.email > '' && this.validatePhone()) {  
+        this.setState({ isDisabled: false });
+          
+      } else {
+        this.setState({ isDisabled: true });
+      }
+  }
+
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value }, () => {
       console.log(this.state)
     });
-    if(validator.validate(e.target.value) && e.target.value > '') {
-      this.setState({ isDisabled: false });
-    } else {
-      this.setState({ isDisabled: true });
-    }
+    this.validateEverything();
   }
   
   clickHandler = (e) => {
@@ -47,7 +58,7 @@ class EmailForm extends Component {
           <h3>Join Our Program</h3>
           <div>
             <input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
-            <input type="text" name="phone" placeholder="Phone Number" onChange={this.handleChange} />
+            <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} />
             <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} />
           </div>
           <div>

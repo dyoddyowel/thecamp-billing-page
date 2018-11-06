@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import SelectUSState from 'react-select-us-states';
 import PaymentForm from './paymentForm';
+import postcode from 'postcode-validator';
+import cardValidator from 'card-validator';
+
 
 class BillingForm extends Component {
     constructor(props) {
@@ -18,8 +21,21 @@ class BillingForm extends Component {
                 "number": "",
                 "expiry": "",
                 "cvc": "",
-                "name": ""
+                "name": "",
+                "isValid": false
             }
+        }
+    }
+
+    validateEverything = () => {
+        let numberValidation = cardValidator.number(this.state.payment.number);
+        let isValid = numberValidation.isPotentiallyValid;
+        console.log("isvalid", isValid);
+        if(postcode.validate(this.state.address.BillingPostalCode, 'US') && this.state.payment.isValid) {
+            
+            this.setState({ isDisabled: false });
+        } else {
+            this.setState({ isDisabled: true });
         }
     }
 
@@ -29,6 +45,7 @@ class BillingForm extends Component {
         this.setState({ address: x }, () => {
             console.log(this.state)
         });
+        this.validateEverything();
     }
     
     handlePaymentChange = (data) => {
@@ -77,9 +94,9 @@ class BillingForm extends Component {
                             <input onChange={this.handleChange} type="text" placeholder="City" id="BillingCity" name="BillingCity" />
                             <SelectUSState id="BillingState" name="BillingState" className="myClassName" onChange={this.setNewValue} />
                         </div>
-                        <input onChange={this.handleChange} type="text" placeholder="Zip Code" id="BillingPostalCode" name="BillingPostalCode" />
+                        <input onChange={this.handleChange} type="number" placeholder="Zip Code" id="BillingPostalCode" name="BillingPostalCode" />
                     </div>
-                    <button onClick={this.handleSubmit}>Join Class</button>
+                    <button onClick={this.handleSubmit} disabled={this.state.isDisabled}>Join Class</button>
                 </div>
             </div>
 
