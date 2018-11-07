@@ -15,13 +15,11 @@ class EmailForm extends Component {
   }
 
   componentDidMount() {
-    console.log("pixel view", this.props.pixelView)
     this.props.pixelView();
   }
   
   validatePhone = () => {
     let x = phone(this.state.phone);
-    console.log(x)
     return x.length > 0 ? true : false;
   }
 
@@ -35,10 +33,7 @@ class EmailForm extends Component {
   }
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value }, () => {
-      console.log(this.state)
-    });
-    console.log(this.props)
+    this.setState({ [e.target.name]: e.target.value });
     this.validateEverything();
   }
   

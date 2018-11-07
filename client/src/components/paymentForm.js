@@ -61,7 +61,6 @@ export default class PaymentForm extends Component {
     };
   
     handleCallback = (type, isValid) => {
-      console.log(isValid)
       if(isValid) {
         this.setState({ isValid: true });
       }

@@ -31,14 +31,12 @@ class BillingForm extends Component {
     }
 
     componentDidMount() {
-        console.log("pixel view", this.props.pixelView)
         this.props.pixelView();
     }
 
     validateEverything = () => {
         let numberValidation = cardValidator.number(this.state.payment.number);
         let isValid = numberValidation.isPotentiallyValid;
-        console.log("isvalid", isValid);
         if(postcode.validate(this.state.address.BillingPostalCode, 'US') && this.state.payment.isValid) {
             
             this.setState({ isDisabled: false });
@@ -50,9 +48,7 @@ class BillingForm extends Component {
     handleChange = (e) => {
         let x = this.state.address;
         x[e.target.id] = e.target.value;
-        this.setState({ address: x }, () => {
-            console.log(this.state)
-        });
+        this.setState({ address: x });
         this.validateEverything();
     }
     
@@ -61,9 +57,7 @@ class BillingForm extends Component {
             ...this.state.payment,
             ...data
         };
-        this.setState({ payment: x }, () => {
-            console.log("payment data", this.state);
-        });
+        this.setState({ payment: x });
     }
 
     setNewValue = (newValue) => {

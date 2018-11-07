@@ -43,11 +43,9 @@ class App extends Component {
       body: JSON.stringify(x),
     });
     const body = await response.text();
-    console.log(body);
   }
 
   initPixel = (pixelID) => {
-    console.log("pixel id", pixelID)
     const advancedMatching = { 
         // em: 'some@email.com'
     }; // optional, more info: https://developers.facebook.com/docs/facebook-pixel/pixel-with-ads/conversion-tracking#advanced_match
@@ -61,17 +59,13 @@ class App extends Component {
 
   saveSiteID = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
-    await this.setState({ data: newData }, () => {
-      console.log("submitted", this.state);
-    });
+    await this.setState({ data: newData });
     return this.state;
   }
 
   saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
-    console.log(newData)
     await this.setState({ data: newData }, () => {
-      console.log("submitted", this.state);
       this.nextSection();
     });
     return this.state;
@@ -79,9 +73,7 @@ class App extends Component {
 
   nextSection = () => {
     let nextStep = this.state.step + 1;
-    this.setState({ step: nextStep }, () => {
-      console.log(this.state);
-    });
+    this.setState({ step: nextStep });
   };
 
   handleSubmit = async (x) => {
@@ -94,7 +86,6 @@ class App extends Component {
       body: JSON.stringify(this.state.data),
     });
     const body = await response.text();
-    console.log(body);
     ReactPixel.track('Purchase', {
       'currency': 'usd',
       'value': 97.0
