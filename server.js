@@ -8,7 +8,19 @@ const payment = require('./src/payment');
 const classes = require('./src/class');
 const Email = require('email-templates');
 const Infusionsoft = require('./src/infusionsoft');
-const sendmail = require('sendmail')();
+const sendmail = require('sendmail')({
+  logger: {
+    debug: console.log,
+    info: console.info,
+    warn: console.warn,
+    error: console.error
+  },
+  silent: false,
+  devPort: 1025, // Default: False
+  devHost: 'localhost', // Default: localhost
+  smtpPort: 2525, // Default: 25
+  smtpHost: 'localhost' // Default: -1 - extra smtp host after resolveMX
+})
  
 const sendEmail = (emailAddress) => {
 
@@ -19,8 +31,8 @@ const sendEmail = (emailAddress) => {
     attachments: [{   // use URL as an attachment
       filename: 'HolidaySurvivalGuide.pdf',
       path: 'https://drive.google.com/uc?export=view&id=1PS00GEqMjNLuGedrIyQf6My7fcqsj4Uw',
-    },],
-    html: "Thank you for your purchase and for participating in The Camp's  Black Dress Black Tie Holiday Program.",
+    }],
+    html: "Thank you for your purchase and for participating in The Camp's Black Dress Black Tie Holiday Program.",
   }, function(err, reply) {
     console.log(err && err.stack);
     console.dir(reply);
