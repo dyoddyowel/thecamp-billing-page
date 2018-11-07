@@ -4,6 +4,10 @@
     width: 100% !important;
   }
 
+  #thank-you-container button {
+    font-size: 13px !important;
+  }
+
   #card-container form {
     position: relative !important;
   }
@@ -118,6 +122,33 @@ select {
 .card-form-input-container {
   width: 69%;
   margin: auto;
+}
+
+#thank-you-container, #thank-you-image-wrapper {
+  width: 100%;
+}
+
+#thank-you-container button {
+  text-transform: uppercase;
+  height: 50px;
+  width: 95%;
+  background-color: #ca0010;
+  color: #fff;
+  font-family: "Alegreya Sans",sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 22px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border: none;
+  padding: 10px 12px;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+#thank-you-image-wrapper img {
+  width: 100%;
 }
 
 #BillingState {
