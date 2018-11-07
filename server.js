@@ -8,51 +8,23 @@ const payment = require('./src/payment');
 const classes = require('./src/class');
 const Email = require('email-templates');
 const Infusionsoft = require('./src/infusionsoft');
+const sendmail = require('sendmail')();
+ 
+const sendEmail = (emailAddress) => {
 
-// const smtpConfig = {
-//   host: 'smtp.gmail.com',
-//   port: 587,
-//   secure: false, // upgrade later with STARTTLS
-//   auth: {
-//       user: 'michael@onepercentnutrition.com',
-//       pass: 'Zidane12!'
-//   }
-// };
-// const transporter = nodemailer.createTransport(smtpConfig);
-
-const sendEmail = (name, emailAddress) => {
-  let email = new Email({
-    message: {
-      from: 'info@thecamptc.com'
-    },
-    // uncomment below to send emails in development/test env:
-    send: true,
-    transport: {
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false, // upgrade later with STARTTLS
-      auth: {
-          user: 'thatburnleykid@gmail.com',
-          pass: 'Zidane12!t0rnelbow'
-      }
-  }
+  sendmail({
+    from: 'no-reply@thecamptc.com',
+    to: emailAddress,
+    subject: 'Holiday Survival Guide from The Camp',
+    attachments: [{   // use URL as an attachment
+      filename: 'HolidaySurvivalGuide.pdf',
+      path: 'https://drive.google.com/uc?export=view&id=1PS00GEqMjNLuGedrIyQf6My7fcqsj4Uw'
+    },],
+    html: "Thank you for your purchase and for participating in The Camp's  Black Dress Black Tie Holiday Program.",
+  }, function(err, reply) {
+    console.log(err && err.stack);
+    console.dir(reply);
   });
-  
-  email
-    .send({
-      template: 'mindbody',
-      message: {
-        to: emailAddress
-      },
-      attachments: [{
-        path: 'emails/files/HolidaySurvivalGuideCompact.pdf'
-      }],
-      locals: {
-        name: name
-      }
-    })
-    .then(console.log)
-    .catch(console.error);
 } 
 
 const port = process.env.PORT || 5000; 
@@ -151,16 +123,12 @@ app.post('/api', async (req, res) => {
     ClientID: clientResponse[0]['ID'],
     Test: false
   }
-  console.log("Client Response", clientResponse);
-  console.log("Client Response", clientResponse[0]);
   let saleParams = sale.buildArguments(body.SiteID);
   saleParams.Request['CartItems'] = checkout_data.CartItems;
   saleParams.Request['Payments'] = checkout_data.Payments;
   saleParams.Request['ClientID'] = checkout_data.ClientID;
   let purchase = await sale.purchase(saleParams);
-  console.log("purchase data", purchase);
-  sendEmail(body.Payment.name, body.Email);
-  res.send('payment endpoint');
+  sendEmail(body.Email);
 });
 
 // Serve any static files built by React
@@ -171,4 +139,3 @@ app.get("*", function(req, res) {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
-module.exports.sendmail = sendEmail;
