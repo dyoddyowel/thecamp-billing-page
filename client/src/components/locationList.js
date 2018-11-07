@@ -10,6 +10,7 @@ class LocationList extends Component {
         };
     }
 
+    
     componentDidMount() {
         this.submitHandler();
         let newString = this.state.selected.replace(/-/g, " ");
@@ -48,7 +49,10 @@ class LocationList extends Component {
             SiteID: a[t]['siteID'],
             ProgramID: a[t]['programID'],
             TagID: a[t]['tagID'],
+            PixelID: a[t]['pixelID']
         }
+        console.log(x)
+        this.props.initPixel(x.PixelID);
         this.props.saveData(x);
     }
 
