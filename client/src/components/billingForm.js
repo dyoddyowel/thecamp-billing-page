@@ -76,6 +76,27 @@ class BillingForm extends Component {
         }
         // this.props.saveData(x);
         this.props.handleSubmit(x);
+        let clear_data = {
+            isDisabled: true,
+            address: {
+                "BillingAddress": "",
+                "BillingCity": "",
+                "BillingState": "",
+                "BillingPostalCode": "",
+            },
+            payment: {
+                "amount": 89,
+                "number": "",
+                "expiry": "",
+                "cvc": "",
+                "name": "",
+                "isValid": false
+            },
+            formErrors: {
+                
+            }
+        }
+        this.setState(clear_data);
     }
 
     render() {
