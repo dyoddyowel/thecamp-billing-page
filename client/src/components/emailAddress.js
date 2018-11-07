@@ -5,7 +5,7 @@ import phone from 'phone';
 
 class EmailForm extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       email: "",
       phone: "",
@@ -21,7 +21,7 @@ class EmailForm extends Component {
   }
 
   validateEverything = () => {
-      if(validator.validate(this.state.email) && this.state.email > '' && this.validatePhone()) {  
+      if(validator.validate(this.state.email) && this.state.email > '' && this.validatePhone() && this.state.name > '') {  
         this.setState({ isDisabled: false });
           
       } else {
@@ -33,10 +33,11 @@ class EmailForm extends Component {
     this.setState({ [e.target.name]: e.target.value }, () => {
       console.log(this.state)
     });
+    console.log(this.props)
     this.validateEverything();
   }
   
-  clickHandler = (e) => {
+  clickHandler = async (e) => {
       e.preventDefault();
       let x = {
         "Email": this.state.email,
@@ -44,15 +45,6 @@ class EmailForm extends Component {
         "Name": this.state.name,
       }
       this.props.saveData(x);
-      const response = await fetch('/api/infusionsoft', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(x),
-      });
-      const body = await response.text();
-      console.log(body);
   }
 
   emailChange = (e) => {

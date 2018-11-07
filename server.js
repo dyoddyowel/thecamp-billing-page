@@ -62,7 +62,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/api/infusionsoft', async (req, res) => {
   let body = req.body;
-  let name = body.name.split(' ');
+  let name = body.Name.split(' ');
+  let tag = body.TagID;
+  console.log(tag);
+  console.log(body);
   let data = {
     "email_addresses": [{
         "email": body.Email,
@@ -77,8 +80,14 @@ app.post('/api/infusionsoft', async (req, res) => {
     "family_name": name[1]
   }
 
-  let updateResponse = await Infusionsoft.postRequest(data, '/contacts');
-  console.log("update response", updateResponse);
+  let updateResponse = await Infusionsoft.post(data, '/contacts');
+  let tagParam = {
+    "tagIds": [tag]
+  };
+  let contactURL = '/contacts/' + updateResponse['id'] + '/tags';
+  let tagResponse = await Infusionsoft.post(tagParam, contactURL);
+  console.log("contact response", tagResponse);
+  console.log("update response", updateResponse['id']);
   res.send('contact endpoint');
 })
 

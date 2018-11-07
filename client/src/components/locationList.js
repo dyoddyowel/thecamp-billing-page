@@ -46,7 +46,8 @@ class LocationList extends Component {
         let t = this.capitalizeFirstLetter(this.props.match.params.id);
         let x = {
             SiteID: a[t]['siteID'],
-            ProgramID: a[t]['programID']
+            ProgramID: a[t]['programID'],
+            TagID: a[t]['tagID'],
         }
         this.props.saveData(x);
     }
