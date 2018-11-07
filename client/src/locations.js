@@ -168,10 +168,10 @@ const locations = {
     pixelID: '1097520526963386'
   },
   'Galerias-Mexicali': {
-    siteID: '524525',
-    programID: '',
-    tagID: '3024',
-    pixelID: '1909088135976095'
+    siteID: '620570',
+    programID: '100055',
+    tagID: '2982',
+    pixelID: '184828872165057'
   },
   'Gilbert': {
     siteID: '589611',
@@ -648,11 +648,10 @@ const locations = {
     pixelID: '575083292684462'
   },
   'Zona-Dorada-Mexicali': {
-    tagID: '3180',
-    pixelID: '',
-    siteID: '557811',
-    programID: '1102215023205325',
-
+    siteID: '620570',
+    programID: '100055',
+    tagID: '2982',
+    pixelID: '184828872165057'
   },
 }
 

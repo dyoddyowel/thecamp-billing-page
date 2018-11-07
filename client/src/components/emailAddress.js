@@ -51,6 +51,7 @@ class EmailForm extends Component {
         "Name": name,
       }
       this.props.saveData(x);
+      this.props.nextSection();
       this.props.startCheckout('InitiateCheckout', {
         'currency': 'usd',
         'value': 97.00

@@ -6,7 +6,6 @@ const client = require('./src/client');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
-const Email = require('email-templates');
 const Infusionsoft = require('./src/infusionsoft');
 
 const port = process.env.PORT || 5000; 
@@ -105,6 +104,7 @@ app.post('/api', async (req, res) => {
   saleParams.Request['Payments'] = checkout_data.Payments;
   saleParams.Request['ClientID'] = checkout_data.ClientID;
   let purchase = await sale.purchase(saleParams);
+  res.send(purchase.Status);
 });
 
 // Serve any static files built by React

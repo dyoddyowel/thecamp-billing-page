@@ -22,8 +22,6 @@ export default class PaymentForm extends Component {
       Payment.formatCardExpiry(document.querySelector('[name="expiry"]'));
       Payment.formatCardCVC(document.querySelector('[name="cvc"]'));
     }
-  
-    
 
     handleInputFocus = ({ target }) => {
       this.setState({
@@ -35,7 +33,7 @@ export default class PaymentForm extends Component {
       if (target.name === 'number') {
         this.props.handlePaymentChange({
           [target.name]: target.value.replace(/ /g, ''),
-        })
+        });
         this.setState({
           [target.name]: target.value.replace(/ /g, ''),
         });
@@ -53,16 +51,16 @@ export default class PaymentForm extends Component {
           [target.name]: target.value,
         });
         this.setState({
-          [target.name]: target.value,
-        });
-      }
-
-      this.props.handlePaymentChange({ isValid: this.state.isValid});
+          [target.name]: target.value
+        })
+      } 
     };
   
     handleCallback = (type, isValid) => {
       if(isValid) {
-        this.setState({ isValid: true });
+        this.setState({ isValid: true }, () => {
+          this.props.handlePaymentChange({ isValid: this.state.isValid});
+        });
       }
     }
   

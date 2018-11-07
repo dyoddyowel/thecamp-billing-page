@@ -23,9 +23,10 @@ class App extends Component {
     super();
     this.state = {
       step: 1,
+      error: false,
       data: {},
       components: {
-        1: <EmailAddress saveData={this.saveEmailData} pixelView={ReactPixel.pageView} startCheckout={ReactPixel.track}/>,
+        1: <EmailAddress nextSection={this.nextSection} saveData={this.saveEmailData} pixelView={ReactPixel.pageView} startCheckout={ReactPixel.track}/>,
         2: <BillingForm saveData={this.saveData} handleSubmit={this.handleSubmit} pixelView={ReactPixel.pageView}/>,
         3: <ThankYou pixelView={ReactPixel.pageView}/>
       },
@@ -65,9 +66,7 @@ class App extends Component {
 
   saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
-    await this.setState({ data: newData }, () => {
-      this.nextSection();
-    });
+    await this.setState({ data: newData });
     return this.state;
   }
 
@@ -77,6 +76,7 @@ class App extends Component {
   };
 
   handleSubmit = async (x) => {
+    this.setState({ error: false });
     let d = await this.saveData(x);
     const response = await fetch('/api', {
       method: 'POST',
@@ -85,11 +85,17 @@ class App extends Component {
       },
       body: JSON.stringify(this.state.data),
     });
-    const body = await response.text();
-    ReactPixel.track('Purchase', {
-      'currency': 'usd',
-      'value': 97.0
-    });
+
+    const status = await response.text();
+    if(status === "Success") {
+      this.nextSection();
+      ReactPixel.track('Purchase', {
+        'currency': 'usd',
+        'value': 97.0
+      });
+    } else {
+      this.setState({ error: true });
+    }
   };
 
   render() {
@@ -99,6 +105,9 @@ class App extends Component {
             <div>
               <img src={logo} alt="The Camp" />
             </div>
+            {
+              this.state.error ? <ErrorComponent /> : <span></span>
+            }
             <Route path="/:id" render={props => <LocationList {...props} saveData={this.saveSiteID} locations={locations} initPixel={this.initPixel} /> } />
               <div className="block focused">
                 <StepComponent 
@@ -111,5 +120,11 @@ class App extends Component {
     );
   }
 }
+
+const ErrorComponent = () => (
+  <div className="error">
+    Unable to complete Purchase. Please Check Your Payment Details.
+  </div>
+);
 
 export default App;
