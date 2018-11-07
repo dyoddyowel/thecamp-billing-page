@@ -9,7 +9,8 @@ class EmailForm extends Component {
     this.state = {
       email: "",
       phone: "",
-      name: "",
+      fname: "",
+      lname: "",
       isDisabled: true
     }
   }
@@ -23,8 +24,12 @@ class EmailForm extends Component {
     return x.length > 0 ? true : false;
   }
 
+  validateName = () => {
+    return (this.state.lname > "" && this.state.fname > "") ? true : false;
+  }
+
   validateEverything = () => {
-      if(validator.validate(this.state.email) && this.state.email > '' && this.validatePhone() && this.state.name > '') {  
+      if(validator.validate(this.state.email) && this.state.email > '' && this.validatePhone() && this.validateName()) {  
         this.setState({ isDisabled: false });
           
       } else {
@@ -39,10 +44,11 @@ class EmailForm extends Component {
   
   clickHandler = async (e) => {
       e.preventDefault();
+      let name = this.state.fname + ' ' + this.state.lname;
       let x = {
         "Email": this.state.email,
         "Phone": this.state.phone,
-        "Name": this.state.name,
+        "Name": name,
       }
       this.props.saveData(x);
       this.props.startCheckout('InitiateCheckout', {
@@ -62,7 +68,8 @@ class EmailForm extends Component {
         <div id="email-box">
           <h3>Join Our Program</h3>
           <div>
-            <input type="text" name="name" placeholder="Name" onChange={this.handleChange} />
+            <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} />
+            <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} />
             <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} />
             <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} />
           </div>
