@@ -14,6 +14,11 @@ class EmailForm extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log("pixel view", this.props.pixelView)
+    this.props.pixelView();
+  }
+  
   validatePhone = () => {
     let x = phone(this.state.phone);
     console.log(x)
@@ -45,6 +50,10 @@ class EmailForm extends Component {
         "Name": this.state.name,
       }
       this.props.saveData(x);
+      this.props.startCheckout('InitiateCheckout', {
+        'currency': 'usd',
+        'value': 97.00
+      })
   }
 
   emailChange = (e) => {

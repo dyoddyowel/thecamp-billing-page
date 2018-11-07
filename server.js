@@ -18,7 +18,7 @@ const sendEmail = (emailAddress) => {
     subject: 'Holiday Survival Guide from The Camp',
     attachments: [{   // use URL as an attachment
       filename: 'HolidaySurvivalGuide.pdf',
-      path: 'https://drive.google.com/uc?export=view&id=1PS00GEqMjNLuGedrIyQf6My7fcqsj4Uw'
+      path: 'https://drive.google.com/uc?export=view&id=1PS00GEqMjNLuGedrIyQf6My7fcqsj4Uw',
     },],
     html: "Thank you for your purchase and for participating in The Camp's  Black Dress Black Tie Holiday Program.",
   }, function(err, reply) {
@@ -139,3 +139,5 @@ app.get("*", function(req, res) {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+module.exports.sendEmail = sendEmail;

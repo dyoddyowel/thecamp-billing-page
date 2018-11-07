@@ -30,6 +30,11 @@ class BillingForm extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log("pixel view", this.props.pixelView)
+        this.props.pixelView();
+    }
+
     validateEverything = () => {
         let numberValidation = cardValidator.number(this.state.payment.number);
         let isValid = numberValidation.isPotentiallyValid;

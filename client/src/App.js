@@ -25,7 +25,7 @@ class App extends Component {
       step: 1,
       data: {},
       components: {
-        1: <EmailAddress saveData={this.saveEmailData} pixelView={ReactPixel.pageView}/>,
+        1: <EmailAddress saveData={this.saveEmailData} pixelView={ReactPixel.pageView} startCheckout={ReactPixel.track}/>,
         2: <BillingForm saveData={this.saveData} handleSubmit={this.handleSubmit} pixelView={ReactPixel.pageView}/>,
         3: <ThankYou pixelView={ReactPixel.pageView}/>
       },
@@ -95,6 +95,10 @@ class App extends Component {
     });
     const body = await response.text();
     console.log(body);
+    ReactPixel.track('Purchase', {
+      'currency': 'usd',
+      'value': 97.0
+    });
   };
 
   render() {
