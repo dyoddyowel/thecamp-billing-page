@@ -76,10 +76,10 @@ class EmailForm extends Component {
         <div id="email-box">
           <h3>Join Our Program</h3>
           <div>
-            <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} />
-            <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} />
-            <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} />
-            <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} />
+            <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} autocomplete="off"/>
+            <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} autocomplete="off"/>
+            <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} autocomplete="off"/>
+            <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} autocomplete="off"/>
           </div>
           <div>
             <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button>

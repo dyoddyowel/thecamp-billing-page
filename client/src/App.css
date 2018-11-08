@@ -270,6 +270,7 @@ select {
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
+  user-select: none;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
