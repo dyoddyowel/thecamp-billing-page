@@ -29,12 +29,21 @@ class LocationList extends Component {
     }
 
     capitalizeFirstLetter = (text) => {
-        if (text.indexOf('-') > -1)
+        console.log(text)
+        if (text.search('-') > -1)
         {
+            let newString;
             let a = text.split('-');
-            let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
-            let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
-            let newString = firstword + '-' + secondword;
+            if(a.length > 2) {
+                let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
+                let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
+                let thirdword = a[2].charAt(0).toUpperCase()+ a[2].slice(1);
+                newString = firstword + '-' + secondword + '-' + thirdword;
+            } else {
+                let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
+                let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
+                    newString = firstword + '-' + secondword;
+            }
             return newString;
 
         }
@@ -43,6 +52,7 @@ class LocationList extends Component {
 
     submitHandler = (e) => {
         let a = this.props.locations;
+        console.log(this.props.match.params.id)
         let t = this.capitalizeFirstLetter(this.props.match.params.id);
         let x = {
             SiteID: a[t]['siteID'],
