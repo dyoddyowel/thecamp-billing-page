@@ -4,7 +4,7 @@ const AdCopy = () => (
   <div>
         <div id="header-text">Join the <span className="bold">Holiday Survival Program</span> and for just <span className="bold">$97</span> you get:</div>
         <ul>
-          <li>Unlimited sessions @ The Camp 7 days/week for 4 weeks</li>
+          <li>Unlimited sessions @ The Camp 7 days/week for 5 weeks</li>
           <li>How to Choose the Right Alcoholic Beverages during the Holidays</li>
           <li>Healthy Holiday Recipes that don't <span>taste</span> healthy.</li>
           <li>Custom step-by-step nutrition and supplementation program</li>
