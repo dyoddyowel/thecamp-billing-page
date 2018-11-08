@@ -113,7 +113,7 @@ const locations = {
     tagID: '3004',
     pixelID: '1233063763400170'
   },
-  'Downey ': {
+  'Downey': {
     siteID: '273870',
     programID: '10538',
     tagID: '3006',
