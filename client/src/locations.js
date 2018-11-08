@@ -31,7 +31,7 @@ const locations = {
   },
   'Burbank': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '2980',
     pixelID: '179752492676186'
   },
@@ -139,7 +139,7 @@ const locations = {
   },
   'El-Monte': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3014',
     pixelID: '304156889944115'
   },
@@ -337,7 +337,7 @@ const locations = {
   },
   'Monrovia': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3082',
     pixelID: '859360710884359'
   },
@@ -361,7 +361,7 @@ const locations = {
   },
   'Northridge': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3090',
     pixelID: '1065579676890664'
   },
@@ -481,7 +481,7 @@ const locations = {
   },
   'San-Fernando': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3128',
     pixelID: '110603422949518'
   },
@@ -517,7 +517,7 @@ const locations = {
   },
   'Santa-Clarita': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3138',
     pixelID: '517065911823415'
   },
@@ -601,7 +601,7 @@ const locations = {
   },
   'Van-Nuys': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3166',
     pixelID: '161534471052927'
   },
@@ -613,19 +613,19 @@ const locations = {
   },
   'Ventura': {
     siteID: '633911',
-    programID: '',
+    programID: '103175',
     tagID: '3168',
     pixelID: '1157707830943587'
   },
   'West-Chula-Vista': {
     siteID: '616363',
-    programID: '',
+    programID: '10284',
     tagID: '3170',
     pixelID: '1091436784259053'
   },
   'West-Covina': {
     siteID: '264885',
-    programID: '',
+    programID: '10779',
     tagID: '3172',
     pixelID: '350962948626111'
   },
