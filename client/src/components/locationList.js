@@ -29,7 +29,6 @@ class LocationList extends Component {
     }
 
     capitalizeFirstLetter = (text) => {
-        console.log("capitalize", text)
         if (text.search('-') > -1)
         {
             let newString;
@@ -52,7 +51,6 @@ class LocationList extends Component {
 
     submitHandler = (e) => {
         let a = this.props.locations;
-        console.log(this.props.match.params.id)
         let t = this.capitalizeFirstLetter(this.props.match.params.id);
         let x = {
             SiteID: a[t]['siteID'],

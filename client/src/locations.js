@@ -49,7 +49,7 @@ const locations = {
   },
   'Carson': {
     siteID: '298511',
-    programID: '',
+    programID: '10295',
     tagID: '2984',
     pixelID: '629338977239817'
   },
@@ -594,10 +594,10 @@ const locations = {
     pixelID: '2214050265485861'
   },
   'Torrance': {
-    siteID: '962571',
-    programID: '',
-    tagID: '',
-    pixelID: ''
+    siteID: '298511',
+    programID: '10295',
+    tagID: '2984',
+    pixelID: '629338977239817'
   },
   'Van-Nuys': {
     siteID: '264885',
