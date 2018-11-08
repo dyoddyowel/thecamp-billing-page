@@ -6,7 +6,6 @@ import 'react-credit-cards/es/styles-compiled.css';
 export default class PaymentForm extends Component {
     constructor(props) {
       super(props);
-  
       this.state = {
         number: props.cc,
         name: props.ccName,
@@ -79,7 +78,7 @@ export default class PaymentForm extends Component {
                 callback={this.handleCallback}
               />
             </div>
-            <form className="rccs">
+            <form className="rccs" id="card-form">
               <div class="card-form-input-container">
                 <input
                   type="tel"
