@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import SelectUSState from 'react-select-us-states';
 import PaymentForm from './paymentForm';
 import postcode from 'postcode-validator';
-import cardValidator from 'card-validator';
-
+// import cardValidator from 'card-validator';
+import AdCopy from './landingpage/adCopy';
 
 class BillingForm extends Component {
     constructor(props) {
@@ -35,8 +35,8 @@ class BillingForm extends Component {
     }
 
     validateEverything = () => {
-        let numberValidation = cardValidator.number(this.state.payment.number);
-        let isValid = numberValidation.isPotentiallyValid;
+        // let numberValidation = cardValidator.number(this.state.payment.number);
+        // let isValid = numberValidation.isPotentiallyValid;
         if(postcode.validate(this.state.address.BillingPostalCode, 'US') && this.state.payment.isValid) {
             
             this.setState({ isDisabled: false });
@@ -103,8 +103,15 @@ class BillingForm extends Component {
     }
 
     render() {
+        const style = {
+            display: 'none'
+          }
         return(
+            
             <div id="billing-form" className="form">
+                <div className="mobile" style={style}>
+                    <AdCopy />
+                </div>
                 <PaymentForm 
                     amount={this.state.payment['amount']}
                     cc={this.state.payment['number']}

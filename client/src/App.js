@@ -43,7 +43,7 @@ class App extends Component {
       },
       body: JSON.stringify(x),
     });
-    const body = await response.text();
+    await response.text();
   }
 
   initPixel = (pixelID) => {
@@ -77,7 +77,7 @@ class App extends Component {
 
   handleSubmit = async (x) => {
     this.setState({ error: false });
-    let d = await this.saveData(x);
+    await this.saveData(x);
     const response = await fetch('/api', {
       method: 'POST',
       headers: {

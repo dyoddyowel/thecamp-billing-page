@@ -1,5 +1,31 @@
 @media (max-width: 700px) {
 
+  .notmobile {
+    display: none !important;
+  }
+
+  #header-text {
+    font-size: 18px !important;
+    margin-top: 1%;
+    margin-bottom: 1% !important;
+  }
+
+#component_box h1 {
+  font-size: 24px;
+}
+
+.proper {
+  font-size: 15px;
+}
+
+#component_box h3 {
+  font-size: 20px;
+}
+
+  .mobile {
+    display: block !important;
+  }
+
   .App {
     width: 100% !important;
   }
@@ -39,6 +65,15 @@
     width: 75% !important;
     margin: 10% auto auto !important;
     height: auto !important;
+}
+
+
+.notmobile {
+  display: block;
+}
+
+.mobile {
+  display: none;
 }
 
 #card-data-box {
@@ -168,6 +203,7 @@ select {
 
 #header-text {
   font-size: 25px;
+  margin-bottom: 3%;
 }
 
 #billing-address {

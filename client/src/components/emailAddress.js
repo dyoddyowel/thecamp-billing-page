@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import LandingPage from './landingPage';
+import AdHeader from './landingpage/adHeader';
+import AdCopy from './landingpage/adCopy';
 import validator from "email-validator";
 import phone from 'phone'; 
 
@@ -63,9 +64,15 @@ class EmailForm extends Component {
   }
 
   render() {
+    const style = {
+      display: 'none'
+    }
     return(
       <div>
-        <LandingPage />
+        <AdHeader />
+        <div className="notmobile">
+          <AdCopy />
+        </div>
         <div id="email-box">
           <h3>Join Our Program</h3>
           <div>
