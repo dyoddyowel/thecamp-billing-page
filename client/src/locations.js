@@ -287,7 +287,7 @@ const locations = {
     tagID: '3062',
     pixelID: '1588871628082432'
   },
-  'McKinney ': {
+  'Mckinney ': {
     siteID: '568503',
     programID: '100064',
     tagID: '3066',
