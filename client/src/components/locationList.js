@@ -29,7 +29,7 @@ class LocationList extends Component {
     }
 
     capitalizeFirstLetter = (text) => {
-        console.log(text)
+        console.log("capitalize", text)
         if (text.search('-') > -1)
         {
             let newString;
