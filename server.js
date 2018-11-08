@@ -104,7 +104,6 @@ app.post('/api', async (req, res) => {
       }
     },
     ClientID: clientResponse[0]['ID'],
-    Test: false
   }
   let saleParams = sale.buildArguments(body.SiteID);
   saleParams.Request['CartItems'] = checkout_data.CartItems;

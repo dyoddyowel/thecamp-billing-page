@@ -90,11 +90,13 @@ const addClient = (args, fields) => {
         soap.createClient(url + wsdl, (err, client) => {
             if (err) {
                 throw err;
+                return reject(err);
             }
             client.setEndpoint(url);
             client.AddOrUpdateClients(params, (err, result) => {
                 if(err) {
                     console.log(err);
+                    return reject(err);
                 }
                 return resolve(result.AddOrUpdateClientsResult.Clients.Client);
             })
