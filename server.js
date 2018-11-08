@@ -32,11 +32,13 @@ app.post('/api/infusionsoft', async (req, res) => {
   }
 
   let updateResponse = await Infusionsoft.post(data, '/contacts');
+  console.log("Infusionsoft client response", updateResponse);
   let tagParam = {
     "tagIds": [tag]
   };
   let contactURL = '/contacts/' + updateResponse['id'] + '/tags';
   let tagResponse = await Infusionsoft.post(tagParam, contactURL);
+  console.log("Infusionsoft tag Response", tagResponse)
   res.send('contact endpoint');
 })
 
@@ -57,8 +59,13 @@ app.post('/api', async (req, res) => {
     BirthDate: "2018-01-01",
     MobilePhone: body.Phone
   }
+
+  console.log("client_data", client_data);
+
   // Add Client
   let clientResponse = await client.addClient(params, client_data);
+
+  console.log("clientResponse", clientResponse);
   let month = exp[0];
   let year = exp[1].replace(' ','');
   if(year.length < 4) {
@@ -104,6 +111,9 @@ app.post('/api', async (req, res) => {
   saleParams.Request['Payments'] = checkout_data.Payments;
   saleParams.Request['ClientID'] = checkout_data.ClientID;
   let purchase = await sale.purchase(saleParams);
+
+  console.log("Purchase data", purchase);
+
   res.send(purchase.Status);
 });
 
