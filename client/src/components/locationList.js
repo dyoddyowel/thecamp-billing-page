@@ -67,7 +67,6 @@ class LocationList extends Component {
         this.setState({ selected: key });
         e.target.style.display = 'none';
         this.submitHandler();
-        // e.target.class = 'hide';
     }
 
     render() {

@@ -385,7 +385,7 @@ const locations = {
   },
   'Palm-Desert': {
     siteID: '726432',
-    programID: '',
+    programID: '10620',
     tagID: '3098',
     pixelID: '1384696064894963'
   },
@@ -587,12 +587,12 @@ const locations = {
     tagID: '3162',
     pixelID: '1645451662401303'
   },
-  'Tijuana/Zona-Rio': {
-    siteID: '551868',
-    programID: '',
-    tagID: '',
-    pixelID: '2214050265485861'
-  },
+  // 'Tijuana/Zona-Rio': {
+  //   siteID: '551868',
+  //   programID: '',
+  //   tagID: '',
+  //   pixelID: '2214050265485861'
+  // },
   'Torrance': {
     siteID: '298511',
     programID: '10295',
