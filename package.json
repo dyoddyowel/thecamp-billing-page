@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^4.0.1",
+    "dotenv": "^6.1.0",
     "email-templates": "^5.0.2",
     "express": "^4.16.4",
     "infusionsoft-javascript-api": "^0.2.1",
