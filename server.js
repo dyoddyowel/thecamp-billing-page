@@ -111,8 +111,6 @@ app.post('/api', async (req, res) => {
   saleParams.Request['ClientID'] = checkout_data.ClientID;
   let purchase = await sale.purchase(saleParams);
 
-  console.log("Purchase data", purchase);
-
   res.send(purchase.Status);
 });
 
