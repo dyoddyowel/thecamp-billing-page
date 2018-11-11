@@ -355,7 +355,7 @@ const locations = {
   },
   'North-Dallas': {
     siteID: '837070',
-    programID: '',
+    programID: '10296',
     tagID: '3088',
     pixelID: '1109302805771569'
   },
@@ -445,7 +445,7 @@ const locations = {
   },
   'Richardson': {
     siteID: '353209',
-    programID: '',
+    programID: '10280',
     tagID: '3116',
     pixelID: '1783046898576146'
   },
