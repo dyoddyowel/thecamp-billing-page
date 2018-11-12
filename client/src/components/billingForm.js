@@ -9,7 +9,7 @@ class BillingForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isDisabled: true,
+            isDisabled: false,
             address: {
                 "BillingAddress": "",
                 "BillingCity": "",
@@ -41,7 +41,7 @@ class BillingForm extends Component {
             
             this.setState({ isDisabled: false });
         } else {
-            this.setState({ isDisabled: true });
+            this.setState({ isDisabled: false });
         }
     }
 
@@ -77,7 +77,6 @@ class BillingForm extends Component {
         // this.props.saveData(x);
         this.props.handleSubmit(x);
         let clear_data = {
-            isDisabled: true,
             address: {
                 "BillingAddress": "",
                 "BillingCity": "",

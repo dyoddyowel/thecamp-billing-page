@@ -91,7 +91,7 @@ const locations = {
   },
   'Corona': {
     siteID: '233',
-    programID: '',
+    programID: '10296',
     tagID: '2998',
     pixelID: '1637219743219021'
   },
