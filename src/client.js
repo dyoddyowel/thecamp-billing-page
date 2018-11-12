@@ -99,6 +99,7 @@ const addClient = (args, fields) => {
                     reject(err);
                     throw err;
                 }
+                console.log(result.AddOrUpdateClientsResult.Clients);
                 return resolve(result.AddOrUpdateClientsResult.Clients.Client);
             })
         });

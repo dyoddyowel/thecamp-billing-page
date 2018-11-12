@@ -19,7 +19,7 @@ const locations = {
   },
   'Bakersfield': {
     siteID: '539757',
-    programID: '',
+    programID: '102103',
     tagID: '2976',
     pixelID: '124038588258655'
   },
@@ -73,7 +73,7 @@ const locations = {
   },
   'Clearwater': {
     siteID: '698580',
-    programID: '',
+    programID: '10262',
     tagID: '2992',
     pixelID: '1607758422866893'
   },
@@ -145,7 +145,7 @@ const locations = {
   },
   'Escondido': {
     siteID: '581912',
-    programID: '',
+    programID: '101048',
     tagID: '3016',
     pixelID: '236536443725886'
   },
@@ -199,7 +199,7 @@ const locations = {
   },
   'Houston': {
     siteID: '-879013',
-    programID: '',
+    programID: '10306',
     tagID: '3034',
     pixelID: '1759347007673390'
   },
@@ -217,7 +217,7 @@ const locations = {
   },
   'Inglewood': {
     siteID: '740074',
-    programID: '',
+    programID: '101098',
     tagID: '3040',
     pixelID: ''
   },
@@ -301,7 +301,7 @@ const locations = {
   },
   'Mesa': {
     siteID: '497618',
-    programID: '',
+    programID: '11408',
     tagID: '3070',
     pixelID: '1171352239584784'
   },
@@ -331,7 +331,7 @@ const locations = {
   },
   'Modesto': {
     siteID: '289688',
-    programID: '',
+    programID: '11259',
     tagID: '3080',
     pixelID: '1809269429345293'
   },
@@ -426,8 +426,8 @@ const locations = {
     pixelID: '361117030943073'
   },
   'Pittsburgh': {
-    siteID: '953792',
-    programID: '',
+    siteID: '953792', 
+    programID: '10256',
     tagID: '',
     pixelID: '1148149108603193'
   },
@@ -631,19 +631,19 @@ const locations = {
   },
   'Westminster': {
     siteID: '275479',
-    programID: '',
+    programID: '10367',
     tagID: '3174',
     pixelID: '1762087010724053'
   },
   'Wheeling': {
     siteID: '909945',
-    programID: '',
+    programID: '100060',
     tagID: '3176',
     pixelID: '1684887368479739'
   },
   'Woodland-Hills': {
     siteID: '345827',
-    programID: '',
+    programID: '10599',
     tagID: '3178',
     pixelID: '575083292684462'
   },
