@@ -84,10 +84,6 @@ class EmailForm extends Component {
         <VideoPlayer />
         <div className="notmobile">
           <AdCopy />
-          <div id="img-wrapper">
-            <img src="/blacktie.jpg" alt="Landing page" />
-          </div>
-          <a href="#header-text">Back to Top</a>
         </div>
       </div>
     );
