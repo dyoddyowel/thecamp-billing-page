@@ -66,7 +66,7 @@ export default class PaymentForm extends Component {
     render() {
       const { name, number, expiry, cvc, focused } = this.state;
       return (
-        <div>
+        <div id="payment-block">
           <div id="card-container">
             <div id="card-module">
               <Cards

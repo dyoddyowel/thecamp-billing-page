@@ -108,16 +108,19 @@ class BillingForm extends Component {
         return(
             
             <div id="billing-form" className="form">
-                <div className="mobile" style={style}>
-                    <AdCopy />
+                <div id="payment-container">
+                    <div id="copy-block">
+                            <div id="block-header">Get All This for $97:</div>
+                            <AdCopy />
+                    </div>
+                    <PaymentForm 
+                        amount={this.state.payment['amount']}
+                        cc={this.state.payment['number']}
+                        cvc={this.state.payment['cvc']}
+                        expiry={this.state.payment['expiry']}
+                        ccName={this.state.payment['name']} 
+                        handlePaymentChange={this.handlePaymentChange}/>
                 </div>
-                <PaymentForm 
-                    amount={this.state.payment['amount']}
-                    cc={this.state.payment['number']}
-                    cvc={this.state.payment['cvc']}
-                    expiry={this.state.payment['expiry']}
-                    ccName={this.state.payment['name']} 
-                    handlePaymentChange={this.handlePaymentChange}/>
                 <div id="billing-address">
                     <h2>Billing Address</h2>
                     <input onChange={this.handleChange} type="text" placeholder="Address" id="BillingAddress" name="BillingAddress" />

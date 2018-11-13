@@ -1,8 +1,54 @@
 @media (max-width: 700px) {
 
+  #email-box input {
+    width: 95% !important;
+  }
+
   .notmobile {
     display: none !important;
   }
+
+  #email-box button {
+    display: block;
+    height: 75px;
+    font-size: 25px;
+    width: 95% !important;
+    text-align: center;
+    background: #e43b2c;
+    color: #fff;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* height: 55px; */
+    line-height: 40px;
+    border-radius: 5px;
+    border: 0;
+    letter-spacing: 2px;
+    margin: 35px auto 0;
+    padding: 20px;
+  }
+
+  #copy-block {
+    width: 100% !important;
+  }
+
+  #copy-block #header-copy {
+    width: 100% !important;
+  }
+
+  #payment-block {
+    display: inline-block;
+    width: 100% !important;
+    vertical-align: top;
+}
+#billing-address {
+  width: 100% !important;
+  text-align: center !important;
+  margin: 5% auto !important;
+}
+.card-form-input-container {
+  width: 100% !important;
+}
 
   #header-banner {
     background: red !important;
@@ -10,7 +56,7 @@
     font-size: 20px !important;
     width: 100% !important;
     font-weight: bold !important;
-    height: 75px !important;
+    height: 40px !important;
     text-align: center !important;
     margin: auto !important;
     vertical-align: middle !important;
@@ -90,9 +136,20 @@
 
     #card-container {
       position: relative !important;
-      width: 75% !important;
+      width: 100% !important;
       margin: 10% auto auto !important;
       height: auto !important;
+  }
+
+  #header-copy ul li {
+      font-size: 20px !important;
+      list-style-type: circle !important;
+      background: none !important;
+      font-weight: 500 !important;
+      line-height: 27px !important;
+      padding-left: 0 !important;
+      min-height: 27px !important;
+      margin-bottom: 20px !important;
   }
 
 
@@ -105,12 +162,14 @@
   }
 
   #card-data-box {
-    width: 97.9% !important;
+    width: 99.9% !important;
     position: relative !important;
     text-align: center !important;
     margin: auto !important;
     display: inline-block !important;
   }
+
+  
 }
 
 .video-react .video-react-big-play-button {
@@ -211,7 +270,7 @@ box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75); */
 }
 
 select {
-  height: 38px;
+  height: 60px;
 }
 
 
@@ -400,8 +459,49 @@ ul {
   margin: auto;
 }
 
+.form input {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+}
+
+#billing-address {
+  width: 33%;
+  text-align: center;
+  margin: 5% auto;
+}
+
+#block-header {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 1%;
+}
+
 #form-box {
   position: relative;
+}
+
+#payment-container {
+  width: 85%;
+  display: inline-block;
+}
+
+#copy-block #header-copy {
+    margin-top: 1%;
+    width: 60%;
+    float: none; 
+    display: inline-block;
+}
+
+#payment-block {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+#copy-block {
+  display: inline-block;
+  width: 49%;
 }
 
 #email-box button {
