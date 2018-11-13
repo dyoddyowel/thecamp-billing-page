@@ -2,7 +2,30 @@ import React, { Component } from 'react';
 import AdHeader from './landingpage/adHeader';
 import AdCopy from './landingpage/adCopy';
 import validator from "email-validator";
-import phone from 'phone'; 
+import phone from 'phone';
+import "node_modules/video-react/dist/video-react.css"; // import css
+import { Player } from 'video-react';
+
+// http://thecamptc.com/videos/AlexandraThanksgiving_1x1_tiny.mp4
+// http://thecamptc.com/videos/SamAlejandra_wideToFit_tiny.mp4
+// http://thecamptc.com/videos/SamThanksgiving_1x1_tiny.mp4
+
+
+const VideoPlayer = (props) => {
+  return (
+    <Player
+      playsInline
+      poster="/assets/poster.png"
+      src="http://thecamptc.com/videos/SamAlejandra_wideToFit_tiny.mp4"
+    />
+  );
+};
+
+const VideoBlack = () => {
+  return(
+    <div></div>
+  );
+}
 
 class EmailForm extends Component {
   constructor(props) {
