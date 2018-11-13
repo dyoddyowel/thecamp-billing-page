@@ -4,96 +4,149 @@
     display: none !important;
   }
 
+  #header-banner {
+    background: red !important;
+    color: white !important;
+    font-size: 20px !important;
+    width: 100% !important;
+    font-weight: bold !important;
+    height: 75px !important;
+    text-align: center !important;
+    margin: auto !important;
+    vertical-align: middle !important;
+    margin-bottom: 1% !important;
+}
+
   #header-text {
     font-size: 18px !important;
     margin-top: 1%;
     margin-bottom: 1% !important;
   }
 
-#component_box h1 {
-  font-size: 24px;
+  #video-wrapper {
+    display: inline-block !important;
+    width: 100% !important;
+    margin-top: 5% !important;
 }
 
-.proper {
-  font-size: 15px;
-}
-
-#component_box h3 {
-  font-size: 20px;
-}
-
-  .mobile {
-    display: block !important;
-  }
-
-  .App {
+  #email-box {
     width: 100% !important;
   }
 
-  #thank-you-container button {
-    font-size: 13px !important;
+  #email-box button {
+    font-size: 25px !important;
   }
 
-  #card-container form {
+  #component_box h1 {
+    font-size: 24px;
+  }
+
+  .proper {
+    font-size: 15px;
+  }
+
+  #component_box h3 {
+    font-size: 20px;
+  }
+
+    .mobile {
+      display: block !important;
+    }
+
+    .App {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    #thank-you-container button {
+      font-size: 13px !important;
+    }
+
+    #card-container form {
+      position: relative !important;
+    }
+
+    .form input {
+      display: inline-block !important;
+      width: 90% !important;
+    }
+
+    #city-state input {
+      width: 90% !important;
+    }
+
+    select {
+      width: 90% !important;
+    }
+
+    .half-width {
+      width: 46% !important;
+    }
+
+    #card-container #card-module {
+      position: relative !important; 
+      left: 0 !important;
+    }
+
+    #card-container {
+      position: relative !important;
+      width: 75% !important;
+      margin: 10% auto auto !important;
+      height: auto !important;
+  }
+
+
+  .notmobile {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  #card-data-box {
+    width: 97.9% !important;
     position: relative !important;
-  }
-
-  .form input {
+    text-align: center !important;
+    margin: auto !important;
     display: inline-block !important;
-    width: 90% !important;
   }
-
-  #city-state input {
-    width: 90% !important;
-  }
-
-  select {
-    width: 90% !important;
-  }
-
-  .half-width {
-    width: 46% !important;
-  }
-
-  #card-container #card-module {
-    position: relative !important; 
-    left: 0 !important;
-  }
-
-  #card-container {
-    position: relative !important;
-    width: 75% !important;
-    margin: 10% auto auto !important;
-    height: auto !important;
 }
 
-
-.notmobile {
-  display: block;
+.video-react .video-react-big-play-button {
+  top: 42%;
+  left: 40%;
 }
 
-.mobile {
-  display: none;
+#video-wrapper {
+  display: inline-block;
+  width: 45%;
 }
 
-#card-data-box {
-  width: 97.9% !important;
-  position: relative !important;
-  text-align: center !important;
-  margin: auto !important;
-  display: inline-block !important;
+.yellow {
+  background: yellow;
 }
+
+#header-copy {
+  margin-top: 1%;
+  width: 50%;
+  float: right;
+  /* display: inline-block; */
+}
+
+.video-react-controls-enabled {
+  padding-top: 27%;
 }
 
 .App {
   text-align: center;
-  width: 45%;
+  width: 100%;
   margin: auto;
-  background: lightgray;
   height: auto;
+  /* background: lightgray;
   -webkit-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75); */
 }
 
 .App-logo {
@@ -127,12 +180,14 @@ box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
 }
 
 #email-box {
-  width: 75%;
+  width: 50%;
+  display: inline-block;
   margin: auto;
+  vertical-align: top;
 }
 
-#email-box h3 {
-  /* color: white; */
+#email-box input {
+  width: 50%;
 }
 
 .form input {
@@ -249,6 +304,19 @@ select {
   padding: 10px 12px;
 }
 
+#header-banner {
+  background: red;
+  color: white;
+  font-size: 50px;
+  width: 100%;
+  font-weight: bold;
+  height: 75px;
+  text-align: center;
+  margin: auto;
+  vertical-align: middle;
+  margin-bottom: 1%;
+}
+
 #billing-form button:disabled {
   color: black !important;
   background: lightgray !important;
@@ -262,8 +330,12 @@ select {
 }
 
 #email-box button {
+  margin: auto;
   text-transform: uppercase;
+  display: block;
   height: 50px;
+  font-size: 25px;
+  text-align: center;
   background-color: #ca0010;
   color: #fff;
   font-family: "Alegreya Sans",sans-serif;
@@ -277,6 +349,10 @@ select {
   border: none;
   padding: 10px 12px;
   margin-bottom: 10%;
+}
+
+#button-wrapper {
+  width: 50%;
 }
 
 button:disabled {
@@ -299,20 +375,53 @@ ul {
   text-align: left;
 }
 
+#header-copy ul li {
+  font-size: 24px;
+  list-style-type: none;
+  background: transparent url("/info.png") no-repeat scroll 0 0;
+  font-weight: 500;
+  line-height: 27px;
+  padding-left: 55px;
+  min-height: 27px;
+  margin-bottom: 20px;
+}
+
 #email-box div {
   display: inline-block;
   width: 100%;
 }
 
 #email-box input {
-  width: 100%;
-  height: 50px;
+  /* width: 100%; */
+  display: block;
+  height: 50pxz;
   font-size: 25px;
   text-align: center;
+  margin: auto;
+}
+
+#form-box {
+  position: relative;
 }
 
 #email-box button {
-  width: 100%;
+  display: block;
+  height: 75px;
+  font-size: 25px;
+  width: 50%;
+  text-align: center;
+  background: #e43b2c;
+  color: #fff;
+  font-size: 37px;
+  text-transform: uppercase;
+  font-weight: 700;
+  /* height: 55px; */
+  line-height: 40px;
+  border-radius: 5px;
+  border: 0;
+  letter-spacing: 2px;
+  margin: 35px auto 0;
+  padding: 20px;
 }
 
 .App-header {

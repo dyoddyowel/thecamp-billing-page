@@ -3,29 +3,7 @@ import AdHeader from './landingpage/adHeader';
 import AdCopy from './landingpage/adCopy';
 import validator from "email-validator";
 import phone from 'phone';
-import "node_modules/video-react/dist/video-react.css"; // import css
-import { Player } from 'video-react';
-
-// http://thecamptc.com/videos/AlexandraThanksgiving_1x1_tiny.mp4
-// http://thecamptc.com/videos/SamAlejandra_wideToFit_tiny.mp4
-// http://thecamptc.com/videos/SamThanksgiving_1x1_tiny.mp4
-
-
-const VideoPlayer = (props) => {
-  return (
-    <Player
-      playsInline
-      poster="/assets/poster.png"
-      src="http://thecamptc.com/videos/SamAlejandra_wideToFit_tiny.mp4"
-    />
-  );
-};
-
-const VideoBlack = () => {
-  return(
-    <div></div>
-  );
-}
+import VideoPlayer from './landingpage/adVideo';
 
 class EmailForm extends Component {
   constructor(props) {
@@ -93,20 +71,23 @@ class EmailForm extends Component {
     return(
       <div>
         <AdHeader />
+        <div id="email-box">
+          <div id="header-text">Register for the <span className="bold yellow">Holiday Survival Program</span> for just <span className="yellow bold">$97</span>:</div>
+            <div id="form-box">
+              <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} autoComplete="off"/>
+              <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} autoComplete="off"/>
+              <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} autoComplete="off"/>
+              <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} autoComplete="off"/>
+              <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button>
+            </div>
+        </div>
+        <VideoPlayer />
         <div className="notmobile">
           <AdCopy />
-        </div>
-        <div id="email-box">
-          <h3>Join Our Program</h3>
-          <div>
-            <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} autoComplete="off"/>
-            <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} autoComplete="off"/>
-            <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} autoComplete="off"/>
-            <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} autoComplete="off"/>
+          <div id="img-wrapper">
+            <img src="/blacktie.jpg" alt="Landing page" />
           </div>
-          <div>
-            <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button>
-          </div>
+          <a href="#header-text">Back to Top</a>
         </div>
       </div>
     );

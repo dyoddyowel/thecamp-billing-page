@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ThankYou from './components/thankYou';
 import locations from './locations';
 import ReactPixel from 'react-facebook-pixel';
+import HeaderBanner from './components/landingpage/headerBanner';
 
 const StepComponent = ({ step, components, nextSection }) => {
   return(
@@ -90,7 +91,7 @@ class App extends Component {
     if(status === "Success") {
       this.nextSection();
       ReactPixel.track('Purchase', {
-        'currency': 'usd',
+        'currency': 'USD',
         'value': 97.0
       });
     } else {
@@ -102,6 +103,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+            <HeaderBanner />
             <div>
               <img src={logo} alt="The Camp" />
             </div>

@@ -11,9 +11,9 @@ class LandingPage extends Component {
       <div>
         <h1>Holiday Survival Program</h1>
         <h3>Black Tie/Black Dress</h3>
-        <div id="img-wrapper">
+        {/* <div id="img-wrapper">
           <img src="/blacktie.jpg" alt="Landing page" />
-        </div>
+        </div> */}
         <br />
         <div id="header-text">Join the <span className="bold">Holiday Survival Program</span> and for just <span className="bold">$97</span> you get:</div>
         <br />

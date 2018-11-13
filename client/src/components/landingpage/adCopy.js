@@ -2,15 +2,20 @@ import React from 'react';
 
 const AdCopy = () => (
   <div>
-        <div id="header-text">Join the <span className="bold">Holiday Survival Program</span> and for just <span className="bold">$97</span> you get:</div>
-        <ul>
-          <li>Unlimited sessions @ The Camp for 5 weeks</li>
-          <li>How to Choose the Right Alcoholic Beverages during the Holidays</li>
-          <li>Healthy Holiday Recipes that don't <span>taste</span> healthy.</li>
-          <li>Custom step-by-step nutrition and supplementation program</li>
-          <li>34 page step-by-step Holiday Survival Guide</li>
-        </ul>
+        <div id="header-copy">
+          {/* <div id="header-text">For just $97 You Get:</div> */}
+          <ul>
+            <li>5 Weeks of Unlimited Group Training</li>
+            <li>Nutrition Coaching</li>
+            <li>Flexible Meal Plan</li>
+            <li>Holiday Recipes</li>
+            <li>Alcohol Guide (It's the Holidays</li>
+            <li>34 Page Step by Step Manual</li>
+          </ul>
+        </div>
   </div>
 );
+
+
 
 export default AdCopy;
