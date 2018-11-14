@@ -72,7 +72,7 @@ class EmailForm extends Component {
       <div>
         <AdHeader />
         <div id="email-box">
-          <div id="header-text">Register for the <span className="bold yellow">Holiday Survival Program</span> for just <span className="yellow bold">$97</span>:</div>
+          <div id="header-text">Register for the <span className="bold yellow">Holiday Survival Program</span> for just <span className="slash">$197</span> <span className="bold yellow">$97</span>:</div>
             <div id="form-box">
               <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} autoComplete="off"/>
               <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} autoComplete="off"/>

@@ -4,6 +4,7 @@ import PaymentForm from './paymentForm';
 import postcode from 'postcode-validator';
 // import cardValidator from 'card-validator';
 import AdCopy from './landingpage/adCopy';
+import './billingstyle.css';
 
 class BillingForm extends Component {
     constructor(props) {

@@ -144,15 +144,15 @@
   }
 
   #header-copy ul li {
-      font-size: 20px !important;
-      list-style-type: circle !important;
-      background: none !important;
-      font-weight: 500 !important;
-      line-height: 20px !important;
-      padding-left: 0 !important;
-      min-height: 27px !important;
-      margin-bottom: 20px !important;
-  }
+    font-size: 20px !important;
+    list-style-type: circle !important;
+    background: none !important;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    padding-left: 0 !important;
+    min-height: 12px !important;
+    margin-bottom: 5px !important;
+}
 
   .notmobile {
     display: block;
@@ -183,6 +183,11 @@
 
 .yellow {
   background: yellow;
+}
+
+.red {
+  background: red;
+  color: red;
 }
 
 #header-copy {
@@ -574,6 +579,25 @@ ul {
 .form label {
   display: inline-block;
   width: 30%;
+}
+
+.slash {
+  position: relative;
+}
+.slash:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 3px solid;
+  border-color: red;
+
+  -webkit-transform:rotate(-5deg);
+  -moz-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  transform:rotate(-5deg);
 }
 
 @keyframes App-logo-spin {

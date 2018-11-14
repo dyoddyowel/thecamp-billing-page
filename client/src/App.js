@@ -104,7 +104,7 @@ class App extends Component {
       <Router>
         <div className="App">
             <HeaderBanner />
-            <div>
+            <div id="logo-container">
               <img src={logo} alt="The Camp" />
             </div>
             {

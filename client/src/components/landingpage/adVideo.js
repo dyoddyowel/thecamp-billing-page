@@ -12,6 +12,8 @@ const VideoPlayer = (props) => {
     <div id="video-wrapper">
         <Player
         playsInline
+        autoPlay={true}
+        muted={false}
         poster="/videoPoster.png"
         src="http://thecamptc.com/videos/SamAlejandra_wideToFit_tiny.mp4"
         />
