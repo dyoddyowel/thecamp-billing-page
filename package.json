@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "cd client && npm start",
+    "admin": "cd admin && npm start",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd admin && npm install && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\""
   },
   "author": "",
@@ -17,6 +18,7 @@
     "dotenv": "^6.1.0",
     "email-templates": "^5.0.2",
     "express": "^4.16.4",
+    "googleapis": "^36.0.0",
     "infusionsoft-javascript-api": "^0.2.1",
     "node-rest-client": "^3.1.0",
     "npm": "^6.4.1",

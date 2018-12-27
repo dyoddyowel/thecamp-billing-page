@@ -10,6 +10,7 @@ import ThankYou from './components/thankYou';
 import locations from './locations';
 import ReactPixel from 'react-facebook-pixel';
 import HeaderBanner from './components/landingpage/headerBanner';
+import ReactGA from 'react-ga';
 
 const StepComponent = ({ step, components, nextSection }) => {
   return(
@@ -32,6 +33,10 @@ class App extends Component {
         3: <ThankYou pixelView={ReactPixel.pageView}/>
       },
     };
+  }
+
+  componentDidMount() {
+    ReactGA.initialize(process.env.GOOGLE_ANALYTICS_TRACKING_ID);
   }
   
   saveEmailData = async (x) => {
@@ -74,6 +79,7 @@ class App extends Component {
   nextSection = () => {
     let nextStep = this.state.step + 1;
     this.setState({ step: nextStep });
+    ReactGA.pageview(window.location.pathname + window.location.search);
   };
 
   handleSubmit = async (x) => {

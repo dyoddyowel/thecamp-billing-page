@@ -7,7 +7,7 @@ const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
 const Infusionsoft = require('./src/infusionsoft');
-
+const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
 
 app.use(bodyParser.json());
