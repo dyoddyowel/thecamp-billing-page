@@ -14,6 +14,9 @@ class SidePanel extends Component {
           <Link to='/admin'>Home</Link>
         </div>
         <div className="tab">
+          <Link to='/admin/promos'>Promos</Link>
+        </div>
+        <div className="tab">
           <Link to='/admin/locations'>Locations</Link>
         </div>
         <div className="tab">

@@ -37,12 +37,12 @@ const last7days = {
 // analytics views ID
 const views = {
   query: {
-    ids: process.env.GOOGLE_ANALTYICS_ID
+    ids: 'ga:187034035'
   }
 }
 
 const GAGraph = () => (
-  <GoogleProvider clientId={process.env.GOOGLE_ANALYTICS_CLIENT_SECRET}>
+  <GoogleProvider clientId='596829370785-2doaplbfif04hf5un7mp87esks0j99lq.apps.googleusercontent.com'>
     <GoogleDataChart views={views} config={last30days} />
     <GoogleDataChart views={views} config={last7days} />
   </GoogleProvider>
