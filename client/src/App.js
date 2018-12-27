@@ -116,7 +116,7 @@ class App extends Component {
             {
               this.state.error ? <ErrorComponent /> : <span></span>
             }
-            <Route path="/:id" render={props => <LocationList {...props} saveData={this.saveSiteID} locations={locations} initPixel={this.initPixel} /> } />
+            <Route path="/location/:id" render={props => <LocationList {...props} saveData={this.saveSiteID} locations={locations} initPixel={this.initPixel} /> } />
               <div className="block focused">
                 <StepComponent 
                   step={this.state.step}
