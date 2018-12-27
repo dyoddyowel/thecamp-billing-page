@@ -118,7 +118,7 @@ app.post('/api', async (req, res) => {
 app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.static(path.join(__dirname, "admin/build")));
 
-app.get("*", function(req, res) {
+app.get("/client", function(req, res) {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
