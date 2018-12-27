@@ -121,8 +121,14 @@ app.use(express.static(path.join(__dirname, "admin/build")));
 app.get("/client", function(req, res) {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
+app.get("/client/*", function(req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 app.get("/admin", function(req, res) {
+  res.sendFile(path.join(__dirname, "admin/build", "index.html"));
+});
+app.get("/admin/*", function(req, res) {
   res.sendFile(path.join(__dirname, "admin/build", "index.html"));
 });
 

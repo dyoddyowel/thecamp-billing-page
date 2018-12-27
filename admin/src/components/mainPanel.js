@@ -15,7 +15,7 @@ class MainPanel extends Component {
   render() {
     return(
       <div>
-        <Route path='/admin' exact component={Home} />
+        <Route path='/admin/' exact component={Home} />
         <Route path='/admin/logging' exact component={Logging} />
         <Route path='/admin/locations' exact component={Locations} />
         <Route path='/admin/users' exact component={Users} />
