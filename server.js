@@ -116,9 +116,14 @@ app.post('/api', async (req, res) => {
 
 // Serve any static files built by React
 app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "admin/build")));
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
+
+app.get("/admin", function(req, res) {
+  res.sendFile(path.join(__dirname, "admin/build", "index.html"));
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
