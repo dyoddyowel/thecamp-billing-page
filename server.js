@@ -7,11 +7,31 @@ const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
 const Infusionsoft = require('./src/infusionsoft');
+const Timber = require('./src/timber');
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/api/timber/list', async (req, res) => {
+  let request = Timber.list()
+  res.send(request);
+});
+
+//TODO: Write out create alert function for Timber
+app.post('/api/timber/create', async (req, res) => {
+  let params = {
+    aggregate_function: "",
+    condition: "",
+    field_path: "",
+    query: "",
+    threshold: 0,
+    window_seconds: 0
+  }
+  
+  let request = Timber.createAlerts();
+});
 
 app.post('/api/infusionsoft', async (req, res) => {
   let body = req.body;
