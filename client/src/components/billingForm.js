@@ -6,6 +6,8 @@ import postcode from 'postcode-validator';
 import AdCopy from './landingpage/adCopy';
 import './billingstyle.css';
 
+//TODO: Billing Page Hot Link
+
 class BillingForm extends Component {
     constructor(props) {
         super(props);
