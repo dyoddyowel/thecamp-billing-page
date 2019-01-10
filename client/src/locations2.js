@@ -1,5 +1,6 @@
 //TODO: update location tagID
 //TODO: update Location programID
+//TODO: update Miramar, CA and Alexandria
 
 const locations = {
   'Alexandria': {
