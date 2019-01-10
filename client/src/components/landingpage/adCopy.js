@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AdCopy = () => (
+const AdCopy = ({ id }) => (
   <div>
-        <div id="header-copy">
+        <div id={id}>
           <ul>
             <li>Unlimited Training at The Camp</li>
             <li>Nutrition Program to DROP LB's</li>

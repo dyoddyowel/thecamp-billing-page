@@ -35,8 +35,8 @@ const locations = {
   },
   'Bell': {
     siteID: '273870',
-    programID: '10537',
-    tagID: '2978',
+    programID: '10564',
+    tagID: '3236',
     pixelID: '1392379664110280'
   },
   'Burbank': {
@@ -337,6 +337,12 @@ const locations = {
     siteID: '347920',
     programID: '10235',
     tagID: '3078',
+    pixelID: '1780136635595797'
+  },
+  'Miramar-CA': {
+    siteID: '',
+    programID: '',
+    tagID: '378',
     pixelID: '1780136635595797'
   },
   'Modesto': {

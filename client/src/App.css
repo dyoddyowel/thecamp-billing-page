@@ -154,6 +154,17 @@
     margin-bottom: 5px !important;
 }
 
+#billing-copy ul li {
+  font-size: 20px !important;
+  list-style-type: circle !important;
+  background: none !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  padding-left: 0 !important;
+  min-height: 12px !important;
+  margin-bottom: 5px !important;
+}
+
   .notmobile {
     display: block;
   }
@@ -445,6 +456,17 @@ ul {
   margin-bottom: 20px;
 }
 
+#billing-copy ul li {
+  font-size: 24px;
+  list-style-type: none;
+  background: transparent url("/info.png") no-repeat scroll 0 0;
+  font-weight: 500;
+  line-height: 27px;
+  padding-left: 55px;
+  min-height: 27px;
+  margin-bottom: 20px;
+}
+
 #email-box div {
   display: inline-block;
   width: 100%;
@@ -491,6 +513,71 @@ ul {
     width: 60%;
     float: none; 
     display: inline-block;
+}
+
+.billing {
+  width: 100%;
+}
+
+.billing button {
+  display: block;
+  height: 75px;
+  font-size: 25px;
+  width: 50%;
+  text-align: center;
+  background: #e43b2c;
+  color: #fff;
+  font-size: 37px;
+  text-transform: uppercase;
+  font-weight: 700;
+  /* height: 55px; */
+  line-height: 40px;
+  border-radius: 5px;
+  border: 0;
+  letter-spacing: 2px;
+  margin: 35px auto 0;
+  padding: 20px;
+}
+
+.billing button:disabled {
+  color: black !important;
+  background: lightgray !important;
+  border: 1px solid black !important;
+}
+
+.billing #form-box {
+  width: 50%;
+  margin: auto;
+}
+
+.billing #billing-address {
+  width: 50%;
+  margin: auto;
+}
+
+.billing #BillingState {
+  height: 30px;
+}
+
+.billing input {
+  margin: auto;
+  width: 100%;
+}
+
+.billing .card-form-input-container {
+  width: 100%;
+}
+
+.billing #card-data-box {
+  width: 100%;
+}
+
+#billing-copy {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  width: 60%;
+  float: none; 
+  display: inline-block;
 }
 
 #payment-block {

@@ -34,7 +34,7 @@ class EmailForm extends Component {
         </div>
         <VideoPlayer />
         <div className="notmobile">
-          <AdCopy />
+          <AdCopy id="header-copy" />
         </div>
       </div>
     );

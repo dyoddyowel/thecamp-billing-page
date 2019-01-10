@@ -60,7 +60,7 @@ class EmailBox extends Component {
         <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} autoComplete="off"/>
         <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} autoComplete="off"/>
         <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} autoComplete="off"/>
-        <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button>
+        {/* <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button> */}
       </div>
     );
   }

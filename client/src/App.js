@@ -38,7 +38,7 @@ class App extends Component {
       this.nextSection();
       ReactPixel.track('Purchase', {
         'currency': 'USD',
-        'value': 97.0
+        'value': 21.0
       });
     } else {
       this.setState({ error: true });
