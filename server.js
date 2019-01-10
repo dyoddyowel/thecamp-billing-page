@@ -62,8 +62,85 @@ app.post('/api/infusionsoft', async (req, res) => {
   res.send('contact endpoint');
 })
 
-app.post('/api', async (req, res) => {
+app.post('/api/billing', async (req, res) => {
+  console.log("at endpoint");
   let body = req.body;
+  console.log("endpoint", body);
+  let name = body.payment.name.split(' ');  
+  let params = client.buildArguments(body.SiteID)
+  let exp = body.payment.expiry.split('/');
+  let client_data = {
+    Email: body.email,
+    FirstName: name[0],
+    LastName: name[1],
+    AddressLine1: body.address.BillingAddress,
+    City: body.address.BillingCity,
+    State: body.address.BillingState,
+    PostalCode: body.address.BillingPostalCode,
+    Gender: "Female",
+    BirthDate: "2018-01-01",
+    MobilePhone: body.phone
+  }
+
+  console.log("client_data", client_data);
+
+  // Add Client
+  let clientResponse = await client.addClient(params, client_data);
+
+  console.log("clientResponse", clientResponse);
+  let month = exp[0];
+  let year = exp[1].replace(' ','');
+  if(year.length < 4) {
+    year = '20' + year;
+  } else {
+    year = year;
+  }
+  let checkout_data = {
+    Test: 'true',
+    CartItems: {
+        CartItem: {
+            Quantity: 1,
+            Item: {
+              attributes: {
+                'xsi:type': "Service"
+              },  
+              ID: body.ProgramID
+            }
+        }
+    },
+    Payments: {
+      PaymentInfo: {
+        attributes: {
+          'xsi:type': "CreditCardInfo"
+        },  
+        Amount: 21.0,
+        CreditCardNumber: body.payment.number,
+        CVV: body.payment.cvc,
+        ExpMonth: month,
+        ExpYear: year,
+        BillingName: body.payment.name,
+        BillingAddress: body.address.BillingAddress,
+        BillingCity: body.address.BillingCity,
+        BillingState: body.address.BillingState,
+        BillingPostalCode: body.address.BillingPostalCode,
+        SaveInfo: true
+      }
+    },
+    ClientID: clientResponse[0]['ID'],
+  }
+  let saleParams = sale.buildArguments(body.SiteID);
+  saleParams.Request['CartItems'] = checkout_data.CartItems;
+  saleParams.Request['Payments'] = checkout_data.Payments;
+  saleParams.Request['ClientID'] = checkout_data.ClientID;
+  let purchase = await sale.purchase(saleParams);
+  console.log('purchase',purchase)
+  res.send(purchase.Status);
+});
+
+app.post('/api', async (req, res) => {
+  console.log("at endpoint");
+  let body = req.body;
+  console.log("endpoint", body);
   let name = body.Payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
   let exp = body.Payment.expiry.split('/');

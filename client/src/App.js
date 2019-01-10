@@ -58,13 +58,14 @@ class App extends Component {
             }
             <Route path="/:id/landing" render={props => <LandingPage {...props} saveData={this.saveSiteID} locations={locations} initPixel={this.initPixel} /> } />
             <Route path="/:id/billing" render={ props => 
-                      <BillingHotLink 
+                      <BillingHotLink {...props}
                         nextSection={this.nextSection}
                         saveEmailData={this.saveEmailData}
                         startCheckout={ReactPixel.track}
                         saveData={this.saveData}
                         handleSubmit={this.handleSubmit}
-                        pixelView={ReactPixel.pageView} />} 
+                        pixelView={ReactPixel.pageView}
+                        locations={locations} />} 
             />
         </div>
       </Router>

@@ -11,6 +11,8 @@ class BillingHotLink extends Component {
     super(props);
     this.state = {
       isDisabled: false,
+      ProgramID: '',
+      SiteID: '',
       address: {
           "BillingAddress": "",
           "BillingCity": "",
@@ -58,16 +60,7 @@ class BillingHotLink extends Component {
   }
 
   saveEmailData = async (x) => {
-    x['TagID'] = this.state.data.TagID;
-    this.saveData(x);
-    const response = await fetch('/api/infusionsoft', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(x),
-    });
-    await response.text();
+
   }
 
   handleChange = (e) => {
@@ -92,15 +85,41 @@ class BillingHotLink extends Component {
     }
 }
 
+  capitalizeFirstLetter = (text) => {
+    if (text.search('-') > -1)
+    {
+        let newString;
+        let a = text.split('-');
+        if(a.length > 2) {
+            let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
+            let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
+            let thirdword = a[2].charAt(0).toUpperCase()+ a[2].slice(1);
+            newString = firstword + '-' + secondword + '-' + thirdword;
+        } else {
+            let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
+            let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
+                newString = firstword + '-' + secondword;
+        }
+        return newString;
+
+    }
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+
   handleSubmit = async (x) => {
     this.setState({ error: false });
-    await this.saveData(x);
-    const response = await fetch('/api', {
+    let a = this.props.locations;
+    let t = this.capitalizeFirstLetter(this.props.match.params.id);
+    console.log(t);
+    console.log(a);
+    console.log(a[t])
+    this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']})
+    const response = await fetch('/api/billing', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: this.state.data,
+      body: JSON.stringify(this.state),
     });
 
     const status = await response.text();
@@ -124,6 +143,7 @@ class BillingHotLink extends Component {
   }
 
   render() {
+    console.log(this.props)
     return(
       <div className="billing">
         <AdCopy
