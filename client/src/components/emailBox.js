@@ -3,8 +3,8 @@ import validator from "email-validator";
 import phone from 'phone';
 
 class EmailBox extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: "",
       phone: "",
@@ -56,10 +56,10 @@ class EmailBox extends Component {
   render() {
     return(
       <div id="form-box">
-        <input type="text" name="fname" placeholder="First Name" onChange={this.handleChange} autoComplete="off"/>
-        <input type="text" name="lname" placeholder="Last Name" onChange={this.handleChange} autoComplete="off"/>
-        <input type="number" name="phone" placeholder="Phone Number" onChange={this.handleChange} autoComplete="off"/>
-        <input type="text" name="email" placeholder="Email Address" onChange={this.handleChange} autoComplete="off"/>
+        <input type="text" name="fname" placeholder="First Name" onChange={this.props.handleChange} autoComplete="off"/>
+        <input type="text" name="lname" placeholder="Last Name" onChange={this.props.handleChange} autoComplete="off"/>
+        <input type="number" name="phone" placeholder="Phone Number" onChange={this.props.handleChange} autoComplete="off"/>
+        <input type="text" name="email" placeholder="Email Address" onChange={this.props.handleChange} autoComplete="off"/>
         {/* <button onClick={this.clickHandler} disabled={this.state.isDisabled}>Get Started</button> */}
       </div>
     );

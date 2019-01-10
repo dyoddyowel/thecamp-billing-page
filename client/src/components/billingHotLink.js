@@ -40,12 +40,21 @@ class BillingHotLink extends Component {
     return this.state;
   }
 
+  handleEmailChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      console.log(this.state)
+    });
+    this.validateEverything();
+  }
+
   handlePaymentChange = (data) => {
     let x = {
         ...this.state.payment,
         ...data
     };
-    this.setState({ payment: x });
+    this.setState({ payment: x }, () => {
+      console.log(this.state)
+    });
   }
 
   saveEmailData = async (x) => {
@@ -91,7 +100,7 @@ class BillingHotLink extends Component {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.state.data),
+      body: this.state.data,
     });
 
     const status = await response.text();
@@ -106,6 +115,14 @@ class BillingHotLink extends Component {
     }
   };
 
+  setNewValue = (newValue) => {
+    let x = {
+        ...this.state.address
+    };
+    x["BillingState"] = newValue;
+    this.setState({ address: x });
+  }
+
   render() {
     return(
       <div className="billing">
@@ -114,6 +131,7 @@ class BillingHotLink extends Component {
         <h2>Customer Information</h2>
         <EmailBox 
           saveData={this.saveEmailData}
+          handleChange={this.handleEmailChange}
           nextSection={this.props.nextSection} 
           pixelView={this.props.pixelView}
           startCheckout={this.props.pixelView } />
