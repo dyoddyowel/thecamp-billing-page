@@ -111,7 +111,7 @@ class BillingForm extends Component {
             <div id="billing-form" className="form">
                 <div id="payment-container">
                     <div id="copy-block">
-                            <div id="block-header">Get All This for $97:</div>
+                            <div id="block-header">Get All This for $21:</div>
                             <AdCopy />
                     </div>
                     <PaymentForm 
