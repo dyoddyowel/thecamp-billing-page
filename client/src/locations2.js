@@ -1,14 +1,23 @@
+//TODO: update location tagID
+//TODO: update Location programID
+
 const locations = {
+  'Alexandria': {
+    siteID: '830783',
+    programID: '101036',
+    tagID: '3226',
+    pixelID: ''
+  },
   'Anaheim': {
     siteID: '172426',
-    programID: '10579',
-    tagID: '2970',
+    programID: '11603',
+    tagID: '3228',
     pixelID: '1019141084810848'
   },
   'Arcadia': {
     siteID: '505838',
-    programID: '100115',
-    tagID: '2972',
+    programID: '101134',
+    tagID: '3230',
     pixelID: '170049590227137'
   },
   'Arlington': {

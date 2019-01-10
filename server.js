@@ -94,6 +94,7 @@ app.post('/api', async (req, res) => {
     year = year;
   }
   let checkout_data = {
+    Test: 'true',
     CartItems: {
         CartItem: {
             Quantity: 1,
@@ -110,7 +111,7 @@ app.post('/api', async (req, res) => {
         attributes: {
           'xsi:type': "CreditCardInfo"
         },  
-        Amount: 97.0,
+        Amount: 21.0,
         CreditCardNumber: body.Payment.number,
         CVV: body.Payment.cvc,
         ExpMonth: month,
@@ -141,7 +142,7 @@ app.use(express.static(path.join(__dirname, "admin/build")));
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
-app.get("/location/*", function(req, res) {
+app.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 

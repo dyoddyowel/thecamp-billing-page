@@ -17,7 +17,7 @@ const VideoPlayer = (props) => {
           autoPlay={true}
           muted={false}
           poster="http://thecamptc.com/videos/videoPoster.PNG"
-          src="http://thecamptc.com/videos/SamAlejandra_wideToFit_tiny.mp4"
+          src="http://thecamptc.com/videos/ToughLoveTraining.mp4"
         />
     </div>
   );

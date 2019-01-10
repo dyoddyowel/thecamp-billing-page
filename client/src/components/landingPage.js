@@ -9,13 +9,13 @@ class LandingPage extends Component {
   render() {
     return(
       <div>
-        <h1>Holiday Survival Program</h1>
-        <h3>Black Tie/Black Dress</h3>
+        <h1>Tough Love Training</h1>
+        <h3>Tough Love Training</h3>
         {/* <div id="img-wrapper">
           <img src="/blacktie.jpg" alt="Landing page" />
         </div> */}
         <br />
-        <div id="header-text">Join the <span className="bold">Holiday Survival Program</span> and for just <span className="bold">$97</span> you get:</div>
+        <div id="header-text">Join the <span className="bold">Tough Love Training</span> and for just <span className="bold">$21</span> you get:</div>
         <br />
         <ul>
           <li>Unlimited sessions @ The Camp 7 days/week for 4 weeks</li>

@@ -4,7 +4,7 @@ const AdCopy = () => (
   <div>
         <div id="header-copy">
           <ul>
-            <li>5 Weeks of Unlimited Group Training</li>
+            <li>21 Days of Unlimited Group Training</li>
             <li>Nutrition Coaching</li>
             <li>Flexible Meal Plan</li>
             <li>Holiday Recipes</li>

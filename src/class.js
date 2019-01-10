@@ -26,7 +26,7 @@ const buildArguments = (siteID) => {
     return params;
 }
 
-const getClasses = (params) => {
+const getClasses = async (params) => {
         let client = await soap(service);
         return new Promise ((resolve, reject) => {
             client.GetClasses(params, (err, result) => {
@@ -38,7 +38,7 @@ const getClasses = (params) => {
         });
 }
 
-const getCourses = (params) => {
+const getCourses = async (params) => {
     let client = await soap(service);
     return new Promise ((resolve, reject) => {
         client.GetCourses(params, (err, result) => {
@@ -50,7 +50,7 @@ const getCourses = (params) => {
     });
 }
 
-const addClientToClass = (params) => {
+const addClientToClass = async (params) => {
     let client = await soap(service);
     return new Promise ((resolve, reject) => {
         client.AddClientsToClass(params, (err, result) => {

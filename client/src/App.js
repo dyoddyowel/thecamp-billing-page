@@ -7,7 +7,7 @@ import './App.css';
 import './bootstrap.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ThankYou from './components/thankYou';
-import locations from './locations';
+import locations from './locations2';
 import ReactPixel from 'react-facebook-pixel';
 import HeaderBanner from './components/landingpage/headerBanner';
 import ReactGA from 'react-ga';

@@ -19,7 +19,7 @@ const buildArguments = (siteID) => {
     return params;
 }
 
-const getService = (params) => {
+const getService = async (params) => {
     let client = await soap(service);
     return new Promise ((resolve, reject) => {
         client.GetServices(params, (err, result) => {
@@ -31,7 +31,7 @@ const getService = (params) => {
     });
 }	
 
-const purchase = (params) => {
+const purchase = async (params) => {
     let client = await soap(service);
     return new Promise ((resolve, reject) => {
         client.CheckoutShoppingCart(params, (err, result) => {

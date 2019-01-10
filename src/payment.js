@@ -38,7 +38,7 @@ const paymentData = {
     "BillingPostalCode": "",
 };
 
-const purchase = (purchaseData) => {
+const purchase = async (purchaseData) => {
     let client = await soap(service);
     return new Promise ((resolve, reject) => {
         client.GetRequiredClientFields(args, (err, result) => {
