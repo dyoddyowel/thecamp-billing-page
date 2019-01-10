@@ -1,8 +1,5 @@
-const soap = require('soap');
-const base_url = "https://api.mindbodyonline.com/0_5_1/";
-const apiUrl = "ClassService";
-const url = base_url + '/' + apiUrl + '.asmx';
-const wsdl = '?wsdl';
+const soap = require('./soapClient');
+const service = "ClassService";
 const args = {};
 
 const buildArguments = (siteID) => {
@@ -30,53 +27,38 @@ const buildArguments = (siteID) => {
 }
 
 const getClasses = (params) => {
+        let client = await soap(service);
         return new Promise ((resolve, reject) => {
-            soap.createClient(url + wsdl, (err, client) => {
-                if (err) {
-                    throw err;
+            client.GetClasses(params, (err, result) => {
+                if(err) {
+                    console.log(err);
                 }
-                client.setEndpoint(url);
-                client.GetClasses(params, (err, result) => {
-                    if(err) {
-                        console.log(err);
-                    }
-                    return resolve(result.GetClassesResult.Classes);
-                })
-            });
+                return resolve(result['GetClassesResult']['Classes']);
+            })
         });
 }
 
 const getCourses = (params) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
+        client.GetCourses(params, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetCourses(params, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                return resolve(result.GetCoursesResult.Classes);
-            })
-        });
+            return resolve(result['GetCoursesResult']['Classes']);
+        })
     });
 }
 
 const addClientToClass = (params) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
+        client.AddClientsToClass(params, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.AddClientsToClass(params, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                return resolve(result.AddClientsToClassResult);
-            })
-        });
+            return resolve(result['AddClientsToClassResult']);
+        })
     });
 }
 

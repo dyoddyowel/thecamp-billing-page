@@ -44,9 +44,9 @@ app.post('/api/infusionsoft', async (req, res) => {
     }],
     "phone_numbers": [{
       "field": "PHONE1",
-      "number": body.Phone
+      "number": body['Phone']
     }],
-    "opt_in_reason": "Black Tie / Black Dress",
+    "opt_in_reason": process.env.INFUSIONSOFT_OPTIN_REASON,
     "given_name": name[0],
     "family_name": name[1]
   }

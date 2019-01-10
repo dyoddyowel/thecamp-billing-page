@@ -1,18 +1,15 @@
-const soap = require('soap');
-const base_url = "https://api.mindbodyonline.com/0_5_1/";
-const apiUrl = "ClientService";
-const url = base_url + '/' + apiUrl + '.asmx';
-const wsdl = '?wsdl';
+const soap = require('./soapClient');
+const service = "ClientService";
 const args = {};
 
 const buildArguments = (siteID) => {
     let params = {
         "Request": {
             "Content-Type": "application/json",
-            "API-key": process.env.MINDBODY_API_KEY,
+            "API-key": 'process.env.MINDBODY_API_KEY',
             "SourceCredentials": {
-                "SourceName": process.env.MINDBODY_SOURCE_NAME,
-                "Password": process.env.MINDBODY_PASSWORD,
+                "SourceName": 'OnePercentNutrition',
+                "Password": 'gj9RdLNeymPV7TK4kusMrzG7NYw=',
                 "SiteIDs": {
                     "int": siteID
                 }
@@ -21,47 +18,37 @@ const buildArguments = (siteID) => {
                 "SiteIDs": {
                     "int": siteID
                 },
-                "Username": process.env.MINDBODY_STAFF_USER,
-                "Password": process.env.MINDBODY_STAFF_PASSWORD
+                "Username": 'Alejandra@thecamptc.com',
+                "Password": 'fitness102'
             }
         }
     }
     return params;
 }
 
-const getRequiredFields = (params) => {
+const getRequiredFields = async (params) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
+        client.GetRequiredClientFields(params, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetRequiredClientFields(params, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                let requiredFields = result.GetRequiredClientFieldsResult.RequiredClientFields;
-                return resolve(requiredFields);
-            })
-        });
+            let requiredFields = result['GetRequiredClientFieldsResult']['RequiredClientFields'];
+            return resolve(requiredFields);
+        })     
     })
 }
 
-const getExistingClient = (params, email) => {
+const getExistingClient = async (params, email) => {
+    let client = await soap(service);
     params.Request['SearchText'] = email;
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, async (err, client) => {
-            if (err) {
-                throw err;
+        client.GetClients(params, async (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetClients(params, async (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                 return resolve(result.GetClientsResult.Clients);
-            })
-        });
+             return resolve(result['GetClientsResult']['Clients']);
+        })
     })
 }	
 
@@ -74,7 +61,7 @@ const convertToObject = (fields) => {
     return rFields;
 }
 
-const addClient = (args, fields) => {
+const addClient = async (args, fields) => {
     let params = {
         Request: {
             'Content-Type': 'application/json',
@@ -85,24 +72,17 @@ const addClient = (args, fields) => {
             }
         }
     }
-    console.log(params);
+    let client = await soap(service);
     return new Promise((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
-                return reject(err);
-            }
-            client.setEndpoint(url);
-            client.AddOrUpdateClients(params, (err, result) => {
+        client.AddOrUpdateClients(params, (err, result) => {
                 if(err) {
                     console.log(err);
                     reject(err);
                     throw err;
                 }
-                console.log(result.AddOrUpdateClientsResult.Clients);
-                return resolve(result.AddOrUpdateClientsResult.Clients.Client);
-            })
-        });
+                console.log(result['AddOrUpdateClientsResult']['Clients']);
+                return resolve(result['AddOrUpdateClientsResult']['Clients']['Client']);
+        })
     });
 }
 

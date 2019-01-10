@@ -1,8 +1,5 @@
-const soap = require('soap');
-const base_url = "https://api.mindbodyonline.com/0_5_1/";
+const soap = require('./soapClient');
 const apiUrl = "PaymentService";
-const url = base_url + '/' + apiUrl + '.asmx';
-const wsdl = '?wsdl';
 const args = {};
 
 const buildArguments = (siteID) => {
@@ -42,19 +39,14 @@ const paymentData = {
 };
 
 const purchase = (purchaseData) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
+        client.GetRequiredClientFields(args, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetRequiredClientFields(args, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                return resolve(result.GetRequiredClientFieldsResult.RequiredClientFields.string);
-            })
-        });
+            return resolve(result['GetRequiredClientFieldsResult']['RequiredClientFields'].string);
+        })
     });
 }
 

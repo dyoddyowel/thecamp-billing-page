@@ -1,8 +1,5 @@
-const soap = require('soap');
-const base_url = "https://api.mindbodyonline.com/0_5_1/";
-const apiUrl = "SaleService";
-const url = base_url + '/' + apiUrl + '.asmx';
-const wsdl = '?wsdl';
+const soap = require('./soapClient');
+const service = "SaleService";
 const args = {};
 
 const buildArguments = (siteID) => {
@@ -23,38 +20,27 @@ const buildArguments = (siteID) => {
 }
 
 const getService = (params) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
+        client.GetServices(params, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetServices(params, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                return resolve(result.GetServicesResult.Services);
-            })
+            return resolve(result['GetServicesResult']['Services']);
         });
     });
 }	
 
 const purchase = (params) => {
-    console.log("new args", params);
-        return new Promise ((resolve, reject) => {
-            soap.createClient(url + wsdl, (err, client) => {
-              if (err) {
-                  throw err;
-              }
-              client.setEndpoint(url);
-              client.CheckoutShoppingCart(params, (err, result) => {
-                  if(err) {
-                      console.log("error", err);
-                  }
-                  return resolve(result.CheckoutShoppingCartResult);
-              })
-          });
-        });
+    let client = await soap(service);
+    return new Promise ((resolve, reject) => {
+        client.CheckoutShoppingCart(params, (err, result) => {
+            if(err) {
+                console.log("error", err);
+            }
+            return resolve(result.CheckoutShoppingCartResult);
+        })
+    });
 }
 
 module.exports.purchase = purchase;
