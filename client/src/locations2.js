@@ -22,14 +22,14 @@ const locations = {
   },
   'Arlington': {
     siteID: '469848',
-    programID: '10311',
-    tagID: '2974',
+    programID: '10336',
+    tagID: '3232',
     pixelID: '305596673130406'
   },
   'Bakersfield': {
     siteID: '539757',
-    programID: '102103',
-    tagID: '2976',
+    programID: '103110',
+    tagID: '3234',
     pixelID: '124038588258655'
   },
   'Bell': {
