@@ -33,6 +33,10 @@ class BillingHotLink extends Component {
     };
   }
 
+  nextSection = () => {
+    
+  }
+
 //TODO: export out the Email Address section
   saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
@@ -110,9 +114,6 @@ class BillingHotLink extends Component {
     this.setState({ error: false });
     let a = this.props.locations;
     let t = this.capitalizeFirstLetter(this.props.match.params.id);
-    console.log(t);
-    console.log(a);
-    console.log(a[t])
     this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']})
     const response = await fetch('/api/billing', {
       method: 'POST',
