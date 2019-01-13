@@ -2,27 +2,28 @@ const Email = require('email-templates');
 
 const email = new Email({
   message: {
-    from: 'niftylettuce@gmail.com'
+    from: 'sam@onepercentnutrition.com'
   },
-  // uncomment below to send emails in development/test env:
-  // send: true
+  send: true,
   transport: {
     jsonTransport: true
   }
 });
 
-email
-  .send({
-    template: 'mars',
-    message: {
-      to: 'elon@spacex.com'
-    },
-    attachments: [{
-      path: '/emails/files/HolidaySurvivalGuideCompact.pdf'
-    }],
-    locals: {
-      name: 'Elon'
-    }
-  })
-  .then(console.log)
-  .catch(console.error);
+const sendEmail = (email, name) => {
+  email
+    .send({
+      template: 'mindbody',
+      message: {
+        to: email
+      },
+      attachments: [{
+        path: '/emails/files/ToughLove_ValentinesNutritionTrainingProgram.pdf'
+      }],
+      locals: {
+        name: name
+      }
+    })
+    .then(console.log)
+    .catch(console.error);
+}

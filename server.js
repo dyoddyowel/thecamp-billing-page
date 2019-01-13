@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require("path");
 const client = require('./src/client');
+const send_email = require('./src/sendEmail');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
@@ -31,6 +32,10 @@ app.post('/api/timber/create', async (req, res) => {
   }
   
   let request = Timber.createAlerts();
+});
+
+app.get('/email/send', async (req, res) => {
+  send_email
 });
 
 app.post('/api/infusionsoft', async (req, res) => {

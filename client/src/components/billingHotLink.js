@@ -5,11 +5,23 @@ import ReactPixel from 'react-facebook-pixel';
 import PaymentForm from './paymentForm';
 import BillingAddress from './billingAddress';
 import AdCopy from './landingpage/adCopy';
+import { capitalize } from '../helpers';
+
+
+//TODO: Implement Thank You Page
+//TODO: Implement Step Component
+
+const StepComponent = ({ Component }) => (
+  <div className="step">
+    { Component }
+  </div>
+);
 
 class BillingHotLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      steps: 1,
       isDisabled: false,
       ProgramID: '',
       SiteID: '',
@@ -34,7 +46,8 @@ class BillingHotLink extends Component {
   }
 
   nextSection = () => {
-    
+    let steps = this.state.steps + 1;
+    this.setState({ steps: steps });
   }
 
 //TODO: export out the Email Address section
@@ -47,9 +60,7 @@ class BillingHotLink extends Component {
   }
 
   handleEmailChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value }, () => {
-      console.log(this.state)
-    });
+    this.setState({ [e.target.name]: e.target.value });
     this.validateEverything();
   }
 
@@ -89,31 +100,10 @@ class BillingHotLink extends Component {
     }
 }
 
-  capitalizeFirstLetter = (text) => {
-    if (text.search('-') > -1)
-    {
-        let newString;
-        let a = text.split('-');
-        if(a.length > 2) {
-            let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
-            let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
-            let thirdword = a[2].charAt(0).toUpperCase()+ a[2].slice(1);
-            newString = firstword + '-' + secondword + '-' + thirdword;
-        } else {
-            let firstword = a[0].charAt(0).toUpperCase() + a[0].slice(1);
-            let secondword = a[1].charAt(0).toUpperCase()+ a[1].slice(1);
-                newString = firstword + '-' + secondword;
-        }
-        return newString;
-
-    }
-    return text.charAt(0).toUpperCase() + text.slice(1);
-  }
-
   handleSubmit = async (x) => {
     this.setState({ error: false });
     let a = this.props.locations;
-    let t = this.capitalizeFirstLetter(this.props.match.params.id);
+    let t = capitalize(this.props.match.params.id);
     this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']})
     const response = await fetch('/api/billing', {
       method: 'POST',
