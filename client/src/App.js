@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import BillingForm from './components/billingForm';
-import LocationList from './components/locationList';
-import EmailAddress from './components/emailAddress';
 import logo from './logo.png';
 import './App.css';
 import './bootstrap.min.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import ThankYou from './components/thankYou';
 import locations from './locations2';
 import ReactPixel from 'react-facebook-pixel';
 import HeaderBanner from './components/landingpage/headerBanner';

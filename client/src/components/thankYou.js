@@ -5,11 +5,12 @@ const ThankYou = ({ pixelView }) => {
     <div id="thank-you-container">
       {pixelView()}
       <h1>Thank you for signing up!</h1>
-      <div><a href="http://www.thecamptc.com/manuals/ValentinesNutritionTrainingPlan.pdf" download><button>Download the Tough Love Manual</button></a></div>
+      <div>We look forward to see you at the program's start on February 4th! You will receive more information to your provided email in the coming days. If you have any questions, please <a href="mailto: michael@onepercentnutrition.com">contact us</a>.</div>
       <div id="thank-you-image-wrapper">
-        <a href="http://www.thecamptc.com/manuals/ValentinesNutritionTrainingPlan.pdf" download>
+        <a href="/ValentinesNutritionTrainingPlan.pdf" download>
           <img src="/ToughLove.png" />
         </a>
+        <div><a href="/ValentinesNutritionTrainingPlan.pdf" download><button>Download the Tough Love Manual</button></a></div>
       </div>
     </div>
   );

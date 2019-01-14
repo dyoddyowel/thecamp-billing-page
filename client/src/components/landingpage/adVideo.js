@@ -14,9 +14,9 @@ const VideoPlayer = (props) => {
     <div id="video-wrapper">
         <Player
           playsInline
-          autoPlay={true}
+          autoPlay={false}
           muted={false}
-          poster="http://thecamptc.com/videos/videoPoster.PNG"
+          poster="/videoPoster.PNG"
           src="http://thecamptc.com/videos/ToughLoveTraining.mp4"
         />
     </div>

@@ -8,7 +8,8 @@ import AdCopy from './landingpage/adCopy';
 import { capitalize } from '../helpers';
 import ThankYou from './thankYou';
 import ErrorComponent from './error';
-
+import PromoDetails from './landingpage/promoDetails';
+import Video from './landingpage/adVideo';
 
 //TODO: Implement Thank You Page
 //TODO: Implement Step Component
@@ -36,6 +37,10 @@ const BillingPage = ({
   handlePaymentChange,
 }) => (
   <React.Fragment>
+    <PromoDetails
+      detailname="Tough Love Training"
+      price="21" />
+    <Video />
     <AdCopy
       id="billing-copy" />
     <h2 className="form-header">Customer Information</h2>

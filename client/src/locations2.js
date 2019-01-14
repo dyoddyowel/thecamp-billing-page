@@ -50,7 +50,7 @@ const locations = {
 		siteID: '264885',
 		programID: '',
 		tagID: '3238',
-   pixelID: '179752492676186'
+   		pixelID: '179752492676186'
 },
 
 'Carson': 
