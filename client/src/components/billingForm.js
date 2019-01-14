@@ -98,9 +98,7 @@ class BillingForm extends Component {
             }
         }
         document.getElementById('card-form').reset();
-        this.setState(clear_data, () => {
-            console.log(this.state)
-        });
+        this.setState(clear_data);
     }
 
     render() {

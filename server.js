@@ -101,7 +101,6 @@ app.post('/api/billing', async (req, res) => {
     year = year;
   }
   let checkout_data = {
-    Test: 'true',
     CartItems: {
         CartItem: {
             Quantity: 1,
@@ -121,6 +120,7 @@ app.post('/api/billing', async (req, res) => {
         Amount: 21.0,
         CreditCardNumber: body.payment.number,
         CVV: body.payment.cvc,
+        CCType: body.payment.issuer,
         ExpMonth: month,
         ExpYear: year,
         BillingName: body.payment.name,

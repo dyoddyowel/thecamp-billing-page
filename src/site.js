@@ -33,7 +33,7 @@ const getLocations = (params) => {
     return new Promise ((resolve, reject) => {
         soap.createClient(url + wsdl, (err, client) => {
             if (err) {
-                throw err;
+                reject(err);
             }
             client.setEndpoint(url);
             client.GetLocations(params, (err, result) => {

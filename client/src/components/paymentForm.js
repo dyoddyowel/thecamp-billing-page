@@ -10,6 +10,7 @@ export default class PaymentForm extends Component {
         number: props.cc,
         name: props.ccName,
         expiry: props.expiry,
+        type: props.type,
         cvc: props.cvc,
         focused: "",
         isValid: props.isValid
@@ -64,7 +65,7 @@ export default class PaymentForm extends Component {
     }
   
     render() {
-      const { name, number, expiry, cvc, focused } = this.state;
+      const { name, number, expiry, cvc, focused, issuer } = this.state;
       return (
         <div id="payment-block">
           <div id="card-container">
@@ -72,6 +73,7 @@ export default class PaymentForm extends Component {
               <Cards
                 number={number}
                 name={name}
+                issuer={issuer}
                 expiry={expiry}
                 cvc={cvc}
                 focused={focused}
@@ -100,7 +102,7 @@ export default class PaymentForm extends Component {
               <div id="card-data-box">
                 <input
                   type="tel"
-                  className="half-width"
+                  className="half-width left"
                   name="expiry"
                   placeholder="Valid Thru"
                   onKeyUp={this.handleInputChange}
@@ -108,7 +110,7 @@ export default class PaymentForm extends Component {
                 />
                 <input
                   type="tel"
-                  className="half-width"
+                  className="half-width right"
                   name="cvc"
                   placeholder="CVC"
                   onKeyUp={this.handleInputChange}

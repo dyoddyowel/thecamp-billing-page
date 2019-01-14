@@ -13,6 +13,8 @@ import HeaderBanner from './components/landingpage/headerBanner';
 import ReactGA from 'react-ga';
 import BillingHotLink from './components/billingHotLink';
 import LandingPage from './components/landingpage/index';
+import ErrorComponent from './components/error';
+import FooterLinks from './components/footerLinks';
 
 class App extends Component {
   constructor() {
@@ -67,16 +69,11 @@ class App extends Component {
                         pixelView={ReactPixel.pageView}
                         locations={locations} />} 
             />
+            <FooterLinks />
         </div>
       </Router>
     );
   }
 }
-
-const ErrorComponent = () => (
-  <div className="error">
-    Unable to complete Purchase. Please Check Your Payment Details.
-  </div>
-);
 
 export default App;

@@ -6,6 +6,8 @@ import PaymentForm from './paymentForm';
 import BillingAddress from './billingAddress';
 import AdCopy from './landingpage/adCopy';
 import { capitalize } from '../helpers';
+import ThankYou from './thankYou';
+import ErrorComponent from './error';
 
 
 //TODO: Implement Thank You Page
@@ -17,13 +19,57 @@ const StepComponent = ({ Component }) => (
   </div>
 );
 
+const BillingPage = ({ 
+  saveData,
+  pixelView,
+  handleEmailChange,
+  handleChange,
+  handleSubmit,
+  nextSection,
+  setNewValue,
+  disabled,
+  amount,
+  cc,
+  cvc,
+  expiry,
+  ccName,
+  handlePaymentChange,
+}) => (
+  <React.Fragment>
+    <AdCopy
+      id="billing-copy" />
+    <h2 className="form-header">Customer Information</h2>
+    <EmailBox 
+      saveData={saveData}
+      handleChange={handleEmailChange}
+      nextSection={nextSection} 
+      pixelView={pixelView}
+      startCheckout={pixelView } />
+    <BillingAddress 
+      handleChange={handleChange}
+      handleSubmit={handleSubmit}
+      setNewValue={setNewValue}
+      disabled={disabled} />
+    <h2 className="form-header">Payment Information</h2>
+    <PaymentForm 
+      amount={amount}
+      cc={cc}
+      cvc={cvc}
+      expiry={expiry}
+      ccName={ccName} 
+      handlePaymentChange={handlePaymentChange}/>
+    <button className="primary join-program" onClick={handleSubmit}>Join Program</button>
+  </React.Fragment>
+);
+
 class BillingHotLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      steps: 1,
+      complete: false,
       isDisabled: false,
       ProgramID: '',
+      error: false,
       SiteID: '',
       address: {
           "BillingAddress": "",
@@ -37,6 +83,7 @@ class BillingHotLink extends Component {
           "expiry": "",
           "cvc": "",
           "name": "",
+          "issuer": "",
           "isValid": false
       },
       formErrors: {
@@ -53,9 +100,7 @@ class BillingHotLink extends Component {
 //TODO: export out the Email Address section
   saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
-    await this.setState({ data: newData }, () => {
-      console.log(this.state)
-    });
+    await this.setState({ data: newData });
     return this.state;
   }
 
@@ -86,17 +131,10 @@ class BillingHotLink extends Component {
   }
 
   validateEverything = () => {
-    // let numberValidation = cardValidator.number(this.state.payment.number);
-    // let isValid = numberValidation.isPotentiallyValid;
-    if(postcode.validate(this.state.address.BillingPostalCode, 'US') && this.state.payment.isValid) {
-        
-        this.setState({ isDisabled: false }, () => {
-          console.log(this.state)
-        });
+    if(postcode.validate(this.state.address.BillingPostalCode, 'US') && this.state.payment.isValid) {  
+        this.setState({ isDisabled: false });
     } else {
-        this.setState({ isDisabled: false }, () => {
-          console.log(this.state)
-        });
+        this.setState({ isDisabled: false });
     }
 }
 
@@ -120,6 +158,7 @@ class BillingHotLink extends Component {
         'currency': 'USD',
         'value': 21.0
       });
+      this.setState({ complete: true });
     } else {
       this.setState({ error: true });
     }
@@ -137,32 +176,34 @@ class BillingHotLink extends Component {
     console.log(this.props)
     return(
       <div className="billing">
-        <AdCopy
-          id="billing-copy" />
-        <h2>Customer Information</h2>
-        <EmailBox 
-          saveData={this.saveEmailData}
-          handleChange={this.handleEmailChange}
-          nextSection={this.props.nextSection} 
-          pixelView={this.props.pixelView}
-          startCheckout={this.props.pixelView } />
-        <BillingAddress 
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-          setNewValue={this.setNewValue}
-          disabled={this.state.isDisabled} />
-        <h2>Payment Information</h2>
-        <PaymentForm 
-          amount={this.state.payment['amount']}
-          cc={this.state.payment['number']}
-          cvc={this.state.payment['cvc']}
-          expiry={this.state.payment['expiry']}
-          ccName={this.state.payment['name']} 
-          handlePaymentChange={this.handlePaymentChange}/>
-        <button onClick={this.handleSubmit}>Join Program</button>
+      {
+        this.state.error ? <ErrorComponent /> : <span></span>
+      }
+      {
+        this.state.complete ? <ThankYou 
+                                pixelView={this.props.pixelView} /> : 
+                              <BillingPage 
+                                saveData={this.saveEmailData}
+                                handleEmailChange={this.handleEmailChange}
+                                nextSection={this.props.nextSection} 
+                                pixelView={this.props.pixelView}
+                                startCheckout={this.props.pixelView }
+                                handleChange={this.handleChange}
+                                handleSubmit={this.handleSubmit}
+                                setNewValue={this.setNewValue}
+                                disabled={this.state.isDisabled}
+                                amount={this.state.payment['amount']}
+                                cc={this.state.payment['number']}
+                                cvc={this.state.payment['cvc']}
+                                expiry={this.state.payment['expiry']}
+                                ccName={this.state.payment['name']} 
+                                handlePaymentChange={this.handlePaymentChange} />
+      }
       </div>
     );
   }
 }
+
+
 
 export default BillingHotLink;

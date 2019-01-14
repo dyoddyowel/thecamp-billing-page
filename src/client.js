@@ -72,13 +72,13 @@ const addClient = async (args, fields) => {
             }
         }
     }
+    console.log(params)
     let client = await soap(service);
     return new Promise((resolve, reject) => {
         client.AddOrUpdateClients(params, (err, result) => {
                 if(err) {
                     console.log(err);
                     reject(err);
-                    throw err;
                 }
                 console.log(result['AddOrUpdateClientsResult']['Clients']);
                 return resolve(result['AddOrUpdateClientsResult']['Clients']['Client']);
