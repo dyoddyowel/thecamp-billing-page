@@ -76,8 +76,8 @@ app.post('/api/billing', async (req, res) => {
   let exp = body.payment.expiry.split('/');
   let client_data = {
     Email: body.email,
-    FirstName: name[0],
-    LastName: name[1],
+    FirstName: body.fname,
+    LastName: body.lname,
     AddressLine1: body.address.BillingAddress,
     City: body.address.BillingCity,
     State: body.address.BillingState,
