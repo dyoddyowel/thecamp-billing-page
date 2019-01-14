@@ -462,7 +462,7 @@ const locations = {
 'Palm-Desert': 
 	{
 		siteID: '726432',
-		programID: '10646',
+		programID: '10239',
 		tagID: '3356',
 		pixelID: ''
 },
