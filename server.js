@@ -90,7 +90,7 @@ app.post('/api/billing', async (req, res) => {
     PostalCode: body.address.BillingPostalCode,
     Gender: "Female",
     BirthDate: "2018-01-01",
-    MobilePhone: body.phone
+    MobilePhone: phone
   }
 
   console.log("client_data", client_data);
