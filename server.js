@@ -73,12 +73,7 @@ app.post('/api/billing', async (req, res) => {
   console.log("endpoint", body);
   let name = body.payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
-  let exp;
-  if (exp.includes('/')) {
-    exp = body.payment.expiry.split('/');
-  } else {
-    exp = body.payment.expiry.match(/.{1,2}/g);
-  }
+  let exp = body.payment.expiry.split('/');
   let phone;
   if(body.phone) {
     phone = body.phone;
@@ -104,7 +99,6 @@ app.post('/api/billing', async (req, res) => {
   let clientResponse = await client.addClient(params, client_data);
 
   console.log("clientResponse", clientResponse);
-  
   let month = exp[0];
   let year = exp[1].replace(' ','');
   if(year.length < 4) {
