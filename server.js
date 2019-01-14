@@ -90,7 +90,7 @@ app.post('/api/billing', async (req, res) => {
     PostalCode: body.address.BillingPostalCode,
     Gender: "Female",
     BirthDate: "2018-01-01",
-    MobilePhone: phone
+    MobilePhone: body.phone
   }
 
   console.log("client_data", client_data);
@@ -188,7 +188,6 @@ app.post('/api', async (req, res) => {
     year = year;
   }
   let checkout_data = {
-    Test: 'true',
     CartItems: {
         CartItem: {
             Quantity: 1,
