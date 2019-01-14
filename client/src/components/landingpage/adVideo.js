@@ -17,7 +17,7 @@ const VideoPlayer = (props) => {
           autoPlay={false}
           muted={false}
           poster="/videoPoster.PNG"
-          src="http://thecamptc.com/videos/ToughLoveTraining.mp4"
+          src="http://www.thecamptc.com/videos/VIDEOVALENTINE.mp4"
         />
     </div>
   );
