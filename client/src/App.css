@@ -1,10 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
+
+  #logo-container {
+    margin-top: 5%;
+  }
+
+  #billing-copy {
+    margin-top: 5% !important;
+    width: 95%;
+  }
 
   #email-box input {
     width: 95% !important;
+  }
+
+  .billing input {
+    width: 100% !important;
+  }
+
+  .join-program {
+    width: 70% !important;
+    font-size: 25px !important;
+  }
+
+  .billing #form-box {
+    width: 100% !important;
   }
 
   .notmobile {
@@ -125,11 +147,11 @@
   }
 
   #city-state input {
-    width: 90% !important;
+    width: 100% !important;
   }
 
   select {
-    width: 90% !important;
+    width: 100% !important;
   }
 
   .half-width {

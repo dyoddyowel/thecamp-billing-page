@@ -2,7 +2,7 @@ const Email = require('email-templates');
 
 const email = new Email({
   message: {
-    from: 'sam@onepercentnutrition.com'
+    from: 'no-reply@thecamptc.com'
   },
   send: true,
   transport: {
