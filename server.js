@@ -74,6 +74,12 @@ app.post('/api/billing', async (req, res) => {
   let name = body.payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
   let exp = body.payment.expiry.split('/');
+  let phone;
+  if(body.phone) {
+    phone = body.phone;
+  } else {
+    phone = '9092879906';
+  }
   let client_data = {
     Email: body.email,
     FirstName: body.fname,
