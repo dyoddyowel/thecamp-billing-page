@@ -641,7 +641,7 @@ const locations = {
 		tagID: '3406',
 		pixelID: ''
 },
-'South-Fort Worth': 
+'South-Fort-Worth': 
 	{
 		siteID: '761241',
 		programID: '100078',
