@@ -18,8 +18,8 @@ const buildArguments = (siteID) => {
                 "SiteIDs": {
                     "int": siteID
                 },
-                "Username": 'Alejandra@thecamptc.com',
-                "Password": 'fitness102'
+                "Username": process.env.MINDBODY_STAFF_USER,
+                "Password": process.env.MINDBODY_STAFF_PASSWORD,
             }
         }
     }
