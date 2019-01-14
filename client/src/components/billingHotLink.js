@@ -63,7 +63,7 @@ const BillingPage = ({
       expiry={expiry}
       ccName={ccName} 
       handlePaymentChange={handlePaymentChange}/>
-    <button className="primary join-program" onClick={handleSubmit}>Join Program</button>
+    <button title="Please fill out all inputs before submitting." disabled={disabled} className="primary join-program" onClick={handleSubmit}>Join Program</button>
   </React.Fragment>
 );
 
@@ -72,7 +72,7 @@ class BillingHotLink extends Component {
     super(props);
     this.state = {
       complete: false,
-      isDisabled: false,
+      isDisabled: true,
       ProgramID: '',
       error: false,
       SiteID: '',
@@ -181,9 +181,7 @@ class BillingHotLink extends Component {
     console.log(this.props)
     return(
       <div className="billing">
-      {
-        this.state.error ? <ErrorComponent /> : <span></span>
-      }
+
       {
         this.state.complete ? <ThankYou 
                                 pixelView={this.props.pixelView} /> : 
@@ -203,6 +201,9 @@ class BillingHotLink extends Component {
                                 expiry={this.state.payment['expiry']}
                                 ccName={this.state.payment['name']} 
                                 handlePaymentChange={this.handlePaymentChange} />
+      }
+      {
+        this.state.error ? <ErrorComponent /> : <span></span>
       }
       </div>
     );
