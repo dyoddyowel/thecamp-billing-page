@@ -154,7 +154,9 @@ class BillingHotLink extends Component {
     this.setState({ error: false });
     let a = this.props.locations;
     let t = capitalize(this.props.match.params.id);
-    this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']})
+    await this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']}, () => {
+      console.log(this.state)
+    })
     const response = await fetch('/api/billing', {
       method: 'POST',
       headers: {

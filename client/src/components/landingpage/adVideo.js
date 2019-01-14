@@ -16,7 +16,6 @@ const VideoPlayer = (props) => {
           playsInline
           autoPlay={false}
           muted={false}
-          poster="/videoPoster.PNG"
           src="http://www.thecamptc.com/videos/VIDEOVALENTINE.mp4"
         />
     </div>
