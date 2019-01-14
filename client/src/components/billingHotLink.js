@@ -105,12 +105,17 @@ class BillingHotLink extends Component {
 //TODO: export out the Email Address section
   saveData = async (data) => {
     const newData = Object.assign({}, this.state.data, data);
-    await this.setState({ data: newData });
+    await this.setState({ data: newData }
+      , () => {
+        console.log(this.state)
+      });
     return this.state;
   }
 
   handleEmailChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value }, () => {
+      console.log(this.state)
+    });
     this.validateEverything();
   }
 
@@ -131,7 +136,9 @@ class BillingHotLink extends Component {
   handleChange = (e) => {
     let x = this.state.address;
     x[e.target.id] = e.target.value;
-    this.setState({ address: x });
+    this.setState({ address: x }, () => {
+      console.log(this.state)
+    });
     this.validateEverything();
   }
 

@@ -12,6 +12,7 @@ export default class PaymentForm extends Component {
         expiry: props.expiry,
         type: props.type,
         cvc: props.cvc,
+        issuer: "",
         focused: "",
         isValid: props.isValid
       };
