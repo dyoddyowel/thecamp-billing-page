@@ -96,7 +96,11 @@ app.post('/api/billing', async (req, res) => {
   console.log("client_data", client_data);
 
   // Add Client
-  let clientResponse = await client.addClient(params, client_data);
+  try {
+    let clientResponse = await client.addClient(params, client_data);
+  } catch(err) {
+    console.log(err);
+  }
 
   console.log("clientResponse", clientResponse);
   let month = exp[0];
@@ -143,7 +147,13 @@ app.post('/api/billing', async (req, res) => {
   saleParams.Request['CartItems'] = checkout_data.CartItems;
   saleParams.Request['Payments'] = checkout_data.Payments;
   saleParams.Request['ClientID'] = checkout_data.ClientID;
-  let purchase = await sale.purchase(saleParams);
+
+  try {
+    let purchase = await sale.purchase(saleParams);
+  } catch(err) {
+    console.log(err);
+  }
+
   console.log('purchase',purchase)
   res.send(purchase.Status);
 });
