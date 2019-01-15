@@ -78,10 +78,14 @@ const addClient = async (args, fields) => {
         client.AddOrUpdateClients(params, (err, result) => {
                 if(err) {
                     console.log(err);
-                    reject(err);
                 }
-                console.log(result['AddOrUpdateClientsResult']['Clients']);
-                return resolve(result['AddOrUpdateClientsResult']['Clients']['Client']);
+                console.log("clients result", result['AddOrUpdateClientsResult']);
+                if(result['AddOrUpdateClientsResult']['Clients']['Client']) {
+                    return resolve(result['AddOrUpdateClientsResult']['Clients']['Client']);
+                } else {
+                    return reject(err);
+                }
+                
         })
     });
 }
