@@ -96,8 +96,9 @@ app.post('/api/billing', async (req, res) => {
   console.log("client_data", client_data);
 
   // Add Client
+  let clientResponse;
   try {
-    let clientResponse = await client.addClient(params, client_data);
+    clientResponse = await client.addClient(params, client_data);
   } catch(err) {
     console.log(err);
   }
@@ -147,9 +148,10 @@ app.post('/api/billing', async (req, res) => {
   saleParams.Request['CartItems'] = checkout_data.CartItems;
   saleParams.Request['Payments'] = checkout_data.Payments;
   saleParams.Request['ClientID'] = checkout_data.ClientID;
-
+  
+  let purchase;
   try {
-    let purchase = await sale.purchase(saleParams);
+    purchase = await sale.purchase(saleParams);
   } catch(err) {
     console.log(err);
   }
