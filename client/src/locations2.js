@@ -196,7 +196,7 @@ const locations = {
 'Fresno': 
 	{
 		siteID: '-724509',
-		programID: '10314',
+		programID: '10239',
 		tagID: '3280',
 		pixelID: ''
 },
