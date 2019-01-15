@@ -462,7 +462,7 @@ const locations = {
 'Palm-Desert': 
 	{
 		siteID: '726432',
-		programID: '10239',
+		programID: '10646',
 		tagID: '3356',
 		pixelID: ''
 },
@@ -504,7 +504,7 @@ const locations = {
 'Pico-Rivera': 
 	{
 		siteID: '253486',
-		programID: '10584',
+		programID: '10585',
 		tagID: '3368',
 		pixelID: ''
 },

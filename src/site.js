@@ -9,10 +9,10 @@ const buildArguments = (siteID) => {
     let params = {
         "Request": {
             "Content-Type": "application/json",
-            "API-key": process.env.MINDBODY_API_KEY,
+            "API-key": '90f5bb6381f34839b14e5e590a9e079f',
             "SourceCredentials": {
-                "SourceName": process.env.MINDBODY_SOURCE_NAME,
-                "Password": process.env.MINDBODY_PASSWORD,
+                "SourceName": "OnePercentNutrition",
+                "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw",
                 "SiteIDs": {
                     "int": siteID
                 }
@@ -21,8 +21,8 @@ const buildArguments = (siteID) => {
                 "SiteIDs": {
                     "int": siteID
                 },
-                "Username": process.env.MINDBODY_STAFF_USER,
-                "Password": process.env.MINDBODY_STAFF_PASSWORD
+                "Username": "Alejandra@thecamptc.com",
+                "Password": "fitness102"
             }
         }
     }
@@ -57,7 +57,19 @@ const looper = async () => {
     return new_obj;
 }
 
-const getActivationCode = (params) => {
+const getActivationCode = () => {
+    let params = {
+      "Request": {
+          "Content-Type": "application/json",
+          "SourceCredentials": {
+              "SourceName": "OnePercentNutrition",
+              "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw=",
+              "SiteIDs": {
+                  "int": -314525
+              }
+          }
+      }
+  }
     return new Promise ((resolve, reject) => {
         soap.createClient(url + wsdl, (err, client) => {
             if (err) {
@@ -68,6 +80,7 @@ const getActivationCode = (params) => {
                 if(err) {
                     console.log(err);
                 }
+                console.log(result.GetActivationCodeResult);
                 return resolve(result.GetActivationCodeResult.ActivationLink);
             })
         });
