@@ -37,9 +37,12 @@ const purchase = async (params) => {
         client.CheckoutShoppingCart(params, (err, result) => {
             if(err) {
                 console.log("error", err);
-                reject(err);
             }
-            return resolve(result.CheckoutShoppingCartResult);
+            if(result.CheckoutShoppingCartResult) {
+                return resolve(result.CheckoutShoppingCartResult);
+            } else {
+                return reject(err);
+            }
         })
     });
 }
