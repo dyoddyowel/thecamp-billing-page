@@ -3,7 +3,7 @@
 const moment = require('moment');
 const nodemailer = require('nodemailer');
 const postmarkTransport = require('nodemailer-postmark-transport');
-let today = moment(new Date());
+let today = moment().endOf('day').format('MM-DD-YYYY');
 const transport = nodemailer.createTransport(postmarkTransport({
     auth: {
         apiKey: '23f09270-adc1-4c7f-9cf5-0339e1c012b2'
