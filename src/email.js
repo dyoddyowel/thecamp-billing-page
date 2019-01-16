@@ -37,7 +37,7 @@ const email = async (receiver) => {
         attachments: [
             {
                 filename: 'ToughLove_ValentinesNutritionTrainingPlan.pdf',
-                path: '../emails/files/ToughLove_ValentinesNutritionTrainingPlan.pdf',
+                path: 'http://www.thecamptc.com/manuals/ValentinesNutritionTrainingPlan.pdf',
                 contentType: 'application/pdf'
             }
         ]
