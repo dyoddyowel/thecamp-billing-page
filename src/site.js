@@ -1,48 +1,32 @@
-const soap = require('soap');
-const base_url = "https://api.mindbodyonline.com/0_5_1/";
-const apiUrl = "SiteService";
-const url = base_url + '/' + apiUrl + '.asmx';
-const wsdl = '?wsdl';
+const soap = require('./soapClient');
+const service = "SiteService";
 const args = {};
 
 const buildArguments = (siteID) => {
     let params = {
         "Request": {
             "Content-Type": "application/json",
-            "API-key": '90f5bb6381f34839b14e5e590a9e079f',
             "SourceCredentials": {
-                "SourceName": "OnePercentNutrition",
-                "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw",
+                "SourceName": process.env.MINDBODY_SOURCE_NAME,
+                "Password": process.env.MINDBODY_PASSWORD,
                 "SiteIDs": {
-                    "int": siteID
+                    "int":  siteID
                 }
-            },
-            "UserCredentials": {
-                "SiteIDs": {
-                    "int": siteID
-                },
-                "Username": "Alejandra@thecamptc.com",
-                "Password": "fitness102"
             }
         }
     }
     return params;
 }
 
-const getLocations = (params) => {
+const getLocations = async (params) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                reject(err);
+        client.GetLocations(params, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetLocations(params, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                return resolve(result.GetLocationsResult.Locations.Location);
-            })
-        });
+            return resolve(result.GetLocationsResult.Locations.Location);
+        })
     });
 }
 
@@ -57,37 +41,22 @@ const looper = async () => {
     return new_obj;
 }
 
-const getActivationCode = () => {
-    let params = {
-      "Request": {
-          "Content-Type": "application/json",
-          "SourceCredentials": {
-              "SourceName": "OnePercentNutrition",
-              "Password": "gj9RdLNeymPV7TK4kusMrzG7NYw=",
-              "SiteIDs": {
-                  "int":  264885
-              }
-          }
-      }
-  }
+const getActivationCode = (params) => {
+    let client = await soap(service);
     return new Promise ((resolve, reject) => {
-        soap.createClient(url + wsdl, (err, client) => {
-            if (err) {
-                throw err;
+        client.GetActivationCode(params, (err, result) => {
+            if(err) {
+                console.log(err);
             }
-            client.setEndpoint(url);
-            client.GetActivationCode(params, (err, result) => {
-                if(err) {
-                    console.log(err);
-                }
-                console.log(result.GetActivationCodeResult);
-                return resolve(result.GetActivationCodeResult.ActivationLink);
-            })
-        });
+            console.log(result.GetActivationCodeResult);
+            return resolve(result.GetActivationCodeResult.ActivationLink);
+        })
+
     });
 }
 
 module.exports.getLocations = getLocations;
+module.exports.getSales = getSales;
 module.exports.buildArguments = buildArguments;
 module.exports.getActivationCode = getActivationCode;
 module.exports.looper = looper;

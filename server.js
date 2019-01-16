@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require("path");
 const client = require('./src/client');
-const send_email = require('./src/sendEmail');
+const email = require('./src/email');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
@@ -11,6 +11,7 @@ const Infusionsoft = require('./src/infusionsoft');
 const Timber = require('./src/timber');
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
+const helpers = require('./src/helpers');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -73,7 +74,6 @@ app.post('/api/client', async (req, res) => {
   console.log("endpoint", body);
   let name = body.payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
-  let exp = body.payment.expiry.split('/');
   let phone;
   if(body.phone) {
     phone = body.phone;
@@ -90,7 +90,7 @@ app.post('/api/client', async (req, res) => {
     PostalCode: body.address.BillingPostalCode,
     Gender: "Female",
     BirthDate: "2018-01-01",
-    MobilePhone: body.phone
+    MobilePhone: phone,
   }
   console.log("client_data", client_data);
 
@@ -110,7 +110,8 @@ app.post('/api/billing', async (req, res) => {
   let body = req.body;
   console.log("endpoint", body);
   let name = body.payment.name.split(' ');  
-  let exp = body.payment.expiry.split('/');
+  let exp = helpers.format_expiry(body.payment.expiry);
+  exp = exp.split('/');
   let month = exp[0];
   let year = exp[1];
   year = year.replace(/\s+/g, '');
@@ -165,6 +166,9 @@ app.post('/api/billing', async (req, res) => {
   }
 
   console.log('purchase',purchase)
+  if(purchase.Status === "Success") {
+    await email(body.email);
+  }
   res.send(purchase.Status);
 });
 

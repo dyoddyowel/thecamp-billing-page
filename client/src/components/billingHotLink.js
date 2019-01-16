@@ -106,9 +106,7 @@ class BillingHotLink extends Component {
   componentDidMount() {
     let a = this.props.locations;
     let t = capitalize(this.props.match.params.id);
-    this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']}, () => {
-      console.log(this.state)
-    })
+    this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']})
   }
   nextSection = () => {
     let steps = this.state.steps + 1;
@@ -126,9 +124,7 @@ class BillingHotLink extends Component {
   }
 
   handleEmailChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value }, () => {
-      console.log(this.state)
-    });
+    this.setState({ [e.target.name]: e.target.value });
     this.validateEverything();
   }
 
@@ -137,9 +133,7 @@ class BillingHotLink extends Component {
         ...this.state.payment,
         ...data
     };
-    this.setState({ payment: x }, () => {
-      console.log(this.state)
-    });
+    this.setState({ payment: x });
     this.validateEverything();
   }
 
@@ -150,9 +144,7 @@ class BillingHotLink extends Component {
   handleChange = (e) => {
     let x = this.state.address;
     x[e.target.id] = e.target.value;
-    this.setState({ address: x }, () => {
-      console.log(this.state)
-    });
+    this.setState({ address: x });
     this.validateEverything();
   }
 

@@ -41,7 +41,7 @@ const getRequiredFields = async (params) => {
 
 const getExistingClient = async (params, email) => {
     let client = await soap(service);
-    params.Request['SearchText'] = email;
+    params['Request']['SearchText'] = email;
     return new Promise ((resolve, reject) => {
         client.GetClients(params, async (err, result) => {
             if(err) {

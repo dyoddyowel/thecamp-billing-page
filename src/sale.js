@@ -19,6 +19,21 @@ const buildArguments = (siteID) => {
     return params;
 }
 
+const getSales = async (siteID, saleID) => {
+    let params = buildArguments();
+    params['Request']['SaleID'] = saleID;
+    let client = await soap(service);
+    return new Promise ((resolve, reject) => {
+        client.GetSales(params, (err, result) => {
+            if(err) {
+                console.log(err);
+            }
+
+            return resolve(result['GetSalesFieldsResult'])
+        })
+    })
+}
+
 const getService = async (params) => {
     let client = await soap(service);
     return new Promise ((resolve, reject) => {
@@ -48,5 +63,6 @@ const purchase = async (params) => {
 }
 
 module.exports.purchase = purchase;
+module.exports.getSales = getSales;
 module.exports.getService = getService;
 module.exports.buildArguments = buildArguments;
