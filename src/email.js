@@ -18,7 +18,7 @@ const email = async (receiver) => {
         templateId: 9819640,
         templateModel: {
 
-            "product_name": "The Camp Training Center - Anaheim",
+            "product_name": "The Camp Transformation Center",
             "purchase_date": today,
             "product_url": "product_url_Value",
             "date": today,
