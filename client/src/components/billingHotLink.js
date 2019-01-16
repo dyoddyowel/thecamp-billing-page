@@ -20,6 +20,10 @@ const StepComponent = ({ Component }) => (
   </div>
 );
 
+const Loading = () => (
+  <h1>Please wait! Processing your purchase.</h1>
+);
+
 const BillingPage = ({ 
   saveData,
   pixelView,
@@ -71,6 +75,8 @@ class BillingHotLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
+      clientID: '',
       complete: false,
       isDisabled: true,
       ProgramID: '',
@@ -97,6 +103,13 @@ class BillingHotLink extends Component {
     };
   }
 
+  componentDidMount() {
+    let a = this.props.locations;
+    let t = capitalize(this.props.match.params.id);
+    this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']}, () => {
+      console.log(this.state)
+    })
+  }
   nextSection = () => {
     let steps = this.state.steps + 1;
     this.setState({ steps: steps });
@@ -127,6 +140,7 @@ class BillingHotLink extends Component {
     this.setState({ payment: x }, () => {
       console.log(this.state)
     });
+    this.validateEverything();
   }
 
   saveEmailData = async (x) => {
@@ -146,18 +160,26 @@ class BillingHotLink extends Component {
     if(postcode.validate(this.state.address.BillingPostalCode, 'US') && this.state.payment.isValid) {  
         this.setState({ isDisabled: false });
     } else {
-        this.setState({ isDisabled: false });
+        this.setState({ isDisabled: true });
     }
 }
 
-  handleSubmit = async (x) => {
-    this.setState({ error: false });
-    let a = this.props.locations;
-    let t = capitalize(this.props.match.params.id);
-    await this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']}, () => {
-      console.log(this.state)
-    })
-    const response = await fetch('/api/billing', {
+  clientEndpoint = async () => {
+    const client_response = await fetch('/api/client', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state),
+    });
+    let response_parse = await client_response.json();
+    console.log("react client response", response_parse)
+    let client_id = response_parse[0]['ID'];
+    this.setState({ clientID: client_id});
+  }
+
+  paymentEndpoint = async () => {
+    const payment_response = await fetch('/api/billing', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -165,7 +187,7 @@ class BillingHotLink extends Component {
       body: JSON.stringify(this.state),
     });
 
-    const status = await response.text();
+    const status = await payment_response.text();
     if(status === "Success") {
       this.nextSection();
       ReactPixel.track('Purchase', {
@@ -176,6 +198,20 @@ class BillingHotLink extends Component {
     } else {
       this.setState({ error: true });
     }
+  }
+
+  handleSubmit = async () => {
+    this.setState({ error: false });
+    this.setState({ loading: true });
+
+    if(this.state.clientID === '' || this.state.clientID === undefined) {
+      console.log("no clientid")
+      await this.clientEndpoint();
+      await this.paymentEndpoint();
+    } else {
+      await this.paymentEndpoint();
+    }
+    this.setState({ loading: false });
   };
 
   setNewValue = (newValue) => {
@@ -192,6 +228,8 @@ class BillingHotLink extends Component {
       <div className="billing">
 
       {
+
+        this.state.loading ? <Loading /> : 
         this.state.complete ? <ThankYou 
                                 pixelView={this.props.pixelView} /> : 
                               <BillingPage 
@@ -212,7 +250,7 @@ class BillingHotLink extends Component {
                                 handlePaymentChange={this.handlePaymentChange} />
       }
       {
-        this.state.error ? <ErrorComponent /> : <span></span>
+        this.state.error ? <ErrorComponent/> : <span></span>
       }
       </div>
     );

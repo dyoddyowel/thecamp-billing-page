@@ -67,8 +67,8 @@ app.post('/api/infusionsoft', async (req, res) => {
   res.send('contact endpoint');
 })
 
-app.post('/api/billing', async (req, res) => {
-  console.log("at endpoint");
+app.post('/api/client', async (req, res) => {
+  console.log("at client endpoint");
   let body = req.body;
   console.log("endpoint", body);
   let name = body.payment.name.split(' ');  
@@ -92,7 +92,6 @@ app.post('/api/billing', async (req, res) => {
     BirthDate: "2018-01-01",
     MobilePhone: body.phone
   }
-
   console.log("client_data", client_data);
 
   // Add Client
@@ -102,10 +101,19 @@ app.post('/api/billing', async (req, res) => {
   } catch(err) {
     console.log(err);
   }
+  console.log("clientResponse", clientResponse);  
+  res.send(clientResponse);
+});
 
-  console.log("clientResponse", clientResponse);
+app.post('/api/billing', async (req, res) => {
+  console.log("at billing endpoint");
+  let body = req.body;
+  console.log("endpoint", body);
+  let name = body.payment.name.split(' ');  
+  let exp = body.payment.expiry.split('/');
   let month = exp[0];
-  let year = exp[1].replace(' ','');
+  let year = exp[1];
+  year = year.replace(/\s+/g, '');
   if(year.length < 4) {
     year = '20' + year;
   } else {
@@ -142,7 +150,7 @@ app.post('/api/billing', async (req, res) => {
         SaveInfo: true
       }
     },
-    ClientID: clientResponse[0]['ID'],
+    ClientID: body.clientID,
   }
   let saleParams = sale.buildArguments(body.SiteID);
   saleParams.Request['CartItems'] = checkout_data.CartItems;
