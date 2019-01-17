@@ -12,7 +12,9 @@ const Timber = require('./src/timber');
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
 const helpers = require('./src/helpers');
+const enfore = require('express-sslify')
 
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
