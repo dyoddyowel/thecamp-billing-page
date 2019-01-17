@@ -18,8 +18,8 @@ const buildArguments = (siteID) => {
                 "SiteIDs": {
                     "int": siteID
                 },
-                "Username": '_OnePercentNutrition',
-                "Password": process.env.MINDBODY_PASSWORD,
+                "Username": process.env.MINDBODY_STAFF_USER,
+                "Password": process.env.MINDBODY_STAFF_PASSWORD,
             }
         }
     }
