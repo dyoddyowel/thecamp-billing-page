@@ -75,8 +75,8 @@ app.post('/api/infusionsoft', async (req, res) => {
 
 app.post('/api/client', async (req, res) => {
   console.log("at client endpoint");
-  console.log("for site: ", body.SiteID);
   let body = req.body;
+  console.log("for site: ", body.SiteID);
   let name = body.payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
   let phone;
