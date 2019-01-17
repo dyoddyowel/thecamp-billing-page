@@ -354,6 +354,13 @@ const locations = {
 		tagID: '3324',
 		pixelID: ''
 },
+'Mckinney': 
+	{
+		siteID: '568503',
+		programID: '100087',
+		tagID: '3324',
+		pixelID: ''
+},
 'Menifee': 
 	{
 		siteID: '228342',

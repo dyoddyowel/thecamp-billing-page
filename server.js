@@ -13,6 +13,9 @@ const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
 const helpers = require('./src/helpers');
 const enforce = require('express-sslify')
+const admin_template = require('./emails/templates/admin');
+const customer_template = require('./emails/templates/customer');
+const location_emails = require('./location_email');
 
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(bodyParser.json());
@@ -72,8 +75,8 @@ app.post('/api/infusionsoft', async (req, res) => {
 
 app.post('/api/client', async (req, res) => {
   console.log("at client endpoint");
+  console.log("for site: ", body.SiteID);
   let body = req.body;
-  console.log("endpoint", body);
   let name = body.payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
   let phone;
@@ -94,7 +97,7 @@ app.post('/api/client', async (req, res) => {
     BirthDate: "2018-01-01",
     MobilePhone: phone,
   }
-  console.log("client_data", client_data);
+  console.log("client data object created");
 
   // Add Client
   let clientResponse;
@@ -110,7 +113,6 @@ app.post('/api/client', async (req, res) => {
 app.post('/api/billing', async (req, res) => {
   console.log("at billing endpoint");
   let body = req.body;
-  console.log("endpoint", body);
   let name = body.payment.name.split(' ');  
   let exp = helpers.format_expiry(body.payment.expiry);
   exp = exp.split('/');
@@ -169,7 +171,8 @@ app.post('/api/billing', async (req, res) => {
 
   console.log('purchase',purchase)
   if(purchase.Status === "Success") {
-    await email(body.email);
+    await email(body.email, customer_template);
+    // await email(location_emails[body.SiteID], admin_template);
   }
   res.send(purchase.Status);
 });
@@ -177,7 +180,6 @@ app.post('/api/billing', async (req, res) => {
 app.post('/api', async (req, res) => {
   console.log("at endpoint");
   let body = req.body;
-  console.log("endpoint", body);
   let name = body.Payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
   let exp = body.Payment.expiry.split('/');
