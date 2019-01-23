@@ -95,13 +95,6 @@ const locations = {
 		tagID: '3250',
 		pixelID: ''
 },
-'Clovis': 
-	{
-		siteID: '569158',
-		programID: '100032',
-		tagID: '3252',
-		pixelID: ''
-},
 'Colorado-Springs': 
 	{
 		siteID: '735761',
@@ -191,13 +184,6 @@ const locations = {
 		siteID: '834435',
 		programID: '10474',
 		tagID: '3278',
-		pixelID: ''
-},
-'Fresno': 
-	{
-		siteID: '-724509',
-		programID: '10239',
-		tagID: '3280',
 		pixelID: ''
 },
 'Galerias': 
@@ -397,6 +383,13 @@ const locations = {
 		pixelID: ''
 },
 'Miramar': 
+	{
+		siteID: '347920',
+		programID: '10265',
+		tagID: '3336',
+		pixelID: ''
+},
+'Miramar-CA': 
 	{
 		siteID: '347920',
 		programID: '10265',
