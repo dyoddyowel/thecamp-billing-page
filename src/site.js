@@ -56,7 +56,6 @@ const getActivationCode = (params) => {
 }
 
 module.exports.getLocations = getLocations;
-module.exports.getSales = getSales;
 module.exports.buildArguments = buildArguments;
 module.exports.getActivationCode = getActivationCode;
 module.exports.looper = looper;

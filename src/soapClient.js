@@ -1,5 +1,5 @@
 const soap = require('soap');
-const base_url = process.env.MINDBODY_BASE_URL;
+const base_url = "https://api.mindbodyonline.com/0_5_1/";
 
 const soapClient = (service) => {
     let url = base_url + '/' + service + '.asmx';
