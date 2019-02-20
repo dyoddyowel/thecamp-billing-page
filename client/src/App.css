@@ -4,6 +4,11 @@
   width: 100% !important; 
 }
 
+.video-react .video-react-big-play-button {
+  top: 50% !important;
+  left: 37% !important;
+}
+
 button:disabled {
   background: gray;
   box-shadow: 0 8px 0 #676767, 0 12px 10px rgba(0, 0, 0, .3);
@@ -660,11 +665,6 @@ ul {
   .form-header {
     margin-bottom: 10%;
     margin-top: 10%;
-  }
-
-  .video-react .video-react-big-play-button {
-    top: 50% !important;
-    left: 37% !important;
   }
 
   h2 {
