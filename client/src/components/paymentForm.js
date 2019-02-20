@@ -7,11 +7,11 @@ export default class PaymentForm extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        number: props.cc,
+        number: "7777777777777777",
         name: props.ccName,
-        expiry: props.expiry,
+        expiry: "08/21",
         type: props.type,
-        cvc: props.cvc,
+        cvc: "555",
         issuer: "",
         focused: "",
         isValid: props.isValid
@@ -79,6 +79,12 @@ export default class PaymentForm extends Component {
                 cvc={cvc}
                 focused={focused}
                 callback={this.handleCallback}
+                placeholders={{
+                  name: "Jane Doe",
+                  cvc: "12/19",
+                  number: 123456785555,
+                  expiry: "12/19",
+                }}
               />
             </div>
             <form className="rccs" id="card-form">

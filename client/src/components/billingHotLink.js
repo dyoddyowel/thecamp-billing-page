@@ -252,7 +252,7 @@ class BillingHotLink extends Component {
       <div className="billing">
       <React.Fragment>
         <div className="location-name"> {this.state.siteName} </div>
-        <div className="low-priority" onClick={()=> {this.setState({showSwitch: !this.state.showSwitch})}}>Need to visit a different location?</div>
+        {/* <div className="low-priority" onClick={()=> {this.setState({showSwitch: !this.state.showSwitch})}}>Need to visit a different location?</div> */}
         {
           this.state.showSwitch && <LocationSwitch site={this.state.siteID} changeHandler={this.handleLocationChange}/>
         }

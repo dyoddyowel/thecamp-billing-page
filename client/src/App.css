@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.rccs {
+  width: 100% !important; 
+}
 
 button:disabled {
   background: gray;
+  box-shadow: 0 8px 0 #676767, 0 12px 10px rgba(0, 0, 0, .3);
 }
 
 .low-priority {
@@ -11,7 +16,7 @@ button:disabled {
 
 .location-name {
   font-weight: bold;
-  font-size: larger;
+  font-size: 50px;
 }
 
 .video-react .video-react-big-play-button {
@@ -133,7 +138,7 @@ select {
   width: 95%;
   background-color: #ca0010;
   color: #fff;
-  font-family: "Alegreya Sans",sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 20px;
   font-weight: 900;
   line-height: 22px;
@@ -160,13 +165,12 @@ select {
 
 
 #city-state input{
-  width: 360px;
+  /* width: 360px; */
 }
 
 #city-state select {
   margin: auto;
   width: 100%;
-  width: 360px;
   background: #fff;
   color: #a3a3a3;
   font: inherit;
@@ -214,7 +218,7 @@ select {
   margin-top: 5%;
   background-color: #ca0010;
   color: #fff;
-  font-family: "Alegreya Sans",sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -242,6 +246,7 @@ select {
   color: black;
   background: lightgray;
   border: 1px solid black;
+  box-shadow: 0 8px 0 #676767, 0 12px 10px rgba(0, 0, 0, .3);
 }
 
 #billing-form button:hover {
@@ -259,7 +264,7 @@ select {
   text-align: center;
   background-color: #ca0010;
   color: #fff;
-  font-family: "Alegreya Sans",sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -373,7 +378,7 @@ ul {
   -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
   -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
-  font-family: 'Pacifico', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1;
   text-shadow: 0 -1px 1px rgba(175, 49, 95, .7);
   -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
@@ -459,24 +464,18 @@ ul {
   margin: auto;
 }
 
-.billing #billing-address {
-  width: 50%;
-  margin: auto;
-}
-
 .billing #BillingState {
   height: 70px;
 }
 
 .form-header {
-  margin-bottom: 3%;
-  margin-top: 2%;
+  margin-bottom: 5%;
+  margin-top: 10%;
 }
 
 .billing input {
   margin: auto;
   width: 100%;
-  width: 360px;
   background: #fff;
   color: #a3a3a3;
   font: inherit;
@@ -511,7 +510,7 @@ ul {
 }
 
 #billing-copy {
-  margin-top: 1%;
+  margin-top: 5%;
   margin-bottom: 2%;
   width: 60%;
   float: none; 
@@ -633,6 +632,11 @@ ul {
   transform:rotate(-5deg);
 }
 
+.billing #billing-address {
+  width: 50%;
+  margin: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -644,12 +648,36 @@ ul {
 
 @media (max-width: 850px) {
 
+  .card-form-input-container, #card-data-box {
+    width: 75% !important;
+  }
+
+  .billing #billing-address {
+    width: 100%;
+    margin: auto;
+  }
+
+  .form-header {
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+
+  .video-react .video-react-big-play-button {
+    top: 50% !important;
+    left: 37% !important;
+  }
+
+  h2 {
+    margin-top: 10% !important;
+  }
+
   #logo-container {
     margin-top: 5%;
   }
 
   #billing-copy {
     margin-top: 5%;
+    margin-bottom: 5%;
     width: 95%;
   }
 
@@ -667,7 +695,8 @@ ul {
   }
 
   .billing #form-box {
-    width: 100%;
+    width: 75%;
+    margin-bottom: 5%;
   }
 
   .notmobile {
@@ -709,9 +738,9 @@ ul {
   }
 
   #billing-address {
-    width: 100%;
+    width: 75% !important;
     text-align: center;
-    margin: 5% auto;
+    margin: 5% auto 5%;
   }
 
   .card-form-input-container {
@@ -771,7 +800,6 @@ ul {
     width: 100%;
     max-width: 100%;
     background: #cacaca38;
-    font-family: 'Lato', 'sans-serif';
   }
 
   #thank-you-container button {
@@ -824,12 +852,14 @@ ul {
 
 #billing-copy ul li {
   font-size: 20px;
-  list-style-type: circle;
-  background: none;
+  list-style-type: none;
+  padding-left: 15%;
+  background: transparent url(/info.png) no-repeat scroll 0 0;
   font-weight: 500;
-  line-height: 20px;
-  padding-left: 0;
+  margin-top: 10%;
+  line-height: 25px;
   min-height: 12px;
+  margin-right: 10%;
   margin-bottom: 5px;
 }
 
