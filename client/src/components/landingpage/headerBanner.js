@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HeaderBanner = () => (
-  <div id="header-banner">Tough Love Training Promo</div>
+  <div id="header-banner">Spring Cleaning Detox Promo</div>
 );
 
 export default HeaderBanner;

@@ -71,28 +71,21 @@ const BillingPage = ({
   </React.Fragment>
 );
 
-// const filtering = () => {
-//   let keys = Object.keys(location);
-//   let correct;
-//   keys.forEach((key) => {
-//     location[key]
-//   });
-// }
-
-const LocationSwitch = () => {
+const LocationSwitch = ({ changeHandler }) => {
   const renderSwitch = () => {
     let arr = [];
     let keys = Object.keys(location);
-    keys.forEach((key) => {
+    keys.forEach((key, i) => {
+      let name = key.replace('-', ' ');
       arr.push(
-        <option value={location[key]['siteID']}>{key}</option>
-      );
+        <option key={i} value={location[key]['siteID']} name={name}>{name}</option>
+      );        
     })
     return arr;
   }
 
   return(
-    <select>
+    <select onChange={changeHandler}>
       {
         renderSwitch()
       }
@@ -105,12 +98,14 @@ class BillingHotLink extends Component {
     super(props);
     this.state = {
       loading: false,
+      siteName: '',
       clientID: '',
       complete: false,
       isDisabled: true,
       ProgramID: '',
       error: false,
       SiteID: '',
+      showSwitch: false,
       address: {
           "BillingAddress": "",
           "BillingCity": "",
@@ -135,7 +130,11 @@ class BillingHotLink extends Component {
   componentDidMount() {
     let a = this.props.locations;
     let t = capitalize(this.props.match.params.id);
-    this.setState({ SiteID: a[t]['siteID'], ProgramID: a[t]['programID'], PixelID: a[t]['pixelID']})
+    this.setState({ SiteID: a[t]['siteID'],
+                    ProgramID: a[t]['programID'],
+                    PixelID: a[t]['pixelID'],
+                    siteName: t,
+    })
   }
   nextSection = () => {
     let steps = this.state.steps + 1;
@@ -213,7 +212,7 @@ class BillingHotLink extends Component {
       this.nextSection();
       ReactPixel.track('Purchase', {
         'currency': 'USD',
-        'value': 21.0
+        'value': 37.0
       });
       this.setState({ complete: true });
     } else {
@@ -243,16 +242,21 @@ class BillingHotLink extends Component {
     this.setState({ address: x });
   }
 
-  handleLocation = () => {
-
+  handleLocationChange = (e) => {
+    let name = e.target.options[e.target.selectedIndex].text;
+    this.setState({SiteID: e.target.value, showSwitch: false, siteName: name});
   }
 
   render() {
-    console.log(this.props)
     return(
       <div className="billing">
       <React.Fragment>
-        <LocationSwitch />
+        <div className="location-name"> {this.state.siteName} </div>
+        <div className="low-priority" onClick={()=> {this.setState({showSwitch: !this.state.showSwitch})}}>Need to visit a different location?</div>
+        {
+          this.state.showSwitch && <LocationSwitch site={this.state.siteID} changeHandler={this.handleLocationChange}/>
+        }
+        
       </React.Fragment>
       
       {

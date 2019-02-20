@@ -3,6 +3,17 @@
 button:disabled {
   background: gray;
 }
+
+.low-priority {
+  cursor: pointer;
+  color: blue;
+}
+
+.location-name {
+  font-weight: bold;
+  font-size: larger;
+}
+
 @media (max-width: 850px) {
 
   #logo-container {
