@@ -42,8 +42,8 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="Tough Love Training"
-      price="21" />
+      detailname="Spring Cleaning Detox"
+      price="37" />
     <Video />
     <AdCopy
       id="billing-copy" />

@@ -2,7 +2,7 @@
 var postmark = require("postmark");
 
 // Send an email:
-var client = new postmark.ServerClient("23f09270-adc1-4c7f-9cf5-0339e1c012b2");
+var client = new postmark.ServerClient(process.env.POSTMARK_CLIENT_API);
 
 client.sendEmail({
   "From": "no-reply@thecamptc.com",

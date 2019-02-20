@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -9,7 +10,6 @@ const payment = require('./src/payment');
 const classes = require('./src/class');
 const Infusionsoft = require('./src/infusionsoft');
 const Timber = require('./src/timber');
-const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
 const helpers = require('./src/helpers');
 const enforce = require('express-sslify')
@@ -40,9 +40,9 @@ app.post('/api/timber/create', async (req, res) => {
   let request = Timber.createAlerts();
 });
 
-app.get('/email/send', async (req, res) => {
-  send_email
-});
+// app.get('/email/send', async (req, res) => {
+//   send_email
+// });
 
 app.post('/api/infusionsoft', async (req, res) => {
   let body = req.body;

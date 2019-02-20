@@ -17,7 +17,7 @@ const VideoPlayer = (props) => {
           poster='/videoPoster.PNG'
           autoPlay={false}
           muted={false}
-          src="http://www.thecamptc.com/videos/VIDEOVALENTINE.mp4"
+          src="http://www.thecamptc.com/videos/SpringCleaningDetox_optimized.mp4"
         />
     </div>
   );
