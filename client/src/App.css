@@ -14,214 +14,6 @@ button:disabled {
   font-size: larger;
 }
 
-@media (max-width: 850px) {
-
-  #logo-container {
-    margin-top: 5%;
-  }
-
-  #billing-copy {
-    margin-top: 5% !important;
-    width: 95%;
-  }
-
-  #email-box input {
-    width: 95% !important;
-  }
-
-  .billing input {
-    width: 100% !important;
-  }
-
-  .join-program {
-    width: 70% !important;
-    font-size: 25px !important;
-  }
-
-  .billing #form-box {
-    width: 100% !important;
-  }
-
-  .notmobile {
-    display: none !important;
-  }
-
-  #email-box button {
-    display: block;
-    height: 75px;
-    font-size: 25px;
-    width: 95% !important;
-    text-align: center;
-    background: #e43b2c;
-    color: #fff;
-    font-size: 37px;
-    text-transform: uppercase;
-    font-weight: 700;
-    /* height: 55px; */
-    line-height: 40px;
-    border-radius: 5px;
-    border: 0;
-    letter-spacing: 2px;
-    margin: 35px auto 0;
-    padding: 20px;
-  }
-
-  #copy-block {
-    width: 100% !important;
-  }
-
-  #copy-block #header-copy {
-    width: 100% !important;
-  }
-
-  #payment-block {
-    display: inline-block;
-    width: 100% !important;
-    vertical-align: top;
-  }
-
-  #billing-address {
-    width: 100% !important;
-    text-align: center !important;
-    margin: 5% auto !important;
-  }
-
-  .card-form-input-container {
-    width: 100% !important;
-  }
-
-  #header-banner {
-    background: red !important;
-    color: white !important;
-    font-size: 20px !important;
-    width: 100% !important;
-    font-weight: bold !important;
-    height: 40px !important;
-    text-align: center !important;
-    margin: auto !important;
-    vertical-align: middle !important;
-    margin-bottom: 1% !important;
-  }
-
-  #header-text {
-    font-size: 18px !important;
-    margin-top: 1%;
-    margin-bottom: 1% !important;
-  }
-
-  #video-wrapper {
-    display: inline-block !important;
-    width: 100% !important;
-    margin-top: 5% !important;
-  }
-
-  #email-box {
-    width: 100% !important;
-  }
-
-  #email-box button {
-    font-size: 25px !important;
-  }
-
-  #component_box h1 {
-    font-size: 24px;
-  }
-
-  .proper {
-    font-size: 15px;
-  }
-
-  #component_box h3 {
-    font-size: 20px;
-  }
-
-  .mobile {
-    display: block !important;
-  }
-
-  .App {
-    width: 100% !important;
-    max-width: 100% !important;
-    background: #cacaca38;
-    font-family: 'Lato', 'sans-serif';
-  }
-
-  #thank-you-container button {
-    font-size: 13px !important;
-  }
-
-  #card-container form {
-    position: relative !important;
-  }
-
-  .form input {
-    display: inline-block !important;
-    width: 90% !important;
-  }
-
-  #city-state input {
-    width: 100% !important;
-  }
-
-  select {
-    width: 100% !important;
-  }
-
-  .half-width {
-    width: 46% !important;
-  }
-
-  #card-container #card-module {
-    position: relative !important; 
-    left: 0 !important;
-  }
-
-  #card-container {
-    position: relative !important;
-    width: 100% !important;
-    margin: 10% auto auto !important;
-    height: auto !important;
-  }
-
-  #header-copy ul li {
-    font-size: 20px !important;
-    list-style-type: circle !important;
-    background: none !important;
-    font-weight: 500 !important;
-    line-height: 20px !important;
-    padding-left: 0 !important;
-    min-height: 12px !important;
-    margin-bottom: 5px !important;
-}
-
-#billing-copy ul li {
-  font-size: 20px !important;
-  list-style-type: circle !important;
-  background: none !important;
-  font-weight: 500 !important;
-  line-height: 20px !important;
-  padding-left: 0 !important;
-  min-height: 12px !important;
-  margin-bottom: 5px !important;
-}
-
-  .notmobile {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-
-  #card-data-box {
-    width: 99.9% !important;
-    position: relative !important;
-    text-align: center !important;
-    margin: auto !important;
-    display: inline-block !important;
-  }
-}
-
 .video-react .video-react-big-play-button {
   top: 42%;
   left: 40%;
@@ -316,7 +108,7 @@ button:disabled {
 }
 #card-data-box {
   width: 72%;
-  position: relative !important;
+  position: relative;
   text-align: center;
   margin: auto;
 }
@@ -447,9 +239,9 @@ select {
 }
 
 #billing-form button:disabled {
-  color: black !important;
-  background: lightgray !important;
-  border: 1px solid black !important;
+  color: black;
+  background: lightgray;
+  border: 1px solid black;
 }
 
 #billing-form button:hover {
@@ -485,9 +277,9 @@ select {
 }
 
 button:disabled {
-  color: black !important;
-  background: lightgray !important;
-  border: 1px solid black !important;
+  color: black;
+  background: lightgray;
+  border: 1px solid black;
 }
 
 #email-box button:hover {
@@ -657,9 +449,9 @@ ul {
 }
 
 .join-program:disabled {
-  color: black !important;
-  background: lightgray !important;
-  border: 1px solid black !important;
+  color: black;
+  background: lightgray;
+  border: 1px solid black;
 }
 
 .billing #form-box {
@@ -787,7 +579,7 @@ ul {
 }
 
 .half-width {
-  width: 49% !important;
+  width: 49%;
 
 }
 
@@ -847,5 +639,213 @@ ul {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 850px) {
+
+  #logo-container {
+    margin-top: 5%;
+  }
+
+  #billing-copy {
+    margin-top: 5%;
+    width: 95%;
+  }
+
+  #email-box input {
+    width: 95%;
+  }
+
+  .billing input {
+    width: 100%;
+  }
+
+  .join-program {
+    width: 70%;
+    font-size: 25px;
+  }
+
+  .billing #form-box {
+    width: 100%;
+  }
+
+  .notmobile {
+    display: none;
+  }
+
+  #email-box button {
+    display: block;
+    height: 75px;
+    font-size: 25px;
+    width: 95%;
+    text-align: center;
+    background: #e43b2c;
+    color: #fff;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* height: 55px; */
+    line-height: 40px;
+    border-radius: 5px;
+    border: 0;
+    letter-spacing: 2px;
+    margin: 35px auto 0;
+    padding: 20px;
+  }
+
+  #copy-block {
+    width: 100%;
+  }
+
+  #copy-block #header-copy {
+    width: 100%;
+  }
+
+  #payment-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  #billing-address {
+    width: 100%;
+    text-align: center;
+    margin: 5% auto;
+  }
+
+  .card-form-input-container {
+    width: 100%;
+  }
+
+  #header-banner {
+    background: red;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    margin-bottom: 1%;
+  }
+
+  #header-text {
+    font-size: 18px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  #video-wrapper {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #email-box {
+    width: 100%;
+  }
+
+  #email-box button {
+    font-size: 25px;
+  }
+
+  #component_box h1 {
+    font-size: 24px;
+  }
+
+  .proper {
+    font-size: 15px;
+  }
+
+  #component_box h3 {
+    font-size: 20px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .App {
+    width: 100%;
+    max-width: 100%;
+    background: #cacaca38;
+    font-family: 'Lato', 'sans-serif';
+  }
+
+  #thank-you-container button {
+    font-size: 13px;
+  }
+
+  #card-container form {
+    position: relative;
+  }
+
+  .form input {
+    display: inline-block;
+    width: 90%;
+  }
+
+  #city-state input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .half-width {
+    width: 46%;
+  }
+
+  #card-container #card-module {
+    position: relative; 
+    left: 0;
+  }
+
+  #card-container {
+    position: relative;
+    width: 100%;
+    margin: 10% auto auto;
+    height: auto;
+  }
+
+  #header-copy ul li {
+    font-size: 20px;
+    list-style-type: circle;
+    background: none;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 0;
+    min-height: 12px;
+    margin-bottom: 5px;
+}
+
+#billing-copy ul li {
+  font-size: 20px;
+  list-style-type: circle;
+  background: none;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 0;
+  min-height: 12px;
+  margin-bottom: 5px;
+}
+
+  .notmobile {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  #card-data-box {
+    width: 99.9%;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
   }
 }
