@@ -12,10 +12,10 @@ const template = {
         "receipt_details": [
             {
                 "description": "Tough Love Training Promo",
-                "amount": "$21"
+                "amount": "$37"
             }
         ],
-        "total": "$21",
+        "total": "$37",
         "company_name": "The Camp",
         "name": "name_Value",
         "receipt_id": "receipt_id_Value",

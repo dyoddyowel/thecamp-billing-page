@@ -5,9 +5,10 @@ const AdCopy = ({ id }) => (
         <div id={id}>
           <ul>
             <li>Unlimited Training at The Camp</li>
-            <li>Nutrition Program to DROP LB's</li>
-            <li>Special 30+ page educational manual with Step-By-Step Instructions</li>
-            <li>Accountability and Support</li>
+            <li>Nutrition Program to Clean, Detoxify, and DROP stubborn body fat</li>
+            <li>32 Page Step-by-Step Manual w/ Recipes Included</li>
+            <li>Nutritional Seminar and Weekly Weigh-In</li>
+            <li>World Class Accountability and Support</li>
           </ul>
         </div>
   </div>

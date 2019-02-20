@@ -10,7 +10,7 @@ import ThankYou from './thankYou';
 import ErrorComponent from './error';
 import PromoDetails from './landingpage/promoDetails';
 import Video from './landingpage/adVideo';
-
+import location from '../locations2';
 //TODO: Implement Thank You Page
 //TODO: Implement Step Component
 
@@ -70,6 +70,35 @@ const BillingPage = ({
     <button title="Please fill out all inputs before submitting." disabled={disabled} className="primary join-program" onClick={handleSubmit}>Join Program</button>
   </React.Fragment>
 );
+
+// const filtering = () => {
+//   let keys = Object.keys(location);
+//   let correct;
+//   keys.forEach((key) => {
+//     location[key]
+//   });
+// }
+
+const LocationSwitch = () => {
+  const renderSwitch = () => {
+    let arr = [];
+    let keys = Object.keys(location);
+    keys.forEach((key) => {
+      arr.push(
+        <option value={location[key]['siteID']}>{key}</option>
+      );
+    })
+    return arr;
+  }
+
+  return(
+    <select>
+      {
+        renderSwitch()
+      }
+    </select>
+  );
+};
 
 class BillingHotLink extends Component {
   constructor(props) {
@@ -214,11 +243,18 @@ class BillingHotLink extends Component {
     this.setState({ address: x });
   }
 
+  handleLocation = () => {
+
+  }
+
   render() {
     console.log(this.props)
     return(
       <div className="billing">
-
+      <React.Fragment>
+        <LocationSwitch />
+      </React.Fragment>
+      
       {
 
         this.state.loading ? <Loading /> : 
