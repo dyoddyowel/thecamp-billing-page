@@ -11,7 +11,7 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "Tough Love Training Promo",
+                "description": "Spring Cleaning Detox Promo",
                 "amount": "$37"
             }
         ],
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'ToughLove_ValentinesNutritionTrainingPlan.pdf',
-            path: 'http://www.thecamptc.com/manuals/ValentinesNutritionTrainingPlan.pdf',
+            filename: 'SpringCleaningDetoxManual2019.pdf',
+            path: 'http://www.thecamptc.com/manuals/SpringCleaningDetoxManual2019.pdf',
             contentType: 'application/pdf'
         }
     ]
