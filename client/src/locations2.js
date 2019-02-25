@@ -1040,17 +1040,31 @@ const locations = {
 			email: 'pico@thecamptc.com'
 		}
 },
+'Pico-Riviera': 
+	{
+		siteID: '253486',
+		programID: '10585',
+		tagID: '3368',
+		pixelID: '',
+		location: {
+			street: '6035 Rosemead Boulevard',
+			state: 'CA',
+			zip: '90660',
+			phone: '(562) 340-6308',
+			email: 'pico@thecamptc.com'
+		}
+},
 'Burnsville': {
-    siteID: '441415',
-    programID: '101123',
-    tagID: '3076',
-	pixelID: '114710455914412',
+	siteID: '441415',
+	programID: '101123',
+	tagID: '3334',
+	pixelID: '',
 	location: {
-		street: '6035 Rosemead Boulevard',
-		state: 'CA',
-		zip: '90660',
-		phone: '(562) 340-6308',
-		email: 'pico@thecamptc.com'
+		street: '501 State Highway 13 Suite 104',
+		state: 'MN',
+		zip: '55337',
+		phone: '952-882-4986',
+		email: 'MinnesotaFD@thecamptc.com'
 	}
 },
 'Rancho': 
