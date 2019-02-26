@@ -40,10 +40,6 @@ app.post('/api/timber/create', async (req, res) => {
   let request = Timber.createAlerts();
 });
 
-// app.get('/email/send', async (req, res) => {
-//   send_email
-// });
-
 app.post('/api/infusionsoft', async (req, res) => {
   let body = req.body;
   let name = body.Name.split(' ');
