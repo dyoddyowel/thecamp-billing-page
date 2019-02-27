@@ -137,7 +137,7 @@ app.post('/api/billing', async (req, res) => {
         attributes: {
           'xsi:type': "CreditCardInfo"
         },  
-        Amount: 21.0,
+        Amount: 37.0,
         CreditCardNumber: body.payment.number,
         CVV: body.payment.cvc,
         CCType: body.payment.issuer,
