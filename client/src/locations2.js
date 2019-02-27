@@ -90,7 +90,7 @@ const locations = {
 'Burbank': 
 	{
 		siteID: '264885',
-		programID: '10846',
+		programID: '10955',
 		tagID: '3238',
 			 pixelID: '179752492676186',
 			 location: {
@@ -329,7 +329,7 @@ const locations = {
 'El-Monte': 
 	{
 		siteID: '264885',
-		programID: '10847',
+		programID: '10956',
 		tagID: '3272',
 		pixelID: '',
 		location: {
@@ -889,7 +889,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '10848',
+		programID: '10957',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -1182,7 +1182,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '10849',
+		programID: '10958',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -1252,7 +1252,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '10850',
+		programID: '10959',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -1431,24 +1431,24 @@ const locations = {
 			email: 'thousandoaksfd@thecamptc.com'
 		}
 },
-'Vancouver': 
-	{
-		siteID: '477491',
-		programID: '',
-		tagID: '3422',
-		pixelID: '',
-		location: {
-			street: '4200 NW Fruit Valley Rd Unit C',
-			state: 'WA',
-			zip: '98660',
-			phone: '(360) 975-2009',
-			email: 'VancouverFD@thecamptc.com'
-		}
-},
+// 'Vancouver': 
+// 	{
+// 		siteID: '477491',
+// 		programID: '',
+// 		tagID: '3422',
+// 		pixelID: '',
+// 		location: {
+// 			street: '4200 NW Fruit Valley Rd Unit C',
+// 			state: 'WA',
+// 			zip: '98660',
+// 			phone: '(360) 975-2009',
+// 			email: 'VancouverFD@thecamptc.com'
+// 		}
+// },
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '10851',
+		programID: '10960',
 		tagID: '3424',
 		pixelID: '',
 		location: {
@@ -1490,7 +1490,7 @@ const locations = {
 'West-Covina': 
 	{
 		siteID: '264885',
-		programID: '10852',
+		programID: '10961',
 		tagID: '3430',
 		pixelID: '',
 		location: {
