@@ -133,7 +133,7 @@ class BillingHotLink extends Component {
     this.setState({ SiteID: a[t]['siteID'],
                     ProgramID: a[t]['programID'],
                     PixelID: a[t]['pixelID'],
-                    siteName: t,
+                    siteName: t  + ', ' + a[t]['location']['state'],
     })
   }
   nextSection = () => {

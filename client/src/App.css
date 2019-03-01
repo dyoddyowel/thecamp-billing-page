@@ -197,10 +197,6 @@ select {
   margin: 5% auto;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 #card-container {
   position: relative;
   width: 100%;
@@ -878,4 +874,8 @@ ul {
     margin: auto;
     display: inline-block;
   }
+}
+
+.bold {
+  font-weight: bold;
 }

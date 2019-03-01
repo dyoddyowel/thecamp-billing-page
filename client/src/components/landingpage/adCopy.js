@@ -9,6 +9,7 @@ const AdCopy = ({ id }) => (
             <li>32 Page Step-by-Step Manual w/ Recipes Included</li>
             <li>Nutritional Seminar and Weekly Weigh-In</li>
             <li>World Class Accountability and Support</li>
+            <li style={{fontWeight: 'bold'}}>* Only Available for New Members</li>
           </ul>
         </div>
   </div>
