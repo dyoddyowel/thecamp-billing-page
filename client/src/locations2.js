@@ -466,6 +466,20 @@ const locations = {
 			email: 'ClevelandEastFD@thecamptc.com'
 		}
 },
+'Highland-Hts': 
+	{
+		siteID: '912776',
+		programID: '10436',
+		tagID: '3290',
+		pixelID: '',
+		location: {
+			street: '261 Alpha Park',
+			state: 'OH',
+			zip: '44143',
+			phone: '(440) 459-1204',
+			email: 'ClevelandEastFD@thecamptc.com'
+		}
+},
 'Houston': 
 	{
 		siteID: '-879013',
@@ -593,6 +607,20 @@ const locations = {
 		}
 },
 'Laguna-Hills': 
+	{
+		siteID: '221032',
+		programID: '10416',
+		tagID: '3310',
+		pixelID: '',
+		location: {
+			street: '27120 Cabot Rd',
+			state: 'CA',
+			zip: '92653',
+			phone: '(949) 348-1120',
+			email: 'lagunafd@thecamptc.com'
+		}
+},
+'Laguna': 
 	{
 		siteID: '221032',
 		programID: '10416',
@@ -1208,6 +1236,20 @@ const locations = {
 		}
 },
 'San-Juan-Capistrano': 
+	{
+		siteID: '819476',
+		programID: '100173',
+		tagID: '3390',
+		pixelID: '',
+		location: {
+			street: '32409 Calle Perfecto',
+			state: 'CA',
+			zip: '92675',
+			phone: '(949) 922-6946',
+			email: 'sanjuancapistranofd@thecamptc.com'
+		}
+},
+'Juan-Capistrano': 
 	{
 		siteID: '819476',
 		programID: '100173',
