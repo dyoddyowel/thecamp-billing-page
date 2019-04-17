@@ -11,11 +11,11 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "Tough Love Training Promo",
-                "amount": "$21"
+                "description": "21 Day Summer Shred Promo",
+                "amount": "$47"
             }
         ],
-        "total": "$21",
+        "total": "$47",
         "company_name": "The Camp",
         "name": "name_Value",
         "receipt_id": "receipt_id_Value",
