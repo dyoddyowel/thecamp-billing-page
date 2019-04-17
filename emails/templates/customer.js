@@ -24,7 +24,7 @@ const template = {
     attachments: [
         {
             filename: 'SpringCleaningDetoxManual2019.pdf',
-            path: 'http://www.thecamptc.com/manuals/SpringCleaningDetoxManual2019.pdf',
+            path: 'http://www.thecamptc.com/manuals/Summer_Shred_NUTRITION_MANUAL.pdf',
             contentType: 'application/pdf'
         }
     ]
