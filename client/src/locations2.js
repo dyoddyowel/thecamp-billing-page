@@ -73,7 +73,7 @@ const locations = {
 			email: 'BakersfieldFD@thecamptc.com'
 		}
 },
-'Bakersfield-West': 
+'Bakersfield-NW': 
 	{
 		siteID: '697919',
 		programID: '102134',
