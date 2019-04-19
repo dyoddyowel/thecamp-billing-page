@@ -73,6 +73,20 @@ const locations = {
 			email: 'BakersfieldFD@thecamptc.com'
 		}
 },
+'Bakersfield-West': 
+	{
+		siteID: '697919',
+		programID: '102134',
+		tagID: '3234',
+		pixelID: '124038588258655',
+		location: {
+			street: '4510 Stine Road',
+			state: 'CA',
+			zip: '93313',
+			phone: '661-735-5875',
+			email: 'BakersfieldFD@thecamptc.com'
+		}
+},
 'Bell': 
 	{
 		siteID: '273870',
@@ -105,7 +119,7 @@ const locations = {
 'Carson': 
 	{
 		siteID: '298511',
-		programID: '10311',
+		programID: '10316',
 		tagID: '3242',
 		pixelID: '',
 		location: {
@@ -830,6 +844,20 @@ const locations = {
 			email: 'MiramarFD@thecamptc.com'
 		}
 },
+'Las-Vegas': 
+	{
+		siteID: '678753',
+		programID: '101152',
+		tagID: '3336',
+		pixelID: '',
+		location: {
+			street: '6901-B Miramar Parkway',
+			state: 'FL',
+			zip: '33023',
+			phone: '(754) 400-8817',
+			email: 'MiramarFD@thecamptc.com'
+		}
+},
 'Miramar-CA': 
 	{
 		siteID: '347920',
@@ -1363,8 +1391,22 @@ const locations = {
 },
 'South-Bay': 
 	{
-		siteID: '',
-		programID: '',
+		siteID: '298511',
+		programID: '10317',
+		tagID: '3406',
+		pixelID: '',
+		location: {
+			street: '22216 Palos Verdes Blvd',
+			state: 'CA',
+			zip: '90505',
+			phone: '(310) 328-2267',
+			email: 'SouthBayFD@thecamptc.com'
+		}
+},
+'Torrance': 
+	{
+		siteID: '298511',
+		programID: '10317',
 		tagID: '3406',
 		pixelID: '',
 		location: {
@@ -1499,6 +1541,20 @@ const locations = {
 			zip: '91402',
 			phone: '(818) 877-3697',
 			email: 'VanNuysFD@thecamptc.com'
+		}
+},
+'Turlock': 
+	{
+		siteID: '994773',
+		programID: '102466',
+		tagID: '3426',
+		pixelID: '',
+		location: {
+			street: '2227 Portola Road',
+			state: 'CA',
+			zip: '93003',
+			phone: '805-644-4366',
+			email: 'VenturaFD@thecamptc.com'
 		}
 },
 'Ventura': 
