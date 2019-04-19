@@ -87,6 +87,20 @@ const locations = {
 			email: 'BakersfieldFD@thecamptc.com'
 		}
 },
+'Bakersfield-nw': 
+	{
+		siteID: '697919',
+		programID: '102134',
+		tagID: '3234',
+		pixelID: '124038588258655',
+		location: {
+			street: '4510 Stine Road',
+			state: 'CA',
+			zip: '93313',
+			phone: '661-735-5875',
+			email: 'BakersfieldFD@thecamptc.com'
+		}
+},
 'Bell': 
 	{
 		siteID: '273870',
@@ -852,7 +866,7 @@ const locations = {
 		pixelID: '',
 		location: {
 			street: '6901-B Miramar Parkway',
-			state: 'FL',
+			state: 'NV',
 			zip: '33023',
 			phone: '(754) 400-8817',
 			email: 'MiramarFD@thecamptc.com'
