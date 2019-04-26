@@ -1333,6 +1333,34 @@ const locations = {
 			email: 'SantaBarbaraFD@thecamptc.com'
 		}
 },
+'San-Gabriel': 
+	{
+		siteID: '630735',
+		programID: '101151',
+		tagID: '3394',
+		pixelID: '',
+		location: {
+			street: '1023 State St',
+			state: 'CA',
+			zip: '93101',
+			phone: '805-284-2077',
+			email: 'SantaBarbaraFD@thecamptc.com'
+		}
+},
+'San-Marcos': 
+	{
+		siteID: '666702',
+		programID: '101160',
+		tagID: '3394',
+		pixelID: '',
+		location: {
+			street: '1023 State St',
+			state: 'CA',
+			zip: '93101',
+			phone: '805-284-2077',
+			email: 'SantaBarbaraFD@thecamptc.com'
+		}
+},
 'Santa-Clarita': 
 	{
 		siteID: '264885',
