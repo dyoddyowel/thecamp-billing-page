@@ -1,9 +1,8 @@
 //TODO: update location tagID
 //TODO: update Location programID
-//TODO: update Miramar, CA and Alexandria
 
 const locations = {
-  'Alexandria': 
+'Alexandria': 
 	{
 		siteID: '830783',
 		programID: '101131',
@@ -27,8 +26,8 @@ const locations = {
 			street: '3361 E Miraloma Ave',
 			state: 'CA',
 			zip: '92806',
-			phone: '(657) 216-2537',
-			email: 'anaheimfd@thecamptc.com'
+			phone: '657-216-2537',
+			email: 'AnaheimFD@thecamptc.com'
 		}
 },
 'Arcadia': 
