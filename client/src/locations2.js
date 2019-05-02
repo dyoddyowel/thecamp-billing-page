@@ -20,7 +20,7 @@ const locations = {
 'Anaheim': 
 	{
 		siteID: '172426',
-		programID: '101262',
+		programID: '11743',
 		tagID: '3228',
 		pixelID: '1019141084810848',
 		location: {
@@ -763,7 +763,7 @@ const locations = {
 'Mckinney': 
 	{
 		siteID: '568503',
-		programID: '100195',
+		programID: '100220',
 		tagID: '3324',
 		pixelID: '',
 		location: {
