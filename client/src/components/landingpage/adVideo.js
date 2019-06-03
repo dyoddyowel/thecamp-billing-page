@@ -17,7 +17,7 @@ const VideoPlayer = (props) => {
           poster='/videoPoster.PNG'
           autoPlay={false}
           muted={false}
-          src="http://www.thecamptc.com/videos/CarbCycling_optimized.mp4"
+          src="http://www.thecamptc.com/videos/summersizzle.mp4"
         />
     </div>
   );
