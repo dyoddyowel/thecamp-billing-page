@@ -19,7 +19,7 @@ class BillingForm extends Component {
                 "BillingPostalCode": "",
             },
             payment: {
-                "amount": 21,
+                "amount": 37,
                 "number": "",
                 "expiry": "",
                 "cvc": "",
@@ -86,7 +86,7 @@ class BillingForm extends Component {
                 "BillingPostalCode": "",
             },
             payment: {
-                "amount": 21,
+                "amount": 37,
                 "number": "",
                 "expiry": "",
                 "cvc": "",
@@ -110,7 +110,7 @@ class BillingForm extends Component {
             <div id="billing-form" className="form">
                 <div id="payment-container">
                     <div id="copy-block">
-                            <div id="block-header">Get All This for $21:</div>
+                            <div id="block-header">Get All This for $37:</div>
                             <AdCopy />
                     </div>
                     <PaymentForm 
