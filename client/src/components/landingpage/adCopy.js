@@ -4,12 +4,11 @@ const AdCopy = () => (
   <div>
         <div id="header-copy">
           <ul>
-            <li>21 Days of Unlimited Group Training</li>
-            <li>Nutrition Coaching</li>
-            <li>Flexible Meal Plan</li>
-            <li>Holiday Recipes</li>
-            <li>Alcohol Guide (It's the Holidays <span>🤷</span>)</li>
-            <li>34 Page Step by Step Manual</li>
+            <li>Unlimited Camp Classes</li>
+            <li>27 Page Nutrition Guide With Recipes</li>
+            <li>Nutritional Seminar</li>
+            <li>Weekly Weigh-Ins</li>
+            <li>Support and Guidance</li>
           </ul>
         </div>
   </div>
