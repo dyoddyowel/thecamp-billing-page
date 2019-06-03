@@ -26,7 +26,7 @@ class EmailForm extends Component {
       <div>
         <AdHeader />
         <div id="email-box">
-          <div id="header-text">Register for the <span className="bold yellow">Tough Love Training program</span> for just <span className="slash">$197</span> <span className="bold yellow">$21</span>:</div>
+          <div id="header-text">Register for the <span className="bold yellow">Summer Sizzle Slim Down</span> for just <span className="slash">$197</span> <span className="bold yellow">$37</span>:</div>
             <EmailBox
               saveData={this.props.saveData}
               nextSection={this.props.nextSection}
