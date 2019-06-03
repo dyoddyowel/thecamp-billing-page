@@ -11,11 +11,11 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "21 Day Summer Shred Promo",
-                "amount": "$47"
+                "description": "Summer Sizzle Slimdown",
+                "amount": "$37"
             }
         ],
-        "total": "$47",
+        "total": "$37",
         "company_name": "The Camp",
         "name": "name_Value",
         "receipt_id": "receipt_id_Value",
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'ToughLove_ValentinesNutritionTrainingPlan.pdf',
-            path: 'http://www.thecamptc.com/manuals/ValentinesNutritionTrainingPlan.pdf',
+            filename: 'Summer_Sizzle_Slim_Down_MANUAL.pdf',
+            path: 'https://www.thecamptc.com/manuals/Summer_Sizzle_Slim_Down_MANUAL.pdf',
             contentType: 'application/pdf'
         }
     ]
