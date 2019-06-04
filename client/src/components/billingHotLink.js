@@ -113,7 +113,7 @@ class BillingHotLink extends Component {
           "BillingPostalCode": "",
       },
       payment: {
-          "amount": 47,
+          "amount": 37,
           "number": "",
           "expiry": "",
           "cvc": "",
