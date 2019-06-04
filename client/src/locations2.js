@@ -2,24 +2,24 @@
 //TODO: update Location programID
 
 const locations = {
-'Alexandria': 
-	{
-		siteID: '830783',
-		programID: '101131',
-		tagID: '3226',
-		pixelID: '',
-		location: {
-			street: '8766 Richmond Hwy',
-			state: 'VA',
-			zip: '22309',
-			phone: '571-257-6329',
-			email: 'AlexandriaFD@thecamptc.com'
-		}
-},
+//'Alexandria': 
+//	{
+//		siteID: '830783',
+//		programID: '101131',
+//		tagID: '3226',
+//		pixelID: '',
+//		location: {
+//			street: '8766 Richmond Hwy',
+//			state: 'VA',
+//			zip: '22309',
+//			phone: '571-257-6329',
+//			email: 'AlexandriaFD@thecamptc.com'
+//		}
+//},
 'Anaheim': 
 	{
 		siteID: '172426',
-		programID: '11743',
+		programID: '11793',
 		tagID: '3228',
 		pixelID: '1019141084810848',
 		location: {
@@ -33,7 +33,7 @@ const locations = {
 'Arcadia': 
 	{
 		siteID: '505838',
-		programID: '101262',
+		programID: '101310',
 		tagID: '3230',
 		pixelID: '170049590227137',
 		location: {
@@ -47,7 +47,7 @@ const locations = {
 'Arlington': 
 	{
 		siteID: '469848',
-		programID: '10470',
+		programID: '10527',
 		tagID: '3232',
 		pixelID: '305596673130406',
 		location: {
@@ -61,7 +61,7 @@ const locations = {
 'Bakersfield': 
 	{
 		siteID: '539757',
-		programID: '103238',
+		programID: '103287',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -75,7 +75,7 @@ const locations = {
 'Bakersfield-NW': 
 	{
 		siteID: '697919',
-		programID: '102134',
+		programID: '103177',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -89,7 +89,7 @@ const locations = {
 'Bakersfield-nw': 
 	{
 		siteID: '697919',
-		programID: '102134',
+		programID: '103177',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -103,7 +103,7 @@ const locations = {
 'Bell': 
 	{
 		siteID: '273870',
-		programID: '10726',
+		programID: '10778',
 		tagID: '3236',
 			pixelID: '1392379664110280',
 			location: {
@@ -114,39 +114,38 @@ const locations = {
 				email: 'bell@thecamptc.com'
 			}
 },
-'Burbank': 
-	{
-		siteID: '264885',
-		programID: '10994',
-		tagID: '3238',
-			 pixelID: '179752492676186',
-			 location: {
-				 street: '2705 W. Empire Ave',
-				 state: 'CA',
-				 zip: '91504',
-				 phone: '818-857-1017',
-				 email: 'Burbank@thecamptc.com'
-			 }
-},
-
-'Carson': 
-	{
-		siteID: '298511',
-		programID: '10316',
-		tagID: '3242',
-		pixelID: '',
-		location: {
-			street: '21023 S. Figueroa St',
-			state: 'CA',
-			zip: '90745',
-			phone: '(310) 328-2267',
-			email: 'carsonfd@thecamptc.com'
-		}
-},
+//'Burbank': 
+//	{
+//		siteID: '264885',
+//		programID: '10994',
+//		tagID: '3238',
+//			 pixelID: '179752492676186',
+//			 location: {
+//				 street: '2705 W. Empire Ave',
+//				 state: 'CA',
+//				 zip: '91504',
+//				 phone: '818-857-1017',
+//				 email: 'Burbank@thecamptc.com'
+//			 }
+//},
+//'Carson': 
+//	{
+//		siteID: '298511',
+//		programID: '10316',
+//		tagID: '3242',
+//		pixelID: '',
+//		location: {
+//			street: '21023 S. Figueroa St',
+//			state: 'CA',
+//			zip: '90745',
+//			phone: '(310) 328-2267',
+//			email: 'carsonfd@thecamptc.com'
+//		}
+//},
 'Calexico': 
 	{
 		siteID: '620570',
-		programID: '100239',
+		programID: '101284',
 		tagID: '3240',
 		pixelID: '',
 		location: {
@@ -160,7 +159,7 @@ const locations = {
 'Chatsworth': 
 	{
 		siteID: '3324',
-		programID: '10611',
+		programID: '10660',
 		tagID: '3244',
 		pixelID: '',
 		location: {
@@ -174,7 +173,7 @@ const locations = {
 'Chino': 
 	{
 		siteID: '143922',
-		programID: '11190',
+		programID: '11242',
 		tagID: '3246',
 		pixelID: '',
 		location: {
@@ -188,7 +187,7 @@ const locations = {
 'Chula-Vista': 
 	{
 		siteID: '248377',
-		programID: '10429',
+		programID: '10478',
 		tagID: '3248',
 		pixelID: '',
 		location: {
@@ -202,7 +201,7 @@ const locations = {
 'Clearwater': 
 	{
 		siteID: '698580',
-		programID: '10427',
+		programID: '10480',
 		tagID: '3250',
 		pixelID: '',
 		location: {
@@ -216,7 +215,7 @@ const locations = {
 'Clovis': 
 	{
 		siteID: '569158',
-		programID: '100185',
+		programID: '100230',
 		tagID: '3250',
 		pixelID: '',
 		location: {
@@ -227,24 +226,24 @@ const locations = {
 			email: 'ClovisFD@thecamptc.com'
 		}
 },
-'Colorado-Springs': 
-	{
-		siteID: '735761',
-		programID: '101171',
-		tagID: '3254',
-		pixelID: '',
-		location: {
-			street: '1342 N Academy Blvd',
-			state: 'CO',
-			zip: '80909',
-			phone: '719-400-8890',
-			email: 'ColoradoSpringsFD@thecamptc.com'
-		}
-},
+//'Colorado-Springs': 
+//	{
+//		siteID: '735761',
+//		programID: '101171',
+//		tagID: '3254',
+//		pixelID: '',
+//		location: {
+//			street: '1342 N Academy Blvd',
+//			state: 'CO',
+//			zip: '80909',
+//			phone: '719-400-8890',
+//			email: 'ColoradoSpringsFD@thecamptc.com'
+//		}
+//},
 'Corona': 
 	{
 		siteID: '233',
-		programID: '10785',
+		programID: '10834',
 		tagID: '3256',
 		pixelID: '',
 		location: {
@@ -258,7 +257,7 @@ const locations = {
 'Costa-Mesa': 
 	{
 		siteID: '221376',
-		programID: '10448',
+		programID: '10496',
 		tagID: '3258',
 		pixelID: '',
 		location: {
@@ -272,7 +271,7 @@ const locations = {
 'Cypress': 
 	{
 		siteID: '278263',
-		programID: '10562',
+		programID: '10611',
 		tagID: '3260',
 		pixelID: '',
 		location: {
@@ -286,7 +285,7 @@ const locations = {
 'Davie': 
 	{
 		siteID: '257960',
-		programID: '10417',
+		programID: '10470',
 		tagID: '3262',
 		pixelID: '',
 		location: {
@@ -300,7 +299,7 @@ const locations = {
 'Downey': 
 	{
 		siteID: '273870',
-		programID: '10727',
+		programID: '10779',
 		tagID: '3264',
 		pixelID: '',
 		location: {
@@ -521,20 +520,20 @@ const locations = {
 			email: 'HoustonFD@thecamptc.com'
 		}
 },
-'Humble': 
-	{
-		siteID: '682932',
-		programID: '102230',
-		tagID: '3294',
-		pixelID: '',
-		location: {
-			street: '8717 Humble Westfield Rd',
-			state: 'TX',
-			zip: '77338',
-			phone: '713-322-5869',
-			email: 'HumbleFD@thecamptc.com'
-		}
-},
+//'Humble': 
+//	{
+//		siteID: '682932',
+//		programID: '102230',
+//		tagID: '3294',
+//		pixelID: '',
+//		location: {
+//			street: '8717 Humble Westfield Rd',
+//			state: 'TX',
+//			zip: '77338',
+//			phone: '713-322-5869',
+//			email: 'HumbleFD@thecamptc.com'
+//		}
+//},
 'Huntington-Beach': 
 	{
 		siteID: '441683',
@@ -787,20 +786,20 @@ const locations = {
 			email: 'menifeefd@thecamptc.com'
 		}
 },
-'Mesa': 
-	{
-		siteID: '497618',
-		programID: '11557',
-		tagID: '3328',
-		pixelID: '',
-		location: {
-			street: '7931 E. Pecos Suite 200 Mesa',
-			state: 'AZ',
-			zip: '85212',
-			phone: '480-353-6923',
-			email: 'mesafd@thecamptc.com'
-		}
-},
+//'Mesa': 
+//	{
+//		siteID: '497618',
+//		programID: '11557',
+//		tagID: '3328',
+//		pixelID: '',
+//		location: {
+//			street: '7931 E. Pecos Suite 200 Mesa',
+//			state: 'AZ',
+//			zip: '85212',
+//			phone: '480-353-6923',
+//			email: 'mesafd@thecamptc.com'
+//		}
+//},
 'Mid-Phoenix': 
 	{
 		siteID: '822381',
@@ -1500,20 +1499,20 @@ const locations = {
 			email: 'SunriseFD@thecamptc.com'
 		}
 },
-'Surprise': 
-	{
-		siteID: '863734',
-		programID: '10400',
-		tagID: '3414',
-		pixelID: '',
-		location: {
-			street: '13365 W Foxfire Dr Suite A4',
-			state: 'AZ',
-			zip: '85378',
-			phone: '623-696-7956',
-			email: 'SurpriseFD@thecamptc.com'
-		}
-},
+//'Surprise': 
+//	{
+//		siteID: '863734',
+//		programID: '10400',
+//		tagID: '3414',
+//		pixelID: '',
+//		location: {
+//			street: '13365 W Foxfire Dr Suite A4',
+//			state: 'AZ',
+//			zip: '85378',
+//			phone: '623-696-7956',
+//			email: 'SurpriseFD@thecamptc.com'
+//		}
+//},
 'Suwanee': 
 	{
 		siteID: '402019',
@@ -1682,34 +1681,34 @@ const locations = {
 			email: 'WoodlandHillsFD@thecamptc.com'
 		}
 },
-'Zona-Dorada ': 
-	{
-		siteID: '624525',
-		programID: '10350',
-		tagID: '3438',
-		pixelID: '',
-		location: {
-			street: '',
-			state: '',
-			zip: '',
-			phone: '',
-			email: ''
-		}
-},
-'Zona-Rio-Tijuana': 
-	{
-		siteID: '551868',
-		programID: '100102',
-		tagID: '3440',
-		pixelID: '',
-		location: {
-			street: '',
-			state: '',
-			zip: '',
-			phone: '',
-			email: ''
-		}
-},
+//'Zona-Dorada ': 
+//	{
+//		siteID: '624525',
+//		programID: '10350',
+//		tagID: '3438',
+//		pixelID: '',
+//		location: {
+//			street: '',
+//			state: '',
+//			zip: '',
+//			phone: '',
+//			email: ''
+//		}
+//},
+//'Zona-Rio-Tijuana': 
+//	{
+//		siteID: '551868',
+//		programID: '100102',
+//		tagID: '3440',
+//		pixelID: '',
+//		location: {
+//			street: '',
+//			state: '',
+//			zip: '',
+//			phone: '',
+//			email: ''
+//		}
+//},
 
 }
 
