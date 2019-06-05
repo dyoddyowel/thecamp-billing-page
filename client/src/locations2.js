@@ -632,6 +632,34 @@ const locations = {
 			email: 'LaPuenteFD@thecamptc.com'
 		}
 },
+'Las-Vegas': 
+	{
+		siteID: '678753',
+		programID: '101199',
+		tagID: '3336',
+		pixelID: '',
+		location: {
+			street: '7885 W. Sahara Ave. Unit 104 Las Vegas',
+			state: 'NV',
+			zip: '89117',
+			phone: '(702) 888-3831',
+			email: 'LasVegasWestFD@thecamptc.com'
+		}
+},
+'Las-Vegas-East': 
+	{
+		siteID: '974723',
+		programID: '101194',
+		tagID: '',
+		pixelID: '',
+		location: {
+			street: '',
+			state: 'NV',
+			zip: '89117',
+			phone: '(818) 522-3672',
+			email: 'LVFD@thecamptc.com'
+		}
+},
 'Laguna-Hills': 
 	{
 		siteID: '221032',
@@ -728,6 +756,20 @@ const locations = {
 			zip: '90007',
 			phone: '(213) 747-0655',
 			email: 'losangelesfd@thecamptc.com'
+		}
+},
+'Manteca': 
+	{
+		siteID: '826587',
+		programID: '101191',
+		tagID: '3322',
+		pixelID: '',
+		location: {
+			street: '',
+			state: 'CA',
+			zip: '90035',
+			phone: '323-202-0887',
+			email: 'MantecaFD@thecamptc.com'
 		}
 },
 'Mid-Cities': 
@@ -851,20 +893,6 @@ const locations = {
 		location: {
 			street: '6901-B Miramar Parkway',
 			state: 'FL',
-			zip: '33023',
-			phone: '(754) 400-8817',
-			email: 'MiramarFD@thecamptc.com'
-		}
-},
-'Las-Vegas': 
-	{
-		siteID: '678753',
-		programID: '101152',
-		tagID: '3336',
-		pixelID: '',
-		location: {
-			street: '6901-B Miramar Parkway',
-			state: 'NV',
 			zip: '33023',
 			phone: '(754) 400-8817',
 			email: 'MiramarFD@thecamptc.com'
