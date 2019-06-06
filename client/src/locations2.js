@@ -114,20 +114,20 @@ const locations = {
 				email: 'bell@thecamptc.com'
 			}
 },
-//'Burbank': 
-//	{
-//		siteID: '264885',
-//		programID: '10994',
-//		tagID: '3238',
-//			 pixelID: '179752492676186',
-//			 location: {
-//				 street: '2705 W. Empire Ave',
-//				 state: 'CA',
-//				 zip: '91504',
-//				 phone: '818-857-1017',
-//				 email: 'Burbank@thecamptc.com'
-//			 }
-//},
+'Burbank': 
+	{
+		siteID: '264885',
+		programID: '11045',
+		tagID: '3238',
+			 pixelID: '179752492676186',
+			 location: {
+				 street: '2705 W. Empire Ave',
+				 state: 'CA',
+				 zip: '91504',
+				 phone: '818-857-1017',
+				 email: 'Burbank@thecamptc.com'
+			 }
+},
 //'Carson': 
 //	{
 //		siteID: '298511',
@@ -355,7 +355,7 @@ const locations = {
 'El-Monte': 
 	{
 		siteID: '264885',
-		programID: '10995',
+		programID: '11046',
 		tagID: '3272',
 		pixelID: '',
 		location: {
@@ -943,7 +943,7 @@ const locations = {
 'Monrovia': 
 	{
 		siteID: '458660',
-		programID: '10945',
+		programID: '10990',
 		tagID: '3340',
 		pixelID: '',
 		location: {
@@ -999,7 +999,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '10996',
+		programID: '11047',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -1279,7 +1279,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '10997',
+		programID: '11048',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -1391,7 +1391,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '10998',
+		programID: '11049',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -1458,34 +1458,34 @@ const locations = {
 			email: 'SimiValleyFD@thecamptc.com'
 		}
 },
-'South-Bay': 
-	{
-		siteID: '298511',
-		programID: '10317',
-		tagID: '3406',
-		pixelID: '',
-		location: {
-			street: '22216 Palos Verdes Blvd',
-			state: 'CA',
-			zip: '90505',
-			phone: '(310) 328-2267',
-			email: 'SouthBayFD@thecamptc.com'
-		}
-},
-'Torrance': 
-	{
-		siteID: '298511',
-		programID: '10317',
-		tagID: '3406',
-		pixelID: '',
-		location: {
-			street: '22216 Palos Verdes Blvd',
-			state: 'CA',
-			zip: '90505',
-			phone: '(310) 328-2267',
-			email: 'SouthBayFD@thecamptc.com'
-		}
-},
+//'South-Bay': 
+//	{
+//		siteID: '298511',
+//		programID: '10317',
+//		tagID: '3406',
+//		pixelID: '',
+//		location: {
+//			street: '22216 Palos Verdes Blvd',
+//			state: 'CA',
+//			zip: '90505',
+//			phone: '(310) 328-2267',
+//			email: 'SouthBayFD@thecamptc.com'
+//		}
+//},
+//'Torrance': 
+//	{
+//		siteID: '298511',
+//		programID: '10317',
+//		tagID: '3406',
+//		pixelID: '',
+//		location: {
+//			street: '22216 Palos Verdes Blvd',
+//			state: 'CA',
+//			zip: '90505',
+//			phone: '(310) 328-2267',
+//			email: 'SouthBayFD@thecamptc.com'
+//		}
+//},
 'South-Fort-Worth': 
 	{
 		siteID: '761241',
@@ -1601,7 +1601,7 @@ const locations = {
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '10999',
+		programID: '11050',
 		tagID: '3424',
 		pixelID: '',
 		location: {
@@ -1657,7 +1657,7 @@ const locations = {
 'West-Covina': 
 	{
 		siteID: '264885',
-		programID: '11000',
+		programID: '11051',
 		tagID: '3430',
 		pixelID: '',
 		location: {
