@@ -128,20 +128,20 @@ const locations = {
 				 email: 'Burbank@thecamptc.com'
 			 }
 },
-//'Carson': 
-//	{
-//		siteID: '298511',
-//		programID: '10316',
-//		tagID: '3242',
-//		pixelID: '',
-//		location: {
-//			street: '21023 S. Figueroa St',
-//			state: 'CA',
-//			zip: '90745',
-//			phone: '(310) 328-2267',
-//			email: 'carsonfd@thecamptc.com'
-//		}
-//},
+'Carson': 
+	{
+		siteID: '298511',
+		programID: '10321',
+		tagID: '3242',
+		pixelID: '',
+		location: {
+			street: '21023 S. Figueroa St',
+			state: 'CA',
+			zip: '90745',
+			phone: '(310) 328-2267',
+			email: 'carsonfd@thecamptc.com'
+		}
+},
 'Calexico': 
 	{
 		siteID: '620570',
@@ -1458,34 +1458,34 @@ const locations = {
 			email: 'SimiValleyFD@thecamptc.com'
 		}
 },
-//'South-Bay': 
-//	{
-//		siteID: '298511',
-//		programID: '10317',
-//		tagID: '3406',
-//		pixelID: '',
-//		location: {
-//			street: '22216 Palos Verdes Blvd',
-//			state: 'CA',
-//			zip: '90505',
-//			phone: '(310) 328-2267',
-//			email: 'SouthBayFD@thecamptc.com'
-//		}
-//},
-//'Torrance': 
-//	{
-//		siteID: '298511',
-//		programID: '10317',
-//		tagID: '3406',
-//		pixelID: '',
-//		location: {
-//			street: '22216 Palos Verdes Blvd',
-//			state: 'CA',
-//			zip: '90505',
-//			phone: '(310) 328-2267',
-//			email: 'SouthBayFD@thecamptc.com'
-//		}
-//},
+'South-Bay': 
+	{
+		siteID: '298511',
+		programID: '10322',
+		tagID: '3406',
+		pixelID: '',
+		location: {
+			street: '22216 Palos Verdes Blvd',
+			state: 'CA',
+			zip: '90505',
+			phone: '(310) 328-2267',
+			email: 'SouthBayFD@thecamptc.com'
+		}
+},
+'Torrance': 
+	{
+		siteID: '298511',
+		programID: '10322',
+		tagID: '3406',
+		pixelID: '',
+		location: {
+			street: '22216 Palos Verdes Blvd',
+			state: 'CA',
+			zip: '90505',
+			phone: '(310) 328-2267',
+			email: 'SouthBayFD@thecamptc.com'
+		}
+},
 'South-Fort-Worth': 
 	{
 		siteID: '761241',
