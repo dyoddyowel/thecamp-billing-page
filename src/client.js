@@ -469,6 +469,27 @@ const locations = {
           tagID: '3320',
           pixelID: ''
   },
+  'Las-Vegas': 
+      {
+          siteID: '678753',
+          programID: '101199',
+          tagID: '4562',
+          pixelID: ''
+  },
+  'Las-Vegas-East': 
+      {
+          siteID: '974723',
+          programID: '101194',
+          tagID: '4560',
+          pixelID: ''
+  },
+  'Manteca': 
+      {
+          siteID: '826587',
+          programID: '101191',
+          tagID: '4570',
+          pixelID: ''
+  },
   'Mid-Cities': 
       {
           siteID: '764893',
