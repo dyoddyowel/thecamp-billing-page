@@ -636,7 +636,7 @@ const locations = {
 	{
 		siteID: '678753',
 		programID: '101199',
-		tagID: '3336',
+		tagID: '4562',
 		pixelID: '',
 		location: {
 			street: '7885 W. Sahara Ave. Unit 104 Las Vegas',
@@ -650,7 +650,7 @@ const locations = {
 	{
 		siteID: '974723',
 		programID: '101194',
-		tagID: '',
+		tagID: '4560',
 		pixelID: '',
 		location: {
 			street: '',
@@ -762,7 +762,7 @@ const locations = {
 	{
 		siteID: '826587',
 		programID: '101191',
-		tagID: '3322',
+		tagID: '4570',
 		pixelID: '',
 		location: {
 			street: '',
