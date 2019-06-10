@@ -1584,6 +1584,20 @@ const locations = {
 			email: 'thousandoaksfd@thecamptc.com'
 		}
 },
+'Turlock': 
+	{
+		siteID: '979877',
+		programID: '101227',
+		tagID: '3426',
+		pixelID: '',
+		location: {
+			street: '2227 Portola Road',
+			state: 'CA',
+			zip: '93003',
+			phone: '805-644-4366',
+			email: 'VenturaFD@thecamptc.com'
+		}
+},
 // 'Vancouver': 
 // 	{
 // 		siteID: '477491',
@@ -1610,20 +1624,6 @@ const locations = {
 			zip: '91402',
 			phone: '(818) 877-3697',
 			email: 'VanNuysFD@thecamptc.com'
-		}
-},
-'Turlock': 
-	{
-		siteID: '994773',
-		programID: '102542',
-		tagID: '3426',
-		pixelID: '',
-		location: {
-			street: '2227 Portola Road',
-			state: 'CA',
-			zip: '93003',
-			phone: '805-644-4366',
-			email: 'VenturaFD@thecamptc.com'
 		}
 },
 'Ventura': 
