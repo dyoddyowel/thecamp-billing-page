@@ -251,6 +251,18 @@ const locations = {
     tagID: '3050',
     pixelID: '1206137436117440'
   },
+  'Las-Vegas': {
+    siteID: '678753',
+    programID: '101199',
+    tagID: '4562',
+    pixelID: '1616589368601882'
+  },
+  'Las-Vegas-East': {
+    siteID: '974723',
+    programID: '101194',
+    tagID: '4560',
+    pixelID: '1616589368601882'
+  },
   'Laguna': {
     siteID: '221032',
     programID: '10286',
