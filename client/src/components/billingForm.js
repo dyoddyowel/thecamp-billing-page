@@ -86,7 +86,7 @@ class BillingForm extends Component {
                 "BillingPostalCode": "",
             },
             payment: {
-                "amount": 37,
+                "amount": 47,
                 "number": "",
                 "expiry": "",
                 "cvc": "",
