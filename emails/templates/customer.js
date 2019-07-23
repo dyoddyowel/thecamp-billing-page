@@ -11,7 +11,7 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "21 Day Back to School Macro Counting Program",
+                "description": "21 Day Back to School Macro Counting",
                 "amount": "$47"
             }
         ],
