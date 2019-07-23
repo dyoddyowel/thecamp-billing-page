@@ -42,8 +42,8 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="Summer Sizzle Slim Down"
-      price="37" />
+      detailname="21 Day Back to School Macro Counting Program"
+      price="47" />
     <Video />
     <AdCopy
       id="billing-copy" />
@@ -113,7 +113,7 @@ class BillingHotLink extends Component {
           "BillingPostalCode": "",
       },
       payment: {
-          "amount": 37,
+          "amount": 47,
           "number": "",
           "expiry": "",
           "cvc": "",
