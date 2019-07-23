@@ -44,6 +44,20 @@ const locations = {
 			email: 'Arcadiaphfd@thecamptc.com'
 		}
 },
+'Argyle': 
+	{
+		siteID: '515389',
+		programID: '105010',
+		tagID: '3230',
+		pixelID: '170049590227137',
+		location: {
+			street: '3550 E Indian School Rd',
+			state: 'AZ',
+			zip: '85018',
+			phone: '480-272-4784',
+			email: 'Argylefd@thecamptc.com'
+		}
+},
 'Arlington': 
 	{
 		siteID: '469848',
@@ -266,6 +280,20 @@ const locations = {
 			zip: '92626',
 			phone: '714-501-8955',
 			email: 'costamesafd@thecamptc.com'
+		}
+},
+'Covina': 
+	{
+		siteID: '264885',
+		programID: '11051',
+		tagID: '3430',
+		pixelID: '',
+		location: {
+			street: '1773 W. San Bernardino Rd B14',
+			state: 'CA',
+			zip: '91790',
+			phone: '(626) 962-1151',
+			email: 'westcovinafd@thecamptc.com'
 		}
 },
 'Cypress': 
@@ -826,6 +854,20 @@ const locations = {
 			zip: '92586',
 			phone: '951-679-8822',
 			email: 'menifeefd@thecamptc.com'
+		}
+},
+'Mesquite': 
+	{
+		siteID: '496311',
+		programID: '105009',
+		tagID: '3340',
+		pixelID: '',
+		location: {
+			street: '137 W. Maple Ave.',
+			state: 'CA',
+			zip: '91016',
+			phone: '626-975-6071',
+			email: 'Mesquite@thecamptc.com'
 		}
 },
 //'Mesa': 
@@ -1500,6 +1542,20 @@ const locations = {
 			email: 'southfortworthfd@thecamptc.com'
 		}
 },
+'Southlake': 
+	{
+		siteID: '787240',
+		programID: '105009',
+		tagID: '3410',
+		pixelID: '',
+		location: {
+			street: '2339 W. Hammer Ln',
+			state: 'CA',
+			zip: '95209',
+			phone: '209-420-5590',
+			email: 'SouthlakeFD@thecamptc.com'
+		}
+},
 'Stockton': 
 	{
 		siteID: '994773',
@@ -1654,20 +1710,6 @@ const locations = {
 			email: 'chulapalomarfd@thecamptc.com'
 		}
 },
-'West-Covina': 
-	{
-		siteID: '264885',
-		programID: '11051',
-		tagID: '3430',
-		pixelID: '',
-		location: {
-			street: '1773 W. San Bernardino Rd B14',
-			state: 'CA',
-			zip: '91790',
-			phone: '(626) 962-1151',
-			email: 'westcovinafd@thecamptc.com'
-		}
-},
 'Westminster': 
 	{
 		siteID: '275479',
@@ -1694,6 +1736,20 @@ const locations = {
 			zip: '60090',
 			phone: '224-813-2059',
 			email: 'WheelingFD@thecamptc.com'
+		}
+},
+'Whittier': 
+	{
+		siteID: '533514',
+		programID: '105008',
+		tagID: '3432',
+		pixelID: '',
+		location: {
+			street: '14542 Beach Blvd Ste B',
+			state: 'CA',
+			zip: '92683',
+			phone: '(714) 401-2499',
+			email: 'whittierfd@thecamptc.com'
 		}
 },
 'Woodland-Hills': 
