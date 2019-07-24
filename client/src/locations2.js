@@ -2,20 +2,20 @@
 //TODO: update Location programID
 
 const locations = {
-//'Alexandria': 
-//	{
-//		siteID: '830783',
-//		programID: '101131',
-//		tagID: '3226',
-//		pixelID: '',
-//		location: {
-//			street: '8766 Richmond Hwy',
-//			state: 'VA',
-//			zip: '22309',
-//			phone: '571-257-6329',
-//			email: 'AlexandriaFD@thecamptc.com'
-//		}
-//},
+'Alexandria': 
+	{
+		siteID: '830783',
+		programID: '105006',
+		tagID: '3226',
+		pixelID: '',
+		location: {
+			street: '8766 Richmond Hwy',
+			state: 'VA',
+			zip: '22309',
+			phone: '571-257-6329',
+			email: 'AlexandriaFD@thecamptc.com'
+		}
+},
 'Anaheim': 
 	{
 		siteID: '172426',
@@ -1405,7 +1405,7 @@ const locations = {
 'San-Gabriel': 
 	{
 		siteID: '630735',
-		programID: '101198',
+		programID: '105005',
 		tagID: '3394',
 		pixelID: '',
 		location: {
@@ -1413,7 +1413,7 @@ const locations = {
 			state: 'CA',
 			zip: '93101',
 			phone: '805-284-2077',
-			email: 'SantaBarbaraFD@thecamptc.com'
+			email: 'SanGabrielFD@thecamptc.com'
 		}
 },
 'San-Marcos': 
