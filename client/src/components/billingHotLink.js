@@ -42,7 +42,7 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="21 Day Back to School Macro Counting Program"
+      detailname="21 Day Back to School Macro Counting"
       price="47" />
     <Video />
     <AdCopy
