@@ -226,20 +226,20 @@ const locations = {
 			email: 'ClearwaterFD@thecamptc.com'
 		}
 },
-'Clovis': 
-	{
-		siteID: '569158',
-		programID: '105005',
-		tagID: '3250',
-		pixelID: '',
-		location: {
-			street: '23250 US Hwy 19 N',
-			state: 'FL',
-			zip: '33765',
-			phone: '727-669-0763',
-			email: 'ClovisFD@thecamptc.com'
-		}
-},
+//'Clovis': 
+//	{
+//		siteID: '569158',
+//		programID: '105005',
+//		tagID: '3250',
+//		pixelID: '',
+//		location: {
+//			street: '23250 US Hwy 19 N',
+//			state: 'FL',
+//			zip: '33765',
+//			phone: '727-669-0763',
+//			email: 'ClovisFD@thecamptc.com'
+//		}
+//},
 'Corona': 
 	{
 		siteID: '233',
@@ -422,20 +422,20 @@ const locations = {
 			email: 'fortworthfd@thecamptc.com'
 		}
 },
-'Fresno': 
-	{
-		siteID: '-724509',
-		programID: '105006',
-		tagID: '3278',
-		pixelID: '',
-		location: {
-			street: '4323 N. Blackstone Ave suite 101',
-			state: 'CA',
-			zip: '93726',
-			phone: '559-994-7382',
-			email: 'FresnoFD@thecamptc.com'
-		}
-},
+//'Fresno': 
+//	{
+//		siteID: '-724509',
+//		programID: '105006',
+//		tagID: '3278',
+//		pixelID: '',
+//		location: {
+//			street: '4323 N. Blackstone Ave suite 101',
+//			state: 'CA',
+//			zip: '93726',
+//			phone: '559-994-7382',
+//			email: 'FresnoFD@thecamptc.com'
+//		}
+//},
 'Gilbert': 
 	{
 		siteID: '589611',
