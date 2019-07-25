@@ -142,20 +142,6 @@ const locations = {
 				 email: 'Burbank@thecamptc.com'
 			 }
 },
-'Carson': 
-	{
-		siteID: '298511',
-		programID: '10329',
-		tagID: '3242',
-		pixelID: '',
-		location: {
-			street: '21023 S. Figueroa St',
-			state: 'CA',
-			zip: '90745',
-			phone: '(310) 328-2267',
-			email: 'carsonfd@thecamptc.com'
-		}
-},
 'Calexico': 
 	{
 		siteID: '620570',
@@ -168,6 +154,20 @@ const locations = {
 			zip: '92231',
 			phone: '760-890-5999',
 			email: 'CalexicoFD@thecamptc.com'
+		}
+},
+'Carson': 
+	{
+		siteID: '298511',
+		programID: '10329',
+		tagID: '3242',
+		pixelID: '',
+		location: {
+			street: '21023 S. Figueroa St',
+			state: 'CA',
+			zip: '90745',
+			phone: '(310) 328-2267',
+			email: 'carsonfd@thecamptc.com'
 		}
 },
 'Chatsworth': 
@@ -436,20 +436,6 @@ const locations = {
 			email: 'FresnoFD@thecamptc.com'
 		}
 },
-//'Galerias': 
-//	{
-//		siteID: '557811',
-//		programID: '100109',
-//		tagID: '3282',
-//		pixelID: '',
-//		location: {
-//			street: '',
-//			state: '',
-//			zip: '',
-//			phone: '',
-//			email: ''
-//		}
-//},
 'Gilbert': 
 	{
 		siteID: '589611',
@@ -618,49 +604,7 @@ const locations = {
 			email: 'LaPuenteFD@thecamptc.com'
 		}
 },
-'Las-Vegas': 
-	{
-		siteID: '678753',
-		programID: '105006',
-		tagID: '4562',
-		pixelID: '',
-		location: {
-			street: '7885 W. Sahara Ave. Unit 104 Las Vegas',
-			state: 'NV',
-			zip: '89117',
-			phone: '(702) 888-3831',
-			email: 'LasVegasWestFD@thecamptc.com'
-		}
-},
-'Las-Vegas-East': 
-	{
-		siteID: '974723',
-		programID: '105005',
-		tagID: '4560',
-		pixelID: '',
-		location: {
-			street: '',
-			state: 'NV',
-			zip: '89117',
-			phone: '(818) 522-3672',
-			email: 'LVFD@thecamptc.com'
-		}
-},
 'Laguna-Hills': 
-	{
-		siteID: '221032',
-		programID: '105009',
-		tagID: '3310',
-		pixelID: '',
-		location: {
-			street: '27120 Cabot Rd',
-			state: 'CA',
-			zip: '92653',
-			phone: '(949) 348-1120',
-			email: 'lagunafd@thecamptc.com'
-		}
-},
-'Laguna': 
 	{
 		siteID: '221032',
 		programID: '105009',
@@ -714,6 +658,34 @@ const locations = {
 			zip: '93534',
 			phone: '(661) 723-4734',
 			email: 'lancasterfd@thecamptc.com'
+		}
+},
+'Las-Vegas': 
+	{
+		siteID: '678753',
+		programID: '105006',
+		tagID: '4562',
+		pixelID: '',
+		location: {
+			street: '7885 W. Sahara Ave. Unit 104 Las Vegas',
+			state: 'NV',
+			zip: '89117',
+			phone: '(702) 888-3831',
+			email: 'LasVegasWestFD@thecamptc.com'
+		}
+},
+'Las-Vegas-East': 
+	{
+		siteID: '974723',
+		programID: '105005',
+		tagID: '4560',
+		pixelID: '',
+		location: {
+			street: '',
+			state: 'NV',
+			zip: '89117',
+			phone: '(818) 522-3672',
+			email: 'LVFD@thecamptc.com'
 		}
 },
 'Long-Beach': 
@@ -857,20 +829,6 @@ const locations = {
 		}
 },
 'Minnesota': 
-	{
-		siteID: '441415',
-		programID: '105006',
-		tagID: '3334',
-		pixelID: '',
-		location: {
-			street: '501 State Highway 13 Suite 104',
-			state: 'MN',
-			zip: '55337',
-			phone: '952-882-4986',
-			email: 'MinnesotaFD@thecamptc.com'
-		}
-},
-'Burnsville': 
 	{
 		siteID: '441415',
 		programID: '105006',
@@ -1080,20 +1038,20 @@ const locations = {
 			email: 'pasadenafd@thecamptc.com'
 		}
 },
-'Peoria': 
-	{
-		siteID: '748408',
-		programID: '103253',
-		tagID: '3362',
-		pixelID: '',
-		location: {
-			street: '9299 West Olive Ave. Suite 808',
-			state: 'AZ',
-			zip: '85345',
-			phone: '623-227-6214',
-			email: 'PeoriaFD@thecamptc.com'
-		}
-},
+//'Peoria': 
+//	{
+//		siteID: '748408',
+//		programID: '103253',
+//		tagID: '3362',
+//		pixelID: '',
+//		location: {
+//			street: '9299 West Olive Ave. Suite 808',
+//			state: 'AZ',
+//			zip: '85345',
+//			phone: '623-227-6214',
+//			email: 'PeoriaFD@thecamptc.com'
+//		}
+//},
 'Perris': 
 	{
 		siteID: '963',
@@ -1262,6 +1220,20 @@ const locations = {
 			email: 'SanFernandoFD@thecamptc.com'
 		}
 },
+'San-Gabriel': 
+	{
+		siteID: '630735',
+		programID: '105005',
+		tagID: '3394',
+		pixelID: '',
+		location: {
+			street: '1023 State St',
+			state: 'CA',
+			zip: '93101',
+			phone: '805-284-2077',
+			email: 'SanGabrielFD@thecamptc.com'
+		}
+},
 'San-Jose': 
 	{
 		siteID: '461323',
@@ -1304,6 +1276,20 @@ const locations = {
 			email: 'sanjuancapistranofd@thecamptc.com'
 		}
 },
+'San-Marcos': 
+	{
+		siteID: '666702',
+		programID: '105005',
+		tagID: '3394',
+		pixelID: '',
+		location: {
+			street: '1023 State St',
+			state: 'CA',
+			zip: '93101',
+			phone: '805-284-2077',
+			email: 'SantaBarbaraFD@thecamptc.com'
+		}
+},
 'Santa-Ana': 
 	{
 		siteID: '542643',
@@ -1321,34 +1307,6 @@ const locations = {
 'Santa-Barbara': 
 	{
 		siteID: '420012',
-		programID: '105005',
-		tagID: '3394',
-		pixelID: '',
-		location: {
-			street: '1023 State St',
-			state: 'CA',
-			zip: '93101',
-			phone: '805-284-2077',
-			email: 'SantaBarbaraFD@thecamptc.com'
-		}
-},
-'San-Gabriel': 
-	{
-		siteID: '630735',
-		programID: '105005',
-		tagID: '3394',
-		pixelID: '',
-		location: {
-			street: '1023 State St',
-			state: 'CA',
-			zip: '93101',
-			phone: '805-284-2077',
-			email: 'SanGabrielFD@thecamptc.com'
-		}
-},
-'San-Marcos': 
-	{
-		siteID: '666702',
 		programID: '105005',
 		tagID: '3394',
 		pixelID: '',
@@ -1654,34 +1612,6 @@ const locations = {
 			email: 'WoodlandHillsFD@thecamptc.com'
 		}
 },
-//'Zona-Dorada ': 
-//	{
-//		siteID: '624525',
-//		programID: '10350',
-//		tagID: '3438',
-//		pixelID: '',
-//		location: {
-//			street: '',
-//			state: '',
-//			zip: '',
-//			phone: '',
-//			email: ''
-//		}
-//},
-//'Zona-Rio-Tijuana': 
-//	{
-//		siteID: '551868',
-//		programID: '100102',
-//		tagID: '3440',
-//		pixelID: '',
-//		location: {
-//			street: '',
-//			state: '',
-//			zip: '',
-//			phone: '',
-//			email: ''
-//		}
-//},
 
 }
 
