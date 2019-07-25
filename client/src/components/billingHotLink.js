@@ -212,7 +212,7 @@ class BillingHotLink extends Component {
       this.nextSection();
       ReactPixel.track('Purchase', {
         'currency': 'USD',
-        'value': 37.0
+        'value': 47.0
       });
       this.setState({ complete: true });
     } else {
