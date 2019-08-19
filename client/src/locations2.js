@@ -1178,7 +1178,7 @@ const locations = {
 			email: 'SanBernardinoFD@thecamptc.com'
 		}
 },
-'San Diego': 
+'San-Diego': 
 	{
 		siteID: '528419',
 		programID: '105009',
