@@ -562,20 +562,6 @@ const locations = {
 			email: 'JacksonvilleFD@thecamptc.com'
 		}
 },
-'Kearny-Mesa': 
-	{
-		siteID: '528419',
-		programID: '105009',
-		tagID: '3304',
-		pixelID: '',
-		location: {
-			street: '7121 Engineer Rd',
-			state: 'CA',
-			zip: '92111',
-			phone: '(619) 371-0279',
-			email: 'KearnyMesaFD@thecamptc.com'
-		}
-},
 'La-Mirada': 
 	{
 		siteID: '273870',
@@ -1190,6 +1176,20 @@ const locations = {
 			zip: '92404',
 			phone: '909-838-0850',
 			email: 'SanBernardinoFD@thecamptc.com'
+		}
+},
+'San Diego': 
+	{
+		siteID: '528419',
+		programID: '105009',
+		tagID: '3304',
+		pixelID: '',
+		location: {
+			street: '7121 Engineer Rd',
+			state: 'CA',
+			zip: '92111',
+			phone: '(619) 371-0279',
+			email: 'KearnyMesaFD@thecamptc.com'
 		}
 },
 'San-Dimas': 
