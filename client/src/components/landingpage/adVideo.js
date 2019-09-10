@@ -7,7 +7,7 @@ const VideoPlayer = (props) => {
     <div id="video-wrapper">
         <Player
           playsInline
-          poster='/videoPoster.PNG'
+          poster='/videoPoster.jpg'
           autoPlay={false}
           muted={false}
           src="https://www.thecamptc.com/videos/fallback.mp4"
