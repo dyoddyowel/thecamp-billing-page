@@ -5,8 +5,8 @@
 }
 
 .video-react .video-react-big-play-button {
-  top: 50% !important;
-  left: 37% !important;
+  top: 45% !important;
+  left: 45% !important;
 }
 
 button:disabled {
@@ -22,11 +22,6 @@ button:disabled {
 .location-name {
   font-weight: bold;
   font-size: 50px;
-}
-
-.video-react .video-react-big-play-button {
-  top: 42%;
-  left: 40%;
 }
 
 #video-wrapper {
