@@ -11,11 +11,11 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "21 Day Back to School Macro Counting Program",
-                "amount": "$47"
+                "description": "Fall Back Into Fitness 21 Day Detox",
+                "amount": "$37"
             }
         ],
-        "total": "$47",
+        "total": "$37",
         "company_name": "The Camp",
         "name": "name_Value",
         "receipt_id": "receipt_id_Value",
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: '21-Day-Back-to-School-Macro-Counting-Program.pdf',
-            path: 'https://www.thecamptc.com/manuals/21-Day-Back-to-School-Macro-Counting-Program.pdf',
+            filename: 'Fall-Back-Into-Fitness-21-Day-Detox-Manual.pdf',
+            path: 'https://www.thecamptc.com/manuals/Fall-Back-Into-Fitness-21-Day-Detox-Manual.pdf',
             contentType: 'application/pdf'
         }
     ]
