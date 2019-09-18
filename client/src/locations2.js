@@ -161,7 +161,7 @@ const locations = {
 //'Burbank': 
 //	{
 //		siteID: '264885',
-//		programID: '105012',
+//		programID: '105023',
 //		tagID: '3238',
 //			 pixelID: '179752492676186',
 //			 location: {
@@ -175,7 +175,7 @@ const locations = {
 'Covina': 
 	{
 		siteID: '264885',
-		programID: '105012',
+		programID: '105023',
 		tagID: '3430',
 		pixelID: '',
 		location: {
@@ -189,7 +189,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '105012',
+		programID: '105023',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -203,7 +203,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '105012',
+		programID: '105023',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -217,7 +217,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '105012',
+		programID: '105023',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -231,7 +231,7 @@ const locations = {
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '105012',
+		programID: '105023',
 		tagID: '3424',
 		pixelID: '',
 		location: {
@@ -256,35 +256,34 @@ const locations = {
 			email: 'CalexicoFD@thecamptc.com'
 		}
 },
-// no access to mindbody Carson, Torrance South Bay
-//'Carson': 
-//	{
-//		siteID: '298511',
-//		programID: '10329',
-//		tagID: '3242',
-//		pixelID: '',
-//		location: {
-//			street: '21023 S. Figueroa St',
-//			state: 'CA',
-//			zip: '90745',
-//			phone: '(310) 328-2267',
-//			email: 'carsonfd@thecamptc.com'
-//		}
-//},
-//'South-Bay': 
-//	{
-//		siteID: '298511',
-//		programID: '10330',
-//		tagID: '3406',
-//		pixelID: '',
-//		location: {
-//			street: '22216 Palos Verdes Blvd',
-//			state: 'CA',
-//			zip: '90505',
-//			phone: '(310) 328-2267',
-//			email: 'SouthBayFD@thecamptc.com'
-//		}
-//},
+'Carson': 
+	{
+		siteID: '298511',
+		programID: '10349',
+		tagID: '3242',
+		pixelID: '',
+		location: {
+			street: '21023 S. Figueroa St',
+			state: 'CA',
+			zip: '90745',
+			phone: '(310) 328-2267',
+			email: 'carsonfd@thecamptc.com'
+		}
+},
+'South-Bay': 
+	{
+		siteID: '298511',
+		programID: '10349',
+		tagID: '3406',
+		pixelID: '',
+		location: {
+			street: '22216 Palos Verdes Blvd',
+			state: 'CA',
+			zip: '90505',
+			phone: '(310) 328-2267',
+			email: 'SouthBayFD@thecamptc.com'
+		}
+},
 'Chatsworth': 
 	{
 		siteID: '3324',
