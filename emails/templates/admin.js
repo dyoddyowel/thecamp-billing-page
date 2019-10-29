@@ -11,11 +11,11 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "Fall Back Into Fitness 21 Day Detox",
-                "amount": "$37"
+                "description": "Gobble The Pounds Away 21 Day Carb Cycling Program",
+                "amount": "$47"
             }
         ],
-        "total": "$37",
+        "total": "$47",
         "company_name": "The Camp",
         "name": "name_Value",
         "receipt_id": "receipt_id_Value",
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'Fall-Back-Into-Fitness-21-Day-Detox-Manual.pdf',
-            path: 'https://www.thecamptc.com/manuals/Fall-Back-Into-Fitness-21-Day-Detox-Manual.pdf',
+            filename: 'Gobble-The-Pounds-Manual.pdf',
+            path: 'https://www.thecamptc.com/manuals/Gobble-The-Pounds-Manual.pdf',
             contentType: 'application/pdf'
         }
     ]
