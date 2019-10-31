@@ -51,10 +51,10 @@ const locations = {
 		tagID: '3230',
 		pixelID: '170049590227137',
 		location: {
-			street: '3550 E Indian School Rd',
+			street: '308 E. FM1830, Argyle',
 			state: 'TX',
-			zip: '85018',
-			phone: '480-272-4784',
+			zip: '76226',
+			phone: '214-724-1859',
 			email: 'Argylefd@thecamptc.com'
 		}
 },
