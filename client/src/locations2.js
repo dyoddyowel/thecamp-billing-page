@@ -52,7 +52,7 @@ const locations = {
 		pixelID: '170049590227137',
 		location: {
 			street: '3550 E Indian School Rd',
-			state: 'AZ',
+			state: 'TX',
 			zip: '85018',
 			phone: '480-272-4784',
 			email: 'Argylefd@thecamptc.com'
