@@ -1417,10 +1417,10 @@ const locations = {
 		tagID: '3410',
 		pixelID: '',
 		location: {
-			street: '2339 W. Hammer Ln',
-			state: 'CA',
-			zip: '95209',
-			phone: '209-420-5590',
+			street: '280 Commerce St. Unit 130, Southlake',
+			state: 'TX',
+			zip: '76092',
+			phone: '682-261-3697',
 			email: 'SouthlakeFD@thecamptc.com'
 		}
 },
