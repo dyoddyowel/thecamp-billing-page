@@ -1130,20 +1130,20 @@ const locations = {
 			email: 'PeoriaFD@thecamptc.com'
 		}
 },
-//'Perris': 
-//	{
-//		siteID: '434608',
-//		programID: '105056',
-//		tagID: '3364',
-//		pixelID: '',
-//		location: {
-//			street: '3553B N. Perris Blvd Unit 1-3',
-//			state: 'CA',
-//			zip: '92571',
-//			phone: '(951) 808-2427',
-//			email: 'PerrisFD@thecamptc.com'
-//		}
-//},
+'Perris': 
+	{
+		siteID: '434608',
+		programID: '105057',
+		tagID: '3364',
+		pixelID: '',
+		location: {
+			street: '3553B N. Perris Blvd Unit 1-3',
+			state: 'CA',
+			zip: '92571',
+			phone: '(951) 808-2427',
+			email: 'PerrisFD@thecamptc.com'
+		}
+},
 'Phoenix': 
 	{
 		siteID: '-314525',
