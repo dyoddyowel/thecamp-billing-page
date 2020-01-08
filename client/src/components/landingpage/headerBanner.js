@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HeaderBanner = () => (
-  <div id="header-banner">Gobble The Pounds Away 21 Day Carb Cycling</div>
+  <div id="header-banner">21 Day Tough Love 2020</div>
 );
 
 export default HeaderBanner;
