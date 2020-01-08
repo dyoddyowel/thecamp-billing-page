@@ -42,8 +42,8 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="Gobble The Pounds Away 21 Day Carb Cycling"
-      price="47" />
+      detailname="21 Day Tough Love 2020"
+      price="67" />
     <Video />
     <AdCopy
       id="billing-copy" />
@@ -113,7 +113,7 @@ class BillingHotLink extends Component {
           "BillingPostalCode": "",
       },
       payment: {
-          "amount": 47,
+          "amount": 67,
           "number": "",
           "expiry": "",
           "cvc": "",
@@ -212,7 +212,7 @@ class BillingHotLink extends Component {
       this.nextSection();
       ReactPixel.track('Purchase', {
         'currency': 'USD',
-        'value': 47.0
+        'value': 67.0
       });
       this.setState({ complete: true });
     } else {
