@@ -572,7 +572,7 @@ const locations = {
 'High-Desert': 
 	{
 		siteID: '191573',
-		programID: '105053',
+		programID: '105109',
 		tagID: '3288',
 		pixelID: '',
 		location: {
@@ -586,7 +586,7 @@ const locations = {
 'Highland-Heights': 
 	{
 		siteID: '912776',
-		programID: '105076',
+		programID: '105126',
 		tagID: '3290',
 		pixelID: '',
 		location: {
@@ -600,7 +600,7 @@ const locations = {
 'Houston': 
 	{
 		siteID: '-879013',
-		programID: '105048',
+		programID: '105095',
 		tagID: '3292',
 		pixelID: '',
 		location: {
@@ -614,7 +614,7 @@ const locations = {
 'Huntington-Beach': 
 	{
 		siteID: '441683',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3296',
 		pixelID: '',
 		location: {
@@ -628,7 +628,7 @@ const locations = {
 'Inglewood': 
 	{
 		siteID: '740074',
-		programID: '105049',
+		programID: '105094',
 		tagID: '3298',
 		pixelID: '',
 		location: {
@@ -642,7 +642,7 @@ const locations = {
 'Irvine': 
 	{
 		siteID: '228344',
-		programID: '105074',
+		programID: '105124',
 		tagID: '3300',
 		pixelID: '',
 		location: {
@@ -656,7 +656,7 @@ const locations = {
 'Jacksonville': 
 	{
 		siteID: '715841',
-		programID: '105051',
+		programID: '105097',
 		tagID: '3302',
 		pixelID: '',
 		location: {
@@ -670,7 +670,7 @@ const locations = {
 'La-Puente': 
 	{
 		siteID: '136390',
-		programID: '105049',
+		programID: '105095',
 		tagID: '3308',
 		pixelID: '',
 		location: {
@@ -684,7 +684,7 @@ const locations = {
 'Laguna-Hills': 
 	{
 		siteID: '221032',
-		programID: '105073',
+		programID: '105124',
 		tagID: '3310',
 		pixelID: '',
 		location: {
@@ -698,7 +698,7 @@ const locations = {
 'Lake-Elsinore': 
 	{
 		siteID: '963',
-		programID: '105055',
+		programID: '105121',
 		tagID: '3312',
 		pixelID: '',
 		location: {
@@ -712,7 +712,7 @@ const locations = {
 'Lake-Forest': 
 	{
 		siteID: '274470',
-		programID: '105052',
+		programID: '105113',
 		tagID: '3314',
 		pixelID: '',
 		location: {
@@ -726,7 +726,7 @@ const locations = {
 'Lancaster': 
 	{
 		siteID: '149049',
-		programID: '105051',
+		programID: '105097',
 		tagID: '3316',
 		pixelID: '',
 		location: {
@@ -737,11 +737,11 @@ const locations = {
 			email: 'lancasterfd@thecamptc.com'
 		}
 },
-// West Las Vegas
+// Las Vegas West
 'Las-Vegas': 
 	{
 		siteID: '678753',
-		programID: '106053',
+		programID: '107095',
 		tagID: '4562',
 		pixelID: '',
 		location: {
@@ -755,7 +755,7 @@ const locations = {
 'Las-Vegas-East': 
 	{
 		siteID: '974723',
-		programID: '105056',
+		programID: '105102',
 		tagID: '4560',
 		pixelID: '',
 		location: {
@@ -769,7 +769,7 @@ const locations = {
 'Long-Beach': 
 	{
 		siteID: '245950',
-		programID: '105053',
+		programID: '105112',
 		tagID: '3318',
 		pixelID: '',
 		location: {
@@ -783,7 +783,7 @@ const locations = {
 'Los-Angeles': 
 	{
 		siteID: '300527',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3320',
 		pixelID: '',
 		location: {
@@ -797,7 +797,7 @@ const locations = {
 'Manteca': 
 	{
 		siteID: '826587',
-		programID: '105049',
+		programID: '105095',
 		tagID: '4570',
 		pixelID: '',
 		location: {
@@ -811,7 +811,7 @@ const locations = {
 'McKinney': 
 	{
 		siteID: '568503',
-		programID: '105053',
+		programID: '106094',
 		tagID: '3324',
 		pixelID: '',
 		location: {
@@ -825,7 +825,7 @@ const locations = {
 'Mckinney': 
 	{
 		siteID: '568503',
-		programID: '105053',
+		programID: '106094',
 		tagID: '3324',
 		pixelID: '',
 		location: {
@@ -839,7 +839,7 @@ const locations = {
 'Menifee': 
 	{
 		siteID: '228342',
-		programID: '105055',
+		programID: '105101',
 		tagID: '3326',
 		pixelID: '',
 		location: {
@@ -853,7 +853,7 @@ const locations = {
 'Mesquite': 
 	{
 		siteID: '496311',
-		programID: '105056',
+		programID: '105103',
 		tagID: '3340',
 		pixelID: '',
 		location: {
@@ -867,7 +867,7 @@ const locations = {
 'Mid-Cities': 
 	{
 		siteID: '764893',
-		programID: '105049',
+		programID: '105094',
 		tagID: '3322',
 		pixelID: '',
 		location: {
@@ -881,7 +881,7 @@ const locations = {
 'Mid-Phoenix': 
 	{
 		siteID: '822381',
-		programID: '106050',
+		programID: '107091',
 		tagID: '3330',
 		pixelID: '',
 		location: {
@@ -895,7 +895,7 @@ const locations = {
 'Milwaukie': 
 	{
 		siteID: '707289',
-		programID: '105050',
+		programID: '105097',
 		tagID: '3332',
 		pixelID: '',
 		location: {
@@ -909,7 +909,7 @@ const locations = {
 'Minnesota': 
 	{
 		siteID: '441415',
-		programID: '105051',
+		programID: '105098',
 		tagID: '3334',
 		pixelID: '',
 		location: {
@@ -923,7 +923,7 @@ const locations = {
 'Miramar': 
 	{
 		siteID: '347920',
-		programID: '105063',
+		programID: '105110',
 		tagID: '3336',
 		pixelID: '',
 		location: {
@@ -937,7 +937,7 @@ const locations = {
 'Miramar-CA': 
 	{
 		siteID: '498324',
-		programID: '105050',
+		programID: '105100',
 		tagID: '3336',
 		pixelID: '',
 		location: {
@@ -951,7 +951,7 @@ const locations = {
 'Modesto': 
 	{
 		siteID: '289688',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3338',
 		pixelID: '',
 		location: {
@@ -965,7 +965,7 @@ const locations = {
 'Monrovia': 
 	{
 		siteID: '458660',
-		programID: '105089',
+		programID: '105141',
 		tagID: '3340',
 		pixelID: '',
 		location: {
@@ -979,7 +979,7 @@ const locations = {
 'Monterey': 
 	{
 		siteID: '522220',
-		programID: '105052',
+		programID: '105098',
 		tagID: '3342',
 		pixelID: '',
 		location: {
@@ -993,7 +993,7 @@ const locations = {
 'Moreno-Valley': 
 	{
 		siteID: '276772',
-		programID: '105052',
+		programID: '105100',
 		tagID: '3344',
 		pixelID: '',
 		location: {
@@ -1007,7 +1007,7 @@ const locations = {
 'North-Dallas': 
 	{
 		siteID: '837070',
-		programID: '105053',
+		programID: '105104',
 		tagID: '3346',
 		pixelID: '',
 		location: {
@@ -1021,7 +1021,7 @@ const locations = {
 'Oceanside': 
 	{
 		siteID: '192329',
-		programID: '105076',
+		programID: '105127',
 		tagID: '3350',
 		pixelID: '',
 		location: {
@@ -1035,7 +1035,7 @@ const locations = {
 'Orlando': 
 	{
 		siteID: '783641',
-		programID: '106051',
+		programID: '107092',
 		tagID: '3352',
 		pixelID: '',
 		location: {
@@ -1049,7 +1049,7 @@ const locations = {
 'Oxnard': 
 	{
 		siteID: '241280',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3354',
 		pixelID: '',
 		location: {
@@ -1063,7 +1063,7 @@ const locations = {
 'Palm-Desert': 
 	{
 		siteID: '726432',
-		programID: '105053',
+		programID: '105099',
 		tagID: '3356',
 		pixelID: '',
 		location: {
@@ -1077,7 +1077,7 @@ const locations = {
 'Parma': 
 	{
 		siteID: '906879',
-		programID: '105050',
+		programID: '106095',
 		tagID: '3358',
 		pixelID: '',
 		location: {
@@ -1091,7 +1091,7 @@ const locations = {
 'Pasadena': 
 	{
 		siteID: '228343',
-		programID: '105073',
+		programID: '105123',
 		tagID: '3360',
 		pixelID: '',
 		location: {
@@ -1105,7 +1105,7 @@ const locations = {
 'Peoria': 
 	{
 		siteID: '748408',
-		programID: '105052',
+		programID: '106093',
 		tagID: '3362',
 		pixelID: '',
 		location: {
@@ -1119,7 +1119,7 @@ const locations = {
 'Perris': 
 	{
 		siteID: '434608',
-		programID: '105057',
+		programID: '105103',
 		tagID: '3364',
 		pixelID: '',
 		location: {
@@ -1133,7 +1133,7 @@ const locations = {
 'Phoenix': 
 	{
 		siteID: '-314525',
-		programID: '105050',
+		programID: '105098',
 		tagID: '3366',
 		pixelID: '',
 		location: {
