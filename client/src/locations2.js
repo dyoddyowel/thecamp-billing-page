@@ -5,7 +5,7 @@ const locations = {
 'Alexandria': 
 	{
 		siteID: '830783',
-		programID: '105111',
+		programID: '105167',
 		tagID: '3226',
 		pixelID: '',
 		location: {
@@ -19,7 +19,7 @@ const locations = {
 'Anaheim': 
 	{
 		siteID: '172426',
-		programID: '105074',
+		programID: '105125',
 		tagID: '3228',
 		pixelID: '1019141084810848',
 		location: {
@@ -33,7 +33,7 @@ const locations = {
 'Arcadia': 
 	{
 		siteID: '505838',
-		programID: '105050',
+		programID: '105097',
 		tagID: '3230',
 		pixelID: '170049590227137',
 		location: {
@@ -47,7 +47,7 @@ const locations = {
 'Argyle': 
 	{
 		siteID: '515389',
-		programID: '105059',
+		programID: '105109',
 		tagID: '3230',
 		pixelID: '170049590227137',
 		location: {
@@ -61,7 +61,7 @@ const locations = {
 'Arlington': 
 	{
 		siteID: '469848',
-		programID: '105049',
+		programID: '105096',
 		tagID: '3232',
 		pixelID: '305596673130406',
 		location: {
@@ -75,7 +75,7 @@ const locations = {
 'Bakersfield': 
 	{
 		siteID: '539757',
-		programID: '105051',
+		programID: '105097',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -89,7 +89,7 @@ const locations = {
 'Bakersfield-NW': 
 	{
 		siteID: '697919',
-		programID: '105049',
+		programID: '105095',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -103,7 +103,7 @@ const locations = {
 'Bakersfield-nw': 
 	{
 		siteID: '697919',
-		programID: '105049',
+		programID: '105095',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -118,7 +118,7 @@ const locations = {
 'Bell': 
 	{
 		siteID: '273870',
-		programID: '105072',
+		programID: '105153',
 		tagID: '3236',
 			pixelID: '1392379664110280',
 			location: {
@@ -132,7 +132,7 @@ const locations = {
 'Downey': 
 	{
 		siteID: '273870',
-		programID: '105073',
+		programID: '105154',
 		tagID: '3264',
 		pixelID: '',
 		location: {
@@ -146,7 +146,7 @@ const locations = {
 'La-Mirada': 
 	{
 		siteID: '273870',
-		programID: '105074',
+		programID: '105155',
 		tagID: '3306',
 		pixelID: '',
 		location: {
@@ -161,7 +161,7 @@ const locations = {
 'Burbank': 
 	{
 		siteID: '264885',
-		programID: '105070',
+		programID: '105185',
 		tagID: '3238',
 			 pixelID: '179752492676186',
 			 location: {
@@ -175,7 +175,7 @@ const locations = {
 'Covina': 
 	{
 		siteID: '264885',
-		programID: '105075',
+		programID: '105186',
 		tagID: '3430',
 		pixelID: '',
 		location: {
@@ -189,7 +189,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '105071',
+		programID: '105187',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -203,7 +203,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '105072',
+		programID: '105188',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -217,7 +217,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '105073',
+		programID: '105189',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -231,7 +231,7 @@ const locations = {
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '105074',
+		programID: '105190',
 		tagID: '3424',
 		pixelID: '',
 		location: {
@@ -245,7 +245,7 @@ const locations = {
 'Calexico': 
 	{
 		siteID: '620570',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3240',
 		pixelID: '',
 		location: {
@@ -256,11 +256,11 @@ const locations = {
 			email: 'CalexicoFD@thecamptc.com'
 		}
 },
-// Carson, South-Bay-Torrance
+// Carson, South-Bay-Torrance, no access to mindbody
 'Carson': 
 	{
 		siteID: '298511',
-		programID: '10373',
+		programID: '10400',
 		tagID: '3242',
 		pixelID: '',
 		location: {
@@ -288,7 +288,7 @@ const locations = {
 'Chatsworth': 
 	{
 		siteID: '3324',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3244',
 		pixelID: '',
 		location: {
@@ -303,7 +303,7 @@ const locations = {
 'Chino': 
 	{
 		siteID: '143922',
-		programID: '105075',
+		programID: '105125',
 		tagID: '3246',
 		pixelID: '',
 		location: {
@@ -317,7 +317,7 @@ const locations = {
 'Rancho': 
 	{
 		siteID: '143922',
-		programID: '105075',
+		programID: '105125',
 		tagID: '3370',
 		pixelID: '',
 		location: {
@@ -331,7 +331,7 @@ const locations = {
 'Chula-Vista': 
 	{
 		siteID: '248377',
-		programID: '105074',
+		programID: '105124',
 		tagID: '3248',
 		pixelID: '',
 		location: {
@@ -345,7 +345,7 @@ const locations = {
 'Clearwater': 
 	{
 		siteID: '698580',
-		programID: '105052',
+		programID: '105099',
 		tagID: '3250',
 		pixelID: '',
 		location: {
@@ -374,7 +374,7 @@ const locations = {
 'Corona': 
 	{
 		siteID: '233',
-		programID: '105049',
+		programID: '105095',
 		tagID: '3256',
 		pixelID: '',
 		location: {
@@ -388,7 +388,7 @@ const locations = {
 'Costa-Mesa': 
 	{
 		siteID: '221376',
-		programID: '105050',
+		programID: '105095',
 		tagID: '3258',
 		pixelID: '',
 		location: {
@@ -402,7 +402,7 @@ const locations = {
 'Cypress': 
 	{
 		siteID: '278263',
-		programID: '105052',
+		programID: '105098',
 		tagID: '3260',
 		pixelID: '',
 		location: {
@@ -416,7 +416,7 @@ const locations = {
 'Davie': 
 	{
 		siteID: '257960',
-		programID: '105050',
+		programID: '105097',
 		tagID: '3262',
 		pixelID: '',
 		location: {
@@ -427,25 +427,11 @@ const locations = {
 			email: 'daviefd@thecamptc.com'
 		}
 },
-'Draper': 
-	{
-		siteID: '414648',
-		programID: '105049',
-		tagID: '3266',
-		pixelID: '',
-		location: {
-			street: '12636 South 125 West, Suite D',
-			state: 'UT',
-			zip: '84020',
-			phone: '(801) 803-0221',
-			email: 'draperfd@thecamptc.com'
-		}
-},
 // East LA, Pico Rivera
 'East-Los-Angeles': 
 	{
 		siteID: '253486',
-		programID: '105058',
+		programID: '105118',
 		tagID: '3268',
 		pixelID: '',
 		location: {
@@ -459,7 +445,7 @@ const locations = {
 'Pico-Rivera': 
 	{
 		siteID: '253486',
-		programID: '105059',
+		programID: '105119',
 		tagID: '3368',
 		pixelID: '',
 		location: {
@@ -473,7 +459,7 @@ const locations = {
 'El-Cajon': 
 	{
 		siteID: '347909',
-		programID: '105050',
+		programID: '105109',
 		tagID: '3270',
 		pixelID: '',
 		location: {
@@ -487,7 +473,7 @@ const locations = {
 'El-Monte': 
 	{
 		siteID: '-264885',
-		programID: '106074',
+		programID: '106119',
 		tagID: '3272',
 		pixelID: '',
 		location: {
@@ -501,7 +487,7 @@ const locations = {
 'Escondido': 
 	{
 		siteID: '581912',
-		programID: '105049',
+		programID: '105095',
 		tagID: '3274',
 		pixelID: '',
 		location: {
@@ -515,7 +501,7 @@ const locations = {
 'Fontana': 
 	{
 		siteID: '143931',
-		programID: '105050',
+		programID: '105096',
 		tagID: '3276',
 		pixelID: '',
 		location: {
@@ -529,7 +515,7 @@ const locations = {
 'Fort-Worth': 
 	{
 		siteID: '834435',
-		programID: '105053',
+		programID: '105103',
 		tagID: '3278',
 		pixelID: '',
 		location: {
@@ -558,7 +544,7 @@ const locations = {
 'Gilbert': 
 	{
 		siteID: '589611',
-		programID: '105050',
+		programID: '105097',
 		tagID: '3284',
 		pixelID: '',
 		location: {
@@ -572,7 +558,7 @@ const locations = {
 'Hemet': 
 	{
 		siteID: '-291840',
-		programID: '105049',
+		programID: '105108',
 		tagID: '3286',
 		pixelID: '',
 		location: {
