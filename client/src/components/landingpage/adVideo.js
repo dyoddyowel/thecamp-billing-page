@@ -10,7 +10,7 @@ const VideoPlayer = (props) => {
           poster='/videoPoster.jpg'
           autoPlay={false}
           muted={false}
-          src="https://www.thecamptc.com/videos/gobble.mp4"
+          src="https://www.thecamptc.com/videos/toughlove.mp4"
         />
     </div>
   );
