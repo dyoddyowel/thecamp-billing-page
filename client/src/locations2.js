@@ -1508,6 +1508,20 @@ const locations = {
 			email: 'VenturaFD@thecamptc.com'
 		}
 },
+'Victorville': 
+	{
+		siteID: '866046',
+		programID: '105016',
+		tagID: '3426',
+		pixelID: '',
+		location: {
+			street: '14464 Atstar Dr. Suite #210',
+			state: 'CA',
+			zip: '92395',
+			phone: '323-872-4515',
+			email: 'VictorvilleFD@thecamptc.com'
+		}
+},
 'West-Chula-Vista': 
 	{
 		siteID: '616363',
