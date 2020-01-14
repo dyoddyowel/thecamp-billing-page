@@ -371,6 +371,20 @@ const locations = {
 //			email: 'ClovisFD@thecamptc.com'
 //		}
 //},
+'Cool-Springs': 
+	{
+		siteID: '438547',
+		programID: '105023',
+		tagID: '3256',
+		pixelID: '',
+		location: {
+			street: '1722 General George Patron Dr',
+			state: 'TN',
+			zip: '37027',
+			phone: '615-915-2068',
+			email: 'coolspringsfd@thecamptc.com'
+		}
+},
 'Corona': 
 	{
 		siteID: '233',
