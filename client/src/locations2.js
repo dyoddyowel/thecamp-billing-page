@@ -2,6 +2,21 @@
 //TODO: update Location programID
 
 const locations = {
+//test 16 week
+'16Week-Anaheim': 
+	{
+		siteID: '172426',
+		programID: '105125',
+		tagID: '3228',
+		pixelID: '1019141084810848',
+		location: {
+			street: '3361 E Miraloma Ave',
+			state: 'CA',
+			zip: '92806',
+			phone: '657-216-2537',
+			email: 'AnaheimFD@thecamptc.com'
+		}
+},
 'Alexandria': 
 	{
 		siteID: '830783',
