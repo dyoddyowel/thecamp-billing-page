@@ -3,7 +3,7 @@
 
 const locations = {
 //test 16 week
-'16Week-Anaheim': 
+'16week-Anaheim': 
 	{
 		siteID: '172426',
 		programID: '105125',
