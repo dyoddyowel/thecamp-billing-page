@@ -11,11 +11,11 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "21 Day Tough Love 2020 Program",
-                "amount": "$67"
+                "description": "16 Week Challenge",
+                "amount": "$47"
             }
         ],
-        "total": "$67",
+        "total": "$47",
         "company_name": "The Camp",
         "name": "name_Value",
         "receipt_id": "receipt_id_Value",
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'tough-love-manual-2020.pdf',
-            path: 'https://www.thecamptc.com/manuals/tough-love-manual-2020.pdf',
+            filename: 'xxx.pdf',
+            path: 'https://www.thecamptc.com/manuals/xxx.pdf',
             contentType: 'application/pdf'
         }
     ]
