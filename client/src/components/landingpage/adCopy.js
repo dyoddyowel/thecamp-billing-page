@@ -11,7 +11,7 @@ const AdCopy = ({ id }) => (
 		<li>Do you want to get in the best shape of your life?</li>
 		<li>Do you want a community supporting you to your goals every step of the way?</li>
           </ul>
-          <p style="font-size=24px;font-weight=500">If you answered yes to the above then you fit the criteria to join our Brand New 16 Week Challenge today.</p>
+          <p>If you answered yes to the above then you fit the criteria to join our Brand New 16 Week Challenge today.</p>
         </div>
   </div>
 );
