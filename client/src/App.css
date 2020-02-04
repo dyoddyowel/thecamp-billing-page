@@ -4,10 +4,12 @@
   width: 100% !important; 
 }
 
+/*
 .video-react .video-react-big-play-button {
   top: 45% !important;
   left: 45% !important;
 }
+*/
 
 button:disabled {
   background: gray;
