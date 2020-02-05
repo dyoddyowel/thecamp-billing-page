@@ -2,21 +2,6 @@
 //TODO: update Location programID
 
 const locations = {
-//test 16 week
-'16week-Anaheim': 
-	{
-		siteID: '172426',
-		programID: '105125',
-		tagID: '3228',
-		pixelID: '1019141084810848',
-		location: {
-			street: '3361 E Miraloma Ave',
-			state: 'CA',
-			zip: '92806',
-			phone: '657-216-2537',
-			email: 'AnaheimFD@thecamptc.com'
-		}
-},
 'Alexandria': 
 	{
 		siteID: '830783',
@@ -176,7 +161,7 @@ const locations = {
 'Burbank': 
 	{
 		siteID: '264885',
-		programID: '105185',
+		programID: '105241',
 		tagID: '3238',
 			 pixelID: '179752492676186',
 			 location: {
@@ -190,7 +175,7 @@ const locations = {
 'Covina': 
 	{
 		siteID: '264885',
-		programID: '105186',
+		programID: '105242',
 		tagID: '3430',
 		pixelID: '',
 		location: {
@@ -204,7 +189,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '105187',
+		programID: '105243',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -218,7 +203,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '105188',
+		programID: '105244',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -232,7 +217,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '105189',
+		programID: '105245',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -246,7 +231,7 @@ const locations = {
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '105190',
+		programID: '105246',
 		tagID: '3424',
 		pixelID: '',
 		location: {
