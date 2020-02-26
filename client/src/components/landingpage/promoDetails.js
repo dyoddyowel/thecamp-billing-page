@@ -2,7 +2,7 @@ import React from 'react';
 
 const PromoDetails = ({ detailname, price }) => (
     <div className="details">
-       Secure your <span className="highlight">{ detailname }</span> spot with an initial payment of only <span className="highlight">${price}</span>
+       <span className="highlight">${price}</span> for the <span className="highlight">{ detailname }</span> program will get you:
     </div>
 );
 
