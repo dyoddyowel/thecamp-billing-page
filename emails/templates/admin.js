@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'xxx.pdf',
-            path: 'https://www.thecamptc.com/manuals/xxx.pdf',
+            filename: 'Spring-Cleaning-Detox-Manual.pdf',
+            path: 'https://www.thecamptc.com/manuals/Spring-Cleaning-Detox-Manual.pdf',
             contentType: 'application/pdf'
         }
     ]
