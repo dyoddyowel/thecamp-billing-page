@@ -42,8 +42,8 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="16 Week Challenge"
-      price="47" />
+      detailname="Spring Cleaning Detox"
+      price="67" />
     <Video />
     <AdCopy
       id="billing-copy" />
@@ -113,7 +113,7 @@ class BillingHotLink extends Component {
           "BillingPostalCode": "",
       },
       payment: {
-          "amount": 47,
+          "amount": 67,
           "number": "",
           "expiry": "",
           "cvc": "",
