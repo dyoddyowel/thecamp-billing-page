@@ -5,7 +5,7 @@ const locations = {
 'Alexandria': 
 	{
 		siteID: '830783',
-		programID: '105179',
+		programID: '105182',
 		tagID: '3226',
 		pixelID: '',
 		location: {
@@ -19,7 +19,7 @@ const locations = {
 'Anaheim': 
 	{
 		siteID: '172426',
-		programID: '105135',
+		programID: '105139',
 		tagID: '3228',
 		pixelID: '1019141084810848',
 		location: {
@@ -33,7 +33,7 @@ const locations = {
 'Arcadia': 
 	{
 		siteID: '505838',
-		programID: '105108',
+		programID: '105109',
 		tagID: '3230',
 		pixelID: '170049590227137',
 		location: {
@@ -44,10 +44,25 @@ const locations = {
 			email: 'Arcadiaphfd@thecamptc.com'
 		}
 },
+// Argyle, New name North-Richland-Hills
 'Argyle': 
 	{
 		siteID: '515389',
-		programID: '105119',
+		programID: '105120',
+		tagID: '3230',
+		pixelID: '170049590227137',
+		location: {
+			street: '308 E. FM1830, Argyle',
+			state: 'TX',
+			zip: '76226',
+			phone: '214-724-1859',
+			email: 'Argylefd@thecamptc.com'
+		}
+},
+'North-Richland-Hills': 
+	{
+		siteID: '515389',
+		programID: '105120',
 		tagID: '3230',
 		pixelID: '170049590227137',
 		location: {
@@ -61,7 +76,7 @@ const locations = {
 'Arlington': 
 	{
 		siteID: '469848',
-		programID: '105106',
+		programID: '105107',
 		tagID: '3232',
 		pixelID: '305596673130406',
 		location: {
@@ -75,7 +90,7 @@ const locations = {
 'Bakersfield': 
 	{
 		siteID: '539757',
-		programID: '105107',
+		programID: '105108',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -89,7 +104,7 @@ const locations = {
 'Bakersfield-NW': 
 	{
 		siteID: '697919',
-		programID: '105106',
+		programID: '105107',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -103,7 +118,7 @@ const locations = {
 'Bakersfield-nw': 
 	{
 		siteID: '697919',
-		programID: '105106',
+		programID: '105107',
 		tagID: '3234',
 		pixelID: '124038588258655',
 		location: {
@@ -118,7 +133,7 @@ const locations = {
 'Bell': 
 	{
 		siteID: '273870',
-		programID: '105186',
+		programID: '105190',
 		tagID: '3236',
 			pixelID: '1392379664110280',
 			location: {
@@ -132,7 +147,7 @@ const locations = {
 'Downey': 
 	{
 		siteID: '273870',
-		programID: '105187',
+		programID: '105191',
 		tagID: '3264',
 		pixelID: '',
 		location: {
@@ -146,7 +161,7 @@ const locations = {
 'La-Mirada': 
 	{
 		siteID: '273870',
-		programID: '105188',
+		programID: '105192',
 		tagID: '3306',
 		pixelID: '',
 		location: {
@@ -161,7 +176,7 @@ const locations = {
 'Burbank': 
 	{
 		siteID: '264885',
-		programID: '105241',
+		programID: '105247',
 		tagID: '3238',
 			 pixelID: '179752492676186',
 			 location: {
@@ -175,7 +190,7 @@ const locations = {
 'Covina': 
 	{
 		siteID: '264885',
-		programID: '105242',
+		programID: '105248',
 		tagID: '3430',
 		pixelID: '',
 		location: {
@@ -189,7 +204,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '105243',
+		programID: '105249',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -203,7 +218,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '105244',
+		programID: '105250',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -217,7 +232,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '105245',
+		programID: '105251',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -231,7 +246,7 @@ const locations = {
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '105246',
+		programID: '105252',
 		tagID: '3424',
 		pixelID: '',
 		location: {
@@ -245,7 +260,7 @@ const locations = {
 'Calexico': 
 	{
 		siteID: '620570',
-		programID: '105106',
+		programID: '105107',
 		tagID: '3240',
 		pixelID: '',
 		location: {
@@ -257,20 +272,20 @@ const locations = {
 		}
 },
 // Carson, South-Bay-Torrance, no access to mindbody
-'Carson': 
-	{
-		siteID: '298511',
-		programID: '10400',
-		tagID: '3242',
-		pixelID: '',
-		location: {
-			street: '21023 S. Figueroa St',
-			state: 'CA',
-			zip: '90745',
-			phone: '(310) 328-2267',
-			email: 'carsonfd@thecamptc.com'
-		}
-},
+//'Carson': 
+//	{
+//		siteID: '298511',
+//		programID: '10400',
+//		tagID: '3242',
+//		pixelID: '',
+//		location: {
+//			street: '21023 S. Figueroa St',
+//			state: 'CA',
+//			zip: '90745',
+//			phone: '(310) 328-2267',
+//			email: 'carsonfd@thecamptc.com'
+//		}
+//},
 //'South-Bay': 
 //	{
 //		siteID: '298511',
@@ -288,7 +303,7 @@ const locations = {
 'Chatsworth': 
 	{
 		siteID: '3324',
-		programID: '105107',
+		programID: '105108',
 		tagID: '3244',
 		pixelID: '',
 		location: {
@@ -303,7 +318,7 @@ const locations = {
 'Chino': 
 	{
 		siteID: '143922',
-		programID: '105135',
+		programID: '105139',
 		tagID: '3246',
 		pixelID: '',
 		location: {
@@ -317,7 +332,7 @@ const locations = {
 'Rancho': 
 	{
 		siteID: '143922',
-		programID: '105135',
+		programID: '105139',
 		tagID: '3370',
 		pixelID: '',
 		location: {
@@ -331,7 +346,7 @@ const locations = {
 'Chula-Vista': 
 	{
 		siteID: '248377',
-		programID: '105134',
+		programID: '105138',
 		tagID: '3248',
 		pixelID: '',
 		location: {
@@ -345,7 +360,7 @@ const locations = {
 'Clearwater': 
 	{
 		siteID: '698580',
-		programID: '105109',
+		programID: '105110',
 		tagID: '3250',
 		pixelID: '',
 		location: {
