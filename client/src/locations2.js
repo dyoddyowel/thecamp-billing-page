@@ -1132,6 +1132,20 @@ const locations = {
 			email: 'OxnardFD@thecamptc.com'
 		}
 },
+'Palmdale': 
+	{
+		siteID: '891407',
+		programID: '101148',
+		tagID: '3356',
+		pixelID: '',
+		location: {
+			street: '3005 E. Palmdale Blvd. Suite #21',
+			state: 'CA',
+			zip: '93550',
+			phone: '661-690-8020',
+			email: 'PalmdaleFD@thecamptc.com'
+		}
+},
 'Palm-Desert': 
 	{
 		siteID: '726432',
@@ -1270,6 +1284,20 @@ const locations = {
 			zip: '78664',
 			phone: '512-609-8910',
 			email: 'RoundRockFD@thecamptc.com'
+		}
+},
+'Salinas': 
+	{
+		siteID: '710399',
+		programID: '101148',
+		tagID: '3380',
+		pixelID: '',
+		location: {
+			street: '1682 North Main Street',
+			state: 'CA',
+			zip: '93906',
+			phone: '831-887-8458',
+			email: 'SalinasFD@thecamptc.com'
 		}
 },
 'San-Antonio': 
