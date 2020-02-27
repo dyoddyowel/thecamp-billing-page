@@ -781,6 +781,20 @@ const locations = {
 			email: 'LasVegasWestFD@thecamptc.com'
 		}
 },
+'Las-Vegas-West': 
+	{
+		siteID: '678753',
+		programID: '108105',
+		tagID: '4562',
+		pixelID: '',
+		location: {
+			street: '7885 W. Sahara Ave. Unit 104 Las Vegas',
+			state: 'NV',
+			zip: '89117',
+			phone: '(702) 888-3831',
+			email: 'LasVegasWestFD@thecamptc.com'
+		}
+},
 'Las-Vegas-East': 
 	{
 		siteID: '974723',
@@ -963,7 +977,35 @@ const locations = {
 			email: 'MiramarFD@thecamptc.com'
 		}
 },
+'Miramar-Florida': 
+	{
+		siteID: '347920',
+		programID: '105121',
+		tagID: '3336',
+		pixelID: '',
+		location: {
+			street: '6901-B Miramar Parkway',
+			state: 'FL',
+			zip: '33023',
+			phone: '(754) 400-8817',
+			email: 'MiramarFD@thecamptc.com'
+		}
+},
 'Miramar-CA': 
+	{
+		siteID: '498324',
+		programID: '105111',
+		tagID: '3336',
+		pixelID: '',
+		location: {
+			street: '6904 Miramar Rd #103',
+			state: 'CA',
+			zip: '92121',
+			phone: '619-600-8826',
+			email: 'MiramarSanDiegoFD@thecamptc.com'
+		}
+},
+'Miramar-San-Diego': 
 	{
 		siteID: '498324',
 		programID: '105111',
