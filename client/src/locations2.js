@@ -1050,7 +1050,7 @@ const locations = {
 'Oceanside': 
 	{
 		siteID: '192329',
-		programID: '105138',
+		programID: '105142',
 		tagID: '3350',
 		pixelID: '',
 		location: {
