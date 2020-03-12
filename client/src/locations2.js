@@ -612,20 +612,21 @@ const locations = {
 			email: 'highdesertfd@thecamptc.com'
 		}
 },
-'Highland-Heights': 
-	{
-		siteID: '912776',
-		programID: '105140',
-		tagID: '3290',
-		pixelID: '',
-		location: {
-			street: '261 Alpha Park',
-			state: 'OH',
-			zip: '44143',
-			phone: '(440) 459-1204',
-			email: 'ClevelandEastFD@thecamptc.com'
-		}
-},
+// Closed
+//'Highland-Heights': 
+//	{
+//		siteID: '912776',
+//		programID: '105140',
+//		tagID: '3290',
+//		pixelID: '',
+//		location: {
+//			street: '261 Alpha Park',
+//			state: 'OH',
+//			zip: '44143',
+//			phone: '(440) 459-1204',
+//			email: 'ClevelandEastFD@thecamptc.com'
+//		}
+//},
 'Houston': 
 	{
 		siteID: '-879013',
@@ -1216,20 +1217,21 @@ const locations = {
 			email: 'PerrisFD@thecamptc.com'
 		}
 },
-'Phoenix': 
-	{
-		siteID: '-314525',
-		programID: '105109',
-		tagID: '3366',
-		pixelID: '',
-		location: {
-			street: '20813 N 19th Ave Suite 2',
-			state: 'AZ',
-			zip: '85027',
-			phone: '(602) 777-0193',
-			email: 'phoenixfd@thecamptc.com'
-		}
-},
+// Closed
+//'Phoenix': 
+//	{
+//		siteID: '-314525',
+//		programID: '105109',
+//		tagID: '3366',
+//		pixelID: '',
+//		location: {
+//			street: '20813 N 19th Ave Suite 2',
+//			state: 'AZ',
+//			zip: '85027',
+//			phone: '(602) 777-0193',
+//			email: 'phoenixfd@thecamptc.com'
+//		}
+//},
 'Redlands': 
 	{
 		siteID: '143945',
