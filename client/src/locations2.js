@@ -901,10 +901,10 @@ const locations = {
 		tagID: '3340',
 		pixelID: '',
 		location: {
-			street: '137 W. Maple Ave.',
-			state: 'CA',
-			zip: '91016',
-			phone: '626-975-6071',
+			street: '909 Tripp Rd.',
+			state: 'TX',
+			zip: '75150',
+			phone: '469-600-5734',
 			email: 'Mesquite@thecamptc.com'
 		}
 },
