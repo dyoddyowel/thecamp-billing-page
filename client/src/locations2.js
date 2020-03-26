@@ -905,7 +905,7 @@ const locations = {
 			state: 'TX',
 			zip: '75150',
 			phone: '469-600-5734',
-			email: 'Mesquite@thecamptc.com'
+			email: 'MesquiteFD@thecamptc.com'
 		}
 },
 'Mid-Cities': 
