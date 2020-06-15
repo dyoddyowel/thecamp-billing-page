@@ -11,7 +11,7 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "Spring Cleaning Detox",
+                "description": "Summer Sizzle",
                 "amount": "$67"
             }
         ],
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'Spring-Cleaning-Detox-Manual.pdf',
-            path: 'https://www.thecamptc.com/manuals/Spring-Cleaning-Detox-Manual.pdf',
+            filename: 'Summer-Sizzle-Manual.pdf',
+            path: 'https://www.thecamptc.com/manuals/Summer-Sizzle-Manual.pdf',
             contentType: 'application/pdf'
         }
     ]
