@@ -810,6 +810,20 @@ const locations = {
 			email: 'LVFD@thecamptc.com'
 		}
 },
+'Lodi': 
+	{
+		siteID: '274470',
+		programID: '105126',
+		tagID: '3314',
+		pixelID: '',
+		location: {
+			street: '834 West Kettleman Lane, Lodi',
+			state: 'CA',
+			zip: '95240',
+			phone: '(209) 552-5960',
+			email: 'lodifd@thecamptc.com'
+		}
+},
 'Long-Beach': 
 	{
 		siteID: '245950',
