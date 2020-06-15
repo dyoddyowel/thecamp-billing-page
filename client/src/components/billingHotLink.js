@@ -42,7 +42,7 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="Spring Cleaning Detox"
+      detailname="Summer Sizzle"
       price="67" />
     <Video />
     <AdCopy
@@ -212,7 +212,7 @@ class BillingHotLink extends Component {
       this.nextSection();
       ReactPixel.track('Purchase', {
         'currency': 'USD',
-        'value': 47.0
+        'value': 67.0
       });
       this.setState({ complete: true });
     } else {
