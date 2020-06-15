@@ -4,6 +4,7 @@ const AdCopy = ({ id }) => (
   <div>
         <div id={id}>
           <ul>
+            <li>Intermittent Fasting Program</li>
             <li>21 Days of Expert Coaching and Camp Classes</li>
             <li>Step by Step Nutrition Guide with recipes!</li>
             <li>Nutrition guidance every step of the way</li>
