@@ -1344,20 +1344,20 @@ const locations = {
 			email: 'SanBernardinoFD@thecamptc.com'
 		}
 },
-//'San-Diego': 
-//	{
-//		siteID: '528419',
-//		programID: '105138',
-//		tagID: '3304',
-//		pixelID: '',
-//		location: {
-//			street: '7121 Engineer Rd',
-//			state: 'CA',
-//			zip: '92111',
-//			phone: '(619) 371-0279',
-//			email: 'KearnyMesaFD@thecamptc.com'
-//		}
-//},
+'San-Diego': 
+	{
+		siteID: '528419',
+		programID: '105195',
+		tagID: '3304',
+		pixelID: '',
+		location: {
+			street: '7121 Engineer Rd',
+			state: 'CA',
+			zip: '92111',
+			phone: '(619) 371-0279',
+			email: 'KearnyMesaFD@thecamptc.com'
+		}
+},
 'San-Dimas': 
 	{
 		siteID: '274359',
