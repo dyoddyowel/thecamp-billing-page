@@ -176,7 +176,7 @@ const locations = {
 'Burbank': 
 	{
 		siteID: '264885',
-		programID: '105247',
+		programID: '105414',
 		tagID: '3238',
 			 pixelID: '179752492676186',
 			 location: {
@@ -190,7 +190,7 @@ const locations = {
 'Covina': 
 	{
 		siteID: '264885',
-		programID: '105248',
+		programID: '105436',
 		tagID: '3430',
 		pixelID: '',
 		location: {
@@ -204,7 +204,7 @@ const locations = {
 'Northridge': 
 	{
 		siteID: '264885',
-		programID: '105249',
+		programID: '105439',
 		tagID: '3348',
 		pixelID: '',
 		location: {
@@ -218,7 +218,7 @@ const locations = {
 'San-Fernando': 
 	{
 		siteID: '264885',
-		programID: '105250',
+		programID: '105423',
 		tagID: '3386',
 		pixelID: '',
 		location: {
@@ -232,7 +232,7 @@ const locations = {
 'Santa-Clarita': 
 	{
 		siteID: '264885',
-		programID: '105251',
+		programID: '105437',
 		tagID: '3396',
 		pixelID: '',
 		location: {
@@ -246,7 +246,7 @@ const locations = {
 'Van-Nuys': 
 	{
 		siteID: '264885',
-		programID: '105252',
+		programID: '105438',
 		tagID: '3424',
 		pixelID: '',
 		location: {
