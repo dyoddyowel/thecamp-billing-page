@@ -1,184 +1,32 @@
-@media (max-width: 700px) {
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-  #email-box input {
-    width: 95% !important;
-  }
-
-  .notmobile {
-    display: none !important;
-  }
-
-  #email-box button {
-    display: block;
-    height: 75px;
-    font-size: 25px;
-    width: 95% !important;
-    text-align: center;
-    background: #e43b2c;
-    color: #fff;
-    font-size: 37px;
-    text-transform: uppercase;
-    font-weight: 700;
-    /* height: 55px; */
-    line-height: 40px;
-    border-radius: 5px;
-    border: 0;
-    letter-spacing: 2px;
-    margin: 35px auto 0;
-    padding: 20px;
-  }
-
-  #copy-block {
-    width: 100% !important;
-  }
-
-  #copy-block #header-copy {
-    width: 100% !important;
-  }
-
-  #payment-block {
-    display: inline-block;
-    width: 100% !important;
-    vertical-align: top;
-  }
-
-  #billing-address {
-    width: 100% !important;
-    text-align: center !important;
-    margin: 5% auto !important;
-  }
-
-  .card-form-input-container {
-    width: 100% !important;
-  }
-
-  #header-banner {
-    background: red !important;
-    color: white !important;
-    font-size: 20px !important;
-    width: 100% !important;
-    font-weight: bold !important;
-    height: 40px !important;
-    text-align: center !important;
-    margin: auto !important;
-    vertical-align: middle !important;
-    margin-bottom: 1% !important;
-  }
-
-  #header-text {
-    font-size: 18px !important;
-    margin-top: 1%;
-    margin-bottom: 1% !important;
-  }
-
-  #video-wrapper {
-    display: inline-block !important;
-    width: 100% !important;
-    margin-top: 5% !important;
-  }
-
-  #email-box {
-    width: 100% !important;
-  }
-
-  #email-box button {
-    font-size: 25px !important;
-  }
-
-  #component_box h1 {
-    font-size: 24px;
-  }
-
-  .proper {
-    font-size: 15px;
-  }
-
-  #component_box h3 {
-    font-size: 20px;
-  }
-
-  .mobile {
-    display: block !important;
-  }
-
-  .App {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  #thank-you-container button {
-    font-size: 13px !important;
-  }
-
-  #card-container form {
-    position: relative !important;
-  }
-
-  .form input {
-    display: inline-block !important;
-    width: 90% !important;
-  }
-
-  #city-state input {
-    width: 90% !important;
-  }
-
-  select {
-    width: 90% !important;
-  }
-
-  .half-width {
-    width: 46% !important;
-  }
-
-  #card-container #card-module {
-    position: relative !important; 
-    left: 0 !important;
-  }
-
-  #card-container {
-    position: relative !important;
-    width: 100% !important;
-    margin: 10% auto auto !important;
-    height: auto !important;
-  }
-
-  #header-copy ul li {
-    font-size: 20px !important;
-    list-style-type: circle !important;
-    background: none !important;
-    font-weight: 500 !important;
-    line-height: 20px !important;
-    padding-left: 0 !important;
-    min-height: 12px !important;
-    margin-bottom: 5px !important;
-}
-
-  .notmobile {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-
-  #card-data-box {
-    width: 99.9% !important;
-    position: relative !important;
-    text-align: center !important;
-    margin: auto !important;
-    display: inline-block !important;
-  }
+.rccs {
+  width: 100% !important; 
 }
 
 .video-react .video-react-big-play-button {
-  top: 42%;
-  left: 40%;
+  top: 45% !important;
+  left: 45% !important;
+}
+
+button:disabled {
+  background: gray;
+  box-shadow: 0 8px 0 #676767, 0 12px 10px rgba(0, 0, 0, .3);
+}
+
+.low-priority {
+  cursor: pointer;
+  color: blue;
+}
+
+.location-name {
+  font-weight: bold;
+  font-size: 50px;
 }
 
 #video-wrapper {
   display: inline-block;
-  width: 45%;
+  width: 100%;
 }
 
 .yellow {
@@ -258,13 +106,14 @@
 
 .error {
   color: red;
+  margin-top: 5%;
   font-size: 20px;
   text-align: center;
   width: 100%;
 }
 #card-data-box {
   width: 72%;
-  position: relative !important;
+  position: relative;
   text-align: center;
   margin: auto;
 }
@@ -289,7 +138,7 @@ select {
   width: 95%;
   background-color: #ca0010;
   color: #fff;
-  font-family: "Alegreya Sans",sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 20px;
   font-weight: 900;
   line-height: 22px;
@@ -302,17 +151,34 @@ select {
   margin-top: 10%;
 }
 
+#thank-you-image-wrapper {
+  margin-top: 5%;
+}
+
 #thank-you-image-wrapper img {
-  width: 100%;
+  width: 45%;
 }
 
 #BillingState {
-  width: 49%;
+  width: 360px;
 }
 
 
 #city-state input{
-  width: 51%;
+  /* width: 360px; */
+}
+
+#city-state select {
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+  margin-bottom: 2%;
 }
 
 #header-text {
@@ -324,10 +190,6 @@ select {
   width: 75%;
   text-align: center;
   margin: 5% auto;
-}
-
-.bold {
-  font-weight: bold;
 }
 
 #card-container {
@@ -352,7 +214,7 @@ select {
   margin-top: 5%;
   background-color: #ca0010;
   color: #fff;
-  font-family: "Alegreya Sans",sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -377,9 +239,10 @@ select {
 }
 
 #billing-form button:disabled {
-  color: black !important;
-  background: lightgray !important;
-  border: 1px solid black !important;
+  color: black;
+  background: lightgray;
+  border: 1px solid black;
+  box-shadow: 0 8px 0 #676767, 0 12px 10px rgba(0, 0, 0, .3);
 }
 
 #billing-form button:hover {
@@ -397,7 +260,7 @@ select {
   text-align: center;
   background-color: #ca0010;
   color: #fff;
-  font-family: "Alegreya Sans",sans-serif;
+  font-family: "Open Sans",sans-serif;
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -415,9 +278,9 @@ select {
 }
 
 button:disabled {
-  color: black !important;
-  background: lightgray !important;
-  border: 1px solid black !important;
+  color: black;
+  background: lightgray;
+  border: 1px solid black;
 }
 
 #email-box button:hover {
@@ -435,6 +298,17 @@ ul {
 }
 
 #header-copy ul li {
+  font-size: 24px;
+  list-style-type: none;
+  background: transparent url("/info.png") no-repeat scroll 0 0;
+  font-weight: 500;
+  line-height: 27px;
+  padding-left: 55px;
+  min-height: 27px;
+  margin-bottom: 20px;
+}
+
+#billing-copy ul li {
   font-size: 24px;
   list-style-type: none;
   background: transparent url("/info.png") no-repeat scroll 0 0;
@@ -486,11 +360,157 @@ ul {
   display: inline-block;
 }
 
+.join-program {
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: #ec528d;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(338, 90%, 80%, .8)), to(hsla(338, 90%, 70%, .2)));
+  background-image: -webkit-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+  background-image: -moz-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+  background-image: -o-linear-gradient(hsla(338, 90%, 80%, .8), hsla(338, 90%, 70%, .2));
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+  -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1;
+  text-shadow: 0 -1px 1px rgba(175, 49, 95, .7);
+  -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+  -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+  transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+}
+
 #copy-block #header-copy {
     margin-top: 1%;
     width: 60%;
     float: none; 
     display: inline-block;
+}
+
+#footerlinks {
+  background: #333;
+  margin-top: 5%;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+
+#footerlinks a {
+  color: #fff;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-size: x-large;
+}
+
+.billing {
+  width: 100%;
+  max-width: 940px;
+  margin: auto;
+}
+
+.join-program {
+  display: block;
+  height: 75px;
+  font-size: 25px;
+  width: 50%;
+  text-align: center;
+  background: #e43b2c;
+  color: #fff;
+  font-size: 37px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 35px;
+  border-radius: 5px;
+  border: 0;
+  letter-spacing: 2px;
+  margin: 35px auto 0;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-box-shadow:    0 8px 0 #e43b2c, 0 12px 10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #e43b2c, 0 12px 10px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+}
+
+.join-program:active, button:focus {
+  -webkit-box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+  box-shadow:    0 8px 0 #c5376d, 0 12px 10px rgba(0, 0, 0, .3);
+  -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+.join-program:disabled {
+  color: black;
+  background: lightgray;
+  border: 1px solid black;
+}
+
+.billing #form-box {
+  width: 50%;
+  margin: auto;
+}
+
+.billing #BillingState {
+  height: 70px;
+}
+
+.form-header {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.billing input {
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  color: #a3a3a3;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+  margin-bottom: 2%;
+}
+
+.details {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.highlight {
+  background: yellow;
+}
+
+.billing #card-form {
+  margin-top: 5%;
+}
+
+.billing .card-form-input-container {
+  width: 100%;
+}
+
+.billing #card-data-box {
+  width: 100%;
+}
+
+#billing-copy {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 60%;
+  float: none; 
+  display: inline-block;
 }
 
 #payment-block {
@@ -554,8 +574,16 @@ ul {
 }
 
 .half-width {
-  width: 48% !important;
-  display: inline-block;
+  width: 49%;
+
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 .App-link {
@@ -600,6 +628,11 @@ ul {
   transform:rotate(-5deg);
 }
 
+.billing #billing-address {
+  width: 50%;
+  margin: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -607,4 +640,237 @@ ul {
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (max-width: 850px) {
+
+  .card-form-input-container, #card-data-box {
+    width: 75% !important;
+  }
+
+  .billing #billing-address {
+    width: 100%;
+    margin: auto;
+  }
+
+  .form-header {
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+
+  h2 {
+    margin-top: 10% !important;
+  }
+
+  #logo-container {
+    margin-top: 5%;
+  }
+
+  #billing-copy {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 95%;
+  }
+
+  #email-box input {
+    width: 95%;
+  }
+
+  .billing input {
+    width: 100%;
+  }
+
+  .join-program {
+    width: 70%;
+    font-size: 25px;
+  }
+
+  .billing #form-box {
+    width: 75%;
+    margin-bottom: 5%;
+  }
+
+  .notmobile {
+    display: none;
+  }
+
+  #email-box button {
+    display: block;
+    height: 75px;
+    font-size: 25px;
+    width: 95%;
+    text-align: center;
+    background: #e43b2c;
+    color: #fff;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* height: 55px; */
+    line-height: 40px;
+    border-radius: 5px;
+    border: 0;
+    letter-spacing: 2px;
+    margin: 35px auto 0;
+    padding: 20px;
+  }
+
+  #copy-block {
+    width: 100%;
+  }
+
+  #copy-block #header-copy {
+    width: 100%;
+  }
+
+  #payment-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+
+  #billing-address {
+    width: 75% !important;
+    text-align: center;
+    margin: 5% auto 5%;
+  }
+
+  .card-form-input-container {
+    width: 100%;
+  }
+
+  #header-banner {
+    background: red;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    margin-bottom: 1%;
+  }
+
+  #header-text {
+    font-size: 18px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+
+  #video-wrapper {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #email-box {
+    width: 100%;
+  }
+
+  #email-box button {
+    font-size: 25px;
+  }
+
+  #component_box h1 {
+    font-size: 24px;
+  }
+
+  .proper {
+    font-size: 15px;
+  }
+
+  #component_box h3 {
+    font-size: 20px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .App {
+    width: 100%;
+    max-width: 100%;
+    background: #cacaca38;
+  }
+
+  #thank-you-container button {
+    font-size: 13px;
+  }
+
+  #card-container form {
+    position: relative;
+  }
+
+  .form input {
+    display: inline-block;
+    width: 90%;
+  }
+
+  #city-state input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  .half-width {
+    width: 46%;
+  }
+
+  #card-container #card-module {
+    position: relative; 
+    left: 0;
+  }
+
+  #card-container {
+    position: relative;
+    width: 100%;
+    margin: 10% auto auto;
+    height: auto;
+  }
+
+  #header-copy ul li {
+    font-size: 20px;
+    list-style-type: circle;
+    background: none;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 0;
+    min-height: 12px;
+    margin-bottom: 5px;
+}
+
+#billing-copy ul li {
+  font-size: 20px;
+  list-style-type: none;
+  padding-left: 15%;
+  background: transparent url(/info.png) no-repeat scroll 0 0;
+  font-weight: 500;
+  margin-top: 10%;
+  line-height: 25px;
+  min-height: 12px;
+  margin-right: 10%;
+  margin-bottom: 5px;
+}
+
+  .notmobile {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  #card-data-box {
+    width: 99.9%;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+  }
+}
+
+.bold {
+  font-weight: bold;
 }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import SelectUSState from 'react-select-us-states';
 import PaymentForm from './paymentForm';
 import postcode from 'postcode-validator';
-// import cardValidator from 'card-validator';
+import BillingAddress from './billingAddress';
 import AdCopy from './landingpage/adCopy';
 import './billingstyle.css';
+
+//TODO: Billing Page Hot Link
 
 class BillingForm extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class BillingForm extends Component {
                 "BillingPostalCode": "",
             },
             payment: {
-                "amount": 89,
+                "amount": 37,
                 "number": "",
                 "expiry": "",
                 "cvc": "",
@@ -85,7 +86,7 @@ class BillingForm extends Component {
                 "BillingPostalCode": "",
             },
             payment: {
-                "amount": 89,
+                "amount": 37,
                 "number": "",
                 "expiry": "",
                 "cvc": "",
@@ -97,9 +98,7 @@ class BillingForm extends Component {
             }
         }
         document.getElementById('card-form').reset();
-        this.setState(clear_data, () => {
-            console.log(this.state)
-        });
+        this.setState(clear_data);
     }
 
     render() {
@@ -111,7 +110,7 @@ class BillingForm extends Component {
             <div id="billing-form" className="form">
                 <div id="payment-container">
                     <div id="copy-block">
-                            <div id="block-header">Get All This for $21:</div>
+                            <div id="block-header">Get All This for $37:</div>
                             <AdCopy />
                     </div>
                     <PaymentForm 
@@ -122,18 +121,11 @@ class BillingForm extends Component {
                         ccName={this.state.payment['name']} 
                         handlePaymentChange={this.handlePaymentChange}/>
                 </div>
-                <div id="billing-address">
-                    <h2>Billing Address</h2>
-                    <input onChange={this.handleChange} type="text" placeholder="Address" id="BillingAddress" name="BillingAddress" />
-                    <div id="city-postal">
-                        <div id="city-state">
-                            <input onChange={this.handleChange} type="text" placeholder="City" id="BillingCity" name="BillingCity" />
-                            <SelectUSState id="BillingState" name="BillingState" className="myClassName" onChange={this.setNewValue} />
-                        </div>
-                        <input onChange={this.handleChange} type="number" placeholder="Zip Code" id="BillingPostalCode" name="BillingPostalCode" />
-                    </div>
-                    <button onClick={this.handleSubmit} disabled={this.state.isDisabled}>Join Class</button>
-                </div>
+                <BillingAddress 
+                    handleChange={this.handleChange}
+                    setNewValue={this.setNewValue}
+                    disabled={this.state.isDisabled} />
+                <button onClick={this.handleSubmit} disabled={this.state.isDisabled}>Join Class</button>
             </div>
 
         );

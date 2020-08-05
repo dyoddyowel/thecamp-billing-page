@@ -1,16 +1,23 @@
+const dotenv = require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require("path");
 const client = require('./src/client');
+const email = require('./src/email');
 const sale = require('./src/sale');
 const payment = require('./src/payment');
 const classes = require('./src/class');
 const Infusionsoft = require('./src/infusionsoft');
 const Timber = require('./src/timber');
-const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000; 
+const helpers = require('./src/helpers');
+const enforce = require('express-sslify')
+const admin_template = require('./emails/templates/admin');
+const customer_template = require('./emails/templates/customer');
+const location_emails = require('./location_email');
 
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -62,39 +69,58 @@ app.post('/api/infusionsoft', async (req, res) => {
   res.send('contact endpoint');
 })
 
-app.post('/api', async (req, res) => {
+app.post('/api/client', async (req, res) => {
+  console.log("at client endpoint");
   let body = req.body;
-  let name = body.Payment.name.split(' ');  
+  console.log("for site: ", body.SiteID);
+  let name = body.payment.name.split(' ');  
   let params = client.buildArguments(body.SiteID)
-  let exp = body.Payment.expiry.split('/');
+  let phone;
+  if(body.phone) {
+    phone = body.phone;
+  } else {
+    phone = '9092879906';
+  }
   let client_data = {
-    Email: body.Email,
-    FirstName: name[0],
-    LastName: name[1],
-    AddressLine1: body.Address.BillingAddress,
-    City: body.Address.BillingCity,
-    State: body.Address.BillingState,
-    PostalCode: body.Address.BillingPostalCode,
+    Email: body.email,
+    FirstName: body.fname,
+    LastName: body.lname,
+    AddressLine1: body.address.BillingAddress,
+    City: body.address.BillingCity,
+    State: body.address.BillingState,
+    PostalCode: body.address.BillingPostalCode,
     Gender: "Female",
     BirthDate: "2018-01-01",
-    MobilePhone: body.Phone
+    MobilePhone: phone,
   }
-
-  console.log("client_data", client_data);
+  console.log("client data object created");
 
   // Add Client
-  let clientResponse = await client.addClient(params, client_data);
+  let clientResponse;
+  try {
+    clientResponse = await client.addClient(params, client_data);
+  } catch(err) {
+    console.log(err);
+  }
+  console.log("clientResponse", clientResponse);  
+  res.send(clientResponse);
+});
 
-  console.log("clientResponse", clientResponse);
+app.post('/api/billing', async (req, res) => {
+  console.log("at billing endpoint");
+  let body = req.body;
+  let name = body.payment.name.split(' ');  
+  let exp = helpers.format_expiry(body.payment.expiry);
+  exp = exp.split('/');
   let month = exp[0];
-  let year = exp[1].replace(' ','');
+  let year = exp[1];
+  year = year.replace(/\s+/g, '');
   if(year.length < 4) {
     year = '20' + year;
   } else {
     year = year;
   }
   let checkout_data = {
-    Test: 'true',
     CartItems: {
         CartItem: {
             Quantity: 1,
@@ -111,7 +137,98 @@ app.post('/api', async (req, res) => {
         attributes: {
           'xsi:type': "CreditCardInfo"
         },  
-        Amount: 21.0,
+        Amount: 67.0,
+        CreditCardNumber: body.payment.number,
+        CVV: body.payment.cvc,
+        CCType: body.payment.issuer,
+        ExpMonth: month,
+        ExpYear: year,
+        BillingName: body.payment.name,
+        BillingAddress: body.address.BillingAddress,
+        BillingCity: body.address.BillingCity,
+        BillingState: body.address.BillingState,
+        BillingPostalCode: body.address.BillingPostalCode,
+        SaveInfo: true
+      }
+    },
+    ClientID: body.clientID,
+  }
+  let saleParams = sale.buildArguments(body.SiteID);
+  saleParams.Request['CartItems'] = checkout_data.CartItems;
+  saleParams.Request['Payments'] = checkout_data.Payments;
+  saleParams.Request['ClientID'] = checkout_data.ClientID;
+  
+  let purchase;
+  try {
+    purchase = await sale.purchase(saleParams);
+  } catch(err) {
+    console.log(err);
+  }
+
+  console.log('purchase',purchase)
+  if(purchase.Status === "Success") {
+    await email(body.email, customer_template);
+    // await email(location_emails[body.SiteID], admin_template);
+  }
+  res.send(purchase.Status);
+});
+
+app.post('/api', async (req, res) => {
+  console.log("at endpoint");
+  let body = req.body;
+  let name = body.Payment.name.split(' ');  
+  let params = client.buildArguments(body.SiteID)
+  let exp = body.Payment.expiry.split('/');
+  let phone;
+  if(body.phone) {
+    phone = body.phone;
+  } else {
+    phone = '9092879906';
+  }
+  let client_data = {
+    Email: body.Email,
+    FirstName: fname,
+    LastName: lname,
+    AddressLine1: body.Address.BillingAddress,
+    City: body.Address.BillingCity,
+    State: body.Address.BillingState,
+    PostalCode: body.Address.BillingPostalCode,
+    Gender: "Female",
+    BirthDate: "2018-01-01",
+    MobilePhone: phone,
+  }
+
+  console.log("client_data", client_data);
+
+  // Add Client
+  let clientResponse = await client.addClient(params, client_data);
+
+  console.log("clientResponse", clientResponse);
+  let month = exp[0];
+  let year = exp[1].replace(' ','');
+  if(year.length < 4) {
+    year = '20' + year;
+  } else {
+    year = year;
+  }
+  let checkout_data = {
+    CartItems: {
+        CartItem: {
+            Quantity: 1,
+            Item: {
+              attributes: {
+                'xsi:type': "Service"
+              },  
+              ID: body.ProgramID
+            }
+        }
+    },
+    Payments: {
+      PaymentInfo: {
+        attributes: {
+          'xsi:type': "CreditCardInfo"
+        },  
+        Amount: 67.0,
         CreditCardNumber: body.Payment.number,
         CVV: body.Payment.cvc,
         ExpMonth: month,
