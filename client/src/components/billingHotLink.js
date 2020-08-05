@@ -42,7 +42,7 @@ const BillingPage = ({
 }) => (
   <React.Fragment>
     <PromoDetails
-      detailname="Summer Sizzle"
+      detailname="Shake It Off"
       price="67" />
     <Video />
     <AdCopy
