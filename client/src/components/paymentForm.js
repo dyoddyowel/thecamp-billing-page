@@ -7,10 +7,12 @@ export default class PaymentForm extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        number: props.cc,
+        number: "7777777777777777",
         name: props.ccName,
-        expiry: props.expiry,
-        cvc: props.cvc,
+        expiry: "08/21",
+        type: props.type,
+        cvc: "555",
+        issuer: "",
         focused: "",
         isValid: props.isValid
       };
@@ -64,7 +66,7 @@ export default class PaymentForm extends Component {
     }
   
     render() {
-      const { name, number, expiry, cvc, focused } = this.state;
+      const { name, number, expiry, cvc, focused, issuer } = this.state;
       return (
         <div id="payment-block">
           <div id="card-container">
@@ -72,10 +74,17 @@ export default class PaymentForm extends Component {
               <Cards
                 number={number}
                 name={name}
+                issuer={issuer}
                 expiry={expiry}
                 cvc={cvc}
                 focused={focused}
                 callback={this.handleCallback}
+                placeholders={{
+                  name: "Jane Doe",
+                  cvc: "12/19",
+                  number: 123456785555,
+                  expiry: "12/19",
+                }}
               />
             </div>
             <form className="rccs" id="card-form">
@@ -100,7 +109,7 @@ export default class PaymentForm extends Component {
               <div id="card-data-box">
                 <input
                   type="tel"
-                  className="half-width"
+                  className="half-width left"
                   name="expiry"
                   placeholder="Valid Thru"
                   onKeyUp={this.handleInputChange}
@@ -108,7 +117,7 @@ export default class PaymentForm extends Component {
                 />
                 <input
                   type="tel"
-                  className="half-width"
+                  className="half-width right"
                   name="cvc"
                   placeholder="CVC"
                   onKeyUp={this.handleInputChange}

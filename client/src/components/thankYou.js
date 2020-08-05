@@ -5,11 +5,9 @@ const ThankYou = ({ pixelView }) => {
     <div id="thank-you-container">
       {pixelView()}
       <h1>Thank you for signing up!</h1>
-      <div><a href="https://drive.google.com/uc?export=download&id=1PS00GEqMjNLuGedrIyQf6My7fcqsj4Uw" download><button>Download the Holiday Survival Guide</button></a></div>
+      <div>We look forward to see you at the program's start! You will receive more information to your provided email in the coming days. If you have any questions, please <a href="https://thecamptc.com/locations">contact us</a>.</div>
       <div id="thank-you-image-wrapper">
-        <a href="https://drive.google.com/uc?export=download&id=1PS00GEqMjNLuGedrIyQf6My7fcqsj4Uw" download>
-          <img src="/survival_guide_image.jpg" />
-        </a>
+        <div><a href="/shakeitoff.pdf" download><button>Download the Shake It Off Program Manual</button></a></div>
       </div>
     </div>
   );
