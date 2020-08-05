@@ -129,10 +129,4 @@ class App extends Component {
   }
 }
 
-const ErrorComponent = () => (
-  <div className="error">
-    Unable to complete Purchase. Please Check Your Payment Details.
-  </div>
-);
-
 export default App;
