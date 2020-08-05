@@ -11,7 +11,7 @@ const template = {
         "date": today,
         "receipt_details": [
             {
-                "description": "Summer Sizzle",
+                "description": "Shake It Off",
                 "amount": "$67"
             }
         ],
@@ -23,8 +23,8 @@ const template = {
     },
     attachments: [
         {
-            filename: 'Summer-Sizzle-Manual.pdf',
-            path: 'https://www.thecamptc.com/manuals/Summer-Sizzle-Manual.pdf',
+            filename: 'ShakeItOff.pdf',
+            path: 'https://www.thecamptc.com/manuals/ShakeItOff.pdf',
             contentType: 'application/pdf'
         }
     ]
