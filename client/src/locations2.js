@@ -867,34 +867,34 @@ const locations = {
 			email: 'MantecaFD@thecamptc.com'
 		}
 },
-//'McKinney': 
-//	{
-//		siteID: '568503',
-//		programID: '106163',
-//		tagID: '3324',
-//		pixelID: '',
-//		location: {
-//			street: '1701 Eldorado Pkwy, Suite 206',
-//			state: 'TX',
-//			zip: '75069',
-//			phone: '469-773-5035',
-//			email: 'McKinneyFD@thecamptc.com'
-//		}
-//},
-//'Mckinney': 
-//	{
-//		siteID: '568503',
-//		programID: '106163',
-//		tagID: '3324',
-//		pixelID: '',
-//		location: {
-//			street: '1701 Eldorado Pkwy, Suite 206',
-//			state: 'TX',
-//			zip: '75069',
-//			phone: '469-773-5035',
-//			email: 'McKinneyFD@thecamptc.com'
-//		}
-//},
+'McKinney': 
+	{
+		siteID: '568503',
+		programID: '106182',
+		tagID: '3324',
+		pixelID: '',
+		location: {
+			street: '1701 Eldorado Pkwy, Suite 206',
+			state: 'TX',
+			zip: '75069',
+			phone: '469-773-5035',
+			email: 'McKinneyFD@thecamptc.com'
+		}
+},
+'Mckinney': 
+	{
+		siteID: '568503',
+		programID: '106182',
+		tagID: '3324',
+		pixelID: '',
+		location: {
+			street: '1701 Eldorado Pkwy, Suite 206',
+			state: 'TX',
+			zip: '75069',
+			phone: '469-773-5035',
+			email: 'McKinneyFD@thecamptc.com'
+		}
+},
 'Menifee': 
 	{
 		siteID: '228342',
