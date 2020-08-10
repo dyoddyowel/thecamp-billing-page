@@ -273,20 +273,20 @@ const locations = {
 //		}
 //},
 // Carson, South-Bay-Torrance, no access to mindbody
-//'Carson': 
-//	{
-//		siteID: '298511',
-//		programID: '10400',
-//		tagID: '3242',
-//		pixelID: '',
-//		location: {
-//			street: '21023 S. Figueroa St',
-//			state: 'CA',
-//			zip: '90745',
-//			phone: '(310) 328-2267',
-//			email: 'carsonfd@thecamptc.com'
-//		}
-//},
+'Carson': 
+	{
+		siteID: '298511',
+		programID: '10429',
+		tagID: '3242',
+		pixelID: '',
+		location: {
+			street: '21023 S. Figueroa St',
+			state: 'CA',
+			zip: '90745',
+			phone: '(310) 328-2267',
+			email: 'carsonfd@thecamptc.com'
+		}
+},
 //'South-Bay': 
 //	{
 //		siteID: '298511',
