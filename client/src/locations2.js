@@ -1373,20 +1373,20 @@ const locations = {
 			email: 'SanGabrielFD@thecamptc.com'
 		}
 },
-//'San-Jose': 
-//	{
-//		siteID: '461323',
-//		programID: '105174',
-//		tagID: '3388',
-//		pixelID: '',
-//		location: {
-//			street: '2230 Quimby Rd',
-//			state: 'CA',
-//			zip: '95122',
-//			phone: '408-872-8673',
-//			email: 'SanJoseFD@thecamptcsj.com'
-//		}
-//},
+'San-Jose': 
+	{
+		siteID: '461323',
+		programID: '105185',
+		tagID: '3388',
+		pixelID: '',
+		location: {
+			street: '2230 Quimby Rd',
+			state: 'CA',
+			zip: '95122',
+			phone: '408-872-8673',
+			email: 'SanJoseFD@thecamptcsj.com'
+		}
+},
 'San-Marcos': 
 	{
 		siteID: '666702',
@@ -1653,20 +1653,20 @@ const locations = {
 			email: 'westminsterfd@thecamptc.com'
 		}
 },
-//'Wheeling': 
-//	{
-//		siteID: '909945',
-//		programID: '105162',
-//		tagID: '3434',
-//		pixelID: '',
-//		location: {
-//			street: '303 Messner Drive',
-//			state: 'IL',
-//			zip: '60090',
-//			phone: '224-813-2059',
-//			email: 'WheelingFD@thecamptc.com'
-//		}
-//},
+'Wheeling': 
+	{
+		siteID: '909945',
+		programID: '105170',
+		tagID: '3434',
+		pixelID: '',
+		location: {
+			street: '303 Messner Drive',
+			state: 'IL',
+			zip: '60090',
+			phone: '224-813-2059',
+			email: 'WheelingFD@thecamptc.com'
+		}
+},
 'Whittier': 
 	{
 		siteID: '533514',
