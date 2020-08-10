@@ -642,20 +642,20 @@ const locations = {
 			email: 'HoustonFD@thecamptc.com'
 		}
 },
-//'Huntington-Beach': 
-//	{
-//		siteID: '441683',
-//		programID: '105159',
-//		tagID: '3296',
-//		pixelID: '',
-//		location: {
-//			street: '18249 Gothard Street , Suite 101',
-//			state: 'CA',
-//			zip: '92648',
-//			phone: '(714) 742-2991',
-//			email: 'huntingtonbeachfd@thecamptc.com'
-//		}
-//},
+'Huntington-Beach': 
+	{
+		siteID: '441683',
+		programID: '105167',
+		tagID: '3296',
+		pixelID: '',
+		location: {
+			street: '18249 Gothard Street , Suite 101',
+			state: 'CA',
+			zip: '92648',
+			phone: '(714) 742-2991',
+			email: 'huntingtonbeachfd@thecamptc.com'
+		}
+},
 'Inglewood': 
 	{
 		siteID: '740074',
