@@ -1021,20 +1021,20 @@ const locations = {
 			email: 'MiramarSanDiegoFD@thecamptc.com'
 		}
 },
-//'Modesto': 
-//	{
-//		siteID: '289688',
-//		programID: '105163',
-//		tagID: '3338',
-//		pixelID: '',
-//		location: {
-//			street: '4807 Greanleaf Circle Suite G',
-//			state: 'CA',
-//			zip: '95356',
-//			phone: '(209) 284-8358',
-//			email: 'modesto@thecamptc.com'
-//		}
-//},
+'Modesto': 
+	{
+		siteID: '289688',
+		programID: '105171',
+		tagID: '3338',
+		pixelID: '',
+		location: {
+			street: '4807 Greanleaf Circle Suite G',
+			state: 'CA',
+			zip: '95356',
+			phone: '(209) 284-8358',
+			email: 'modesto@thecamptc.com'
+		}
+},
 'Monrovia': 
 	{
 		siteID: '458660',
