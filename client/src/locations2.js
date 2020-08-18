@@ -372,21 +372,20 @@ const locations = {
 			email: 'ClearwaterFD@thecamptc.com'
 		}
 },
-// does not want online payment	
-//'Clovis': 
-//	{
-//		siteID: '569158',
-//		programID: '106157',
-//		tagID: '3250',
-//		pixelID: '',
-//		location: {
-//			street: '23250 US Hwy 19 N',
-//			state: 'FL',
-//			zip: '33765',
-//			phone: '727-669-0763',
-//			email: 'ClovisFD@thecamptc.com'
-//		}
-//},
+'Clovis': 
+	{
+		siteID: '569158',
+		programID: '106174',
+		tagID: '3250',
+		pixelID: '',
+		location: {
+			street: '23250 US Hwy 19 N',
+			state: 'FL',
+			zip: '33765',
+			phone: '727-669-0763',
+			email: 'ClovisFD@thecamptc.com'
+		}
+},
 'Cool-Springs': 
 	{
 		siteID: '438547',
