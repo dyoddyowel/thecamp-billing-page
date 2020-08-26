@@ -379,10 +379,10 @@ const locations = {
 		tagID: '3250',
 		pixelID: '',
 		location: {
-			street: '23250 US Hwy 19 N',
-			state: 'FL',
-			zip: '33765',
-			phone: '727-669-0763',
+			street: '80 W. Bullard Ave. Suite 107',
+			state: 'CA',
+			zip: '93612',
+			phone: '559-554-7987',
 			email: 'ClovisFD@thecamptc.com'
 		}
 },
