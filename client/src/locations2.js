@@ -372,20 +372,21 @@ const locations = {
 			email: 'ClearwaterFD@thecamptc.com'
 		}
 },
-'Clovis': 
-	{
-		siteID: '569158',
-		programID: '106174',
-		tagID: '3250',
-		pixelID: '',
-		location: {
-			street: '80 W. Bullard Ave. Suite 107',
-			state: 'CA',
-			zip: '93612',
-			phone: '559-554-7987',
-			email: 'ClovisFD@thecamptc.com'
-		}
-},
+// do not want online payment	
+//'Clovis': 
+//	{
+//		siteID: '569158',
+//		programID: '106174',
+//		tagID: '3250',
+//		pixelID: '',
+//		location: {
+//			street: '80 W. Bullard Ave. Suite 107',
+//			state: 'CA',
+//			zip: '93612',
+//			phone: '559-554-7987',
+//			email: 'ClovisFD@thecamptc.com'
+//		}
+//},
 'Cool-Springs': 
 	{
 		siteID: '438547',
